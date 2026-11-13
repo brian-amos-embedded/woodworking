@@ -1,0 +1,77 @@
+{
+  "boolean_ms": 1404.054,
+  "budget_exceeded": false,
+  "budget_s": 90.0,
+  "checked": 35,
+  "count": 0,
+  "interferences": [],
+  "ms": 170.872,
+  "pairs_candidate": 126,
+  "pairs_cleared": 0,
+  "pairs_excluded": 0,
+  "pairs_intersected": 126,
+  "pairs_not_checked": 0,
+  "skipped_pairs": 0,
+  "slowest": [
+    {
+      "a": "SIDE-L",
+      "b": "TOP",
+      "boolean_ms": 45.406,
+      "ms": 45.408,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "SIDE-R",
+      "b": "TOP",
+      "boolean_ms": 45.217,
+      "ms": 45.221,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "SIDE-R",
+      "b": "BOT",
+      "boolean_ms": 31.699,
+      "ms": 31.701,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "DIV-2",
+      "b": "TOP",
+      "boolean_ms": 30.0,
+      "ms": 30.001,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "DIV-1",
+      "b": "ST-2",
+      "boolean_ms": 28.306,
+      "ms": 28.307,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "DIV-2",
+      "b": "BACK",
+      "boolean_ms": 28.274,
+      "ms": 28.275,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "DIV-2",
+      "b": "ST-3",
+      "boolean_ms": 27.156,
+      "ms": 27.159,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "SIDE-L",
+      "b": "BOT",
+      "boolean_ms": 26.146,
+      "ms": 26.148,
+      "tessellate_ms": 0.0
+    }
+  ],
+  "tessellate_ms": 0.0,
+  "threads": 9,
+  "truncated": false,
+  "unchecked": []
+}

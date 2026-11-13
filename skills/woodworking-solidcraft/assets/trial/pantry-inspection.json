@@ -1,0 +1,40 @@
+{
+  "input": "pantry.skp",
+  "sha256": "19a2387586fe015a8f0bcb97b58c5019b88b0625cddc050c066fdf67783959e9",
+  "size_bytes": 1389523,
+  "header_version": "27.0.0",
+  "metadata_units": "Inches",
+  "target": "soda org 2",
+  "target_name_found_in_model_dat": true,
+  "component_thumbnail_names": [
+    "soda side",
+    "soda side#1",
+    "soda stile",
+    "soda rail",
+    "soda shelf",
+    "soda shelf center",
+    "soda top bot",
+    "soda back",
+    "walls",
+    "soda organizer",
+    "counter top",
+    "side_shelf",
+    "bot_shelf",
+    "XCA04-2750",
+    "back shelf",
+    "Food Processor",
+    "Blender",
+    "Air Fryer",
+    "Crock-Pot",
+    "kitchen props",
+    "soda org 2",
+    "shelf rail",
+    "shelf rail front",
+    "soda stile#1"
+  ],
+  "limitations": [
+    "Names are archive thumbnail labels, NOT a validated assembly hierarchy or quantities.",
+    "No dimensions or placement transforms decoded.",
+    "No pantry CAD import performed."
+  ]
+}

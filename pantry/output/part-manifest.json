@@ -1,0 +1,2453 @@
+[
+  {
+    "id": "SIDE-L",
+    "group": "SIDE",
+    "name": "Outer side L",
+    "corner": [
+      1.25,
+      0.75,
+      0
+    ],
+    "size": [
+      0.75,
+      17.375,
+      36.25
+    ],
+    "source_definition": "86774",
+    "material": "plywood_3_4",
+    "grain_axis": 2,
+    "cuts": [
+      {
+        "name": "shelf-dado-0",
+        "corner": [
+          1.75,
+          0.75,
+          3.5
+        ],
+        "size": [
+          0.25,
+          17.375,
+          0.75
+        ]
+      },
+      {
+        "name": "shelf-dado-1",
+        "corner": [
+          1.75,
+          0.75,
+          11.5
+        ],
+        "size": [
+          0.25,
+          17.375,
+          0.75
+        ]
+      },
+      {
+        "name": "shelf-dado-2",
+        "corner": [
+          1.75,
+          0.75,
+          19.5
+        ],
+        "size": [
+          0.25,
+          17.375,
+          0.75
+        ]
+      },
+      {
+        "name": "shelf-dado-3",
+        "corner": [
+          1.75,
+          0.75,
+          27.5
+        ],
+        "size": [
+          0.25,
+          17.375,
+          0.75
+        ]
+      },
+      {
+        "name": "shelf-dado-4",
+        "corner": [
+          1.75,
+          0.75,
+          35.5
+        ],
+        "size": [
+          0.25,
+          17.375,
+          0.75
+        ]
+      },
+      {
+        "name": "back-groove",
+        "corner": [
+          1.75,
+          17.375,
+          0
+        ],
+        "size": [
+          0.25,
+          0.25,
+          36.25
+        ]
+      },
+      {
+        "name": "baseboard-relief",
+        "corner": [
+          1.25,
+          16.625,
+          0
+        ],
+        "size": [
+          0.75,
+          1.5,
+          3.5
+        ]
+      }
+    ],
+    "blank_lwt_in": [
+      36.25,
+      17.375,
+      0.75
+    ],
+    "source": {
+      "part": "SIDE-L",
+      "definition": "86774",
+      "source_instance_path": [
+        "86773"
+      ],
+      "source_bounds_in": [
+        [
+          1.25,
+          0.6400000000000006,
+          0.012736305081729835
+        ],
+        [
+          2.0,
+          18.0,
+          36.27547261016346
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          1.25,
+          0.75,
+          0
+        ],
+        [
+          2.0,
+          18.125,
+          36.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "SIDE-R",
+    "group": "SIDE",
+    "name": "Outer side R",
+    "corner": [
+      24,
+      0.75,
+      0
+    ],
+    "size": [
+      0.75,
+      17.375,
+      36.25
+    ],
+    "source_definition": "86774",
+    "material": "plywood_3_4",
+    "grain_axis": 2,
+    "cuts": [
+      {
+        "name": "shelf-dado-0",
+        "corner": [
+          24,
+          0.75,
+          3.5
+        ],
+        "size": [
+          0.25,
+          17.375,
+          0.75
+        ]
+      },
+      {
+        "name": "shelf-dado-1",
+        "corner": [
+          24,
+          0.75,
+          11.5
+        ],
+        "size": [
+          0.25,
+          17.375,
+          0.75
+        ]
+      },
+      {
+        "name": "shelf-dado-2",
+        "corner": [
+          24,
+          0.75,
+          19.5
+        ],
+        "size": [
+          0.25,
+          17.375,
+          0.75
+        ]
+      },
+      {
+        "name": "shelf-dado-3",
+        "corner": [
+          24,
+          0.75,
+          27.5
+        ],
+        "size": [
+          0.25,
+          17.375,
+          0.75
+        ]
+      },
+      {
+        "name": "shelf-dado-4",
+        "corner": [
+          24,
+          0.75,
+          35.5
+        ],
+        "size": [
+          0.25,
+          17.375,
+          0.75
+        ]
+      },
+      {
+        "name": "back-groove",
+        "corner": [
+          24,
+          17.375,
+          0
+        ],
+        "size": [
+          0.25,
+          0.25,
+          36.25
+        ]
+      },
+      {
+        "name": "baseboard-relief",
+        "corner": [
+          24,
+          16.625,
+          0
+        ],
+        "size": [
+          0.75,
+          1.5,
+          3.5
+        ]
+      }
+    ],
+    "blank_lwt_in": [
+      36.25,
+      17.375,
+      0.75
+    ],
+    "source": {
+      "part": "SIDE-R",
+      "definition": "86774",
+      "source_instance_path": [
+        "87259"
+      ],
+      "source_bounds_in": [
+        [
+          24.0,
+          0.6400000000000006,
+          -1.0130785099704553e-15
+        ],
+        [
+          24.75,
+          18.0,
+          36.26273630508173
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          24,
+          0.75,
+          0
+        ],
+        [
+          24.75,
+          18.125,
+          36.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "DIV-1",
+    "group": "DIV",
+    "name": "Divider 1",
+    "corner": [
+      8.625,
+      0.75,
+      4.0
+    ],
+    "size": [
+      0.75,
+      16.625,
+      31.75
+    ],
+    "source_definition": "87277",
+    "material": "plywood_3_4",
+    "grain_axis": 2,
+    "cuts": [
+      {
+        "name": "dado-0-left",
+        "corner": [
+          8.625,
+          0.75,
+          11.5
+        ],
+        "size": [
+          0.25,
+          16.625,
+          0.75
+        ]
+      },
+      {
+        "name": "dado-0-right",
+        "corner": [
+          9.125,
+          0.75,
+          11.5
+        ],
+        "size": [
+          0.25,
+          16.625,
+          0.75
+        ]
+      },
+      {
+        "name": "dado-1-left",
+        "corner": [
+          8.625,
+          0.75,
+          19.5
+        ],
+        "size": [
+          0.25,
+          16.625,
+          0.75
+        ]
+      },
+      {
+        "name": "dado-1-right",
+        "corner": [
+          9.125,
+          0.75,
+          19.5
+        ],
+        "size": [
+          0.25,
+          16.625,
+          0.75
+        ]
+      },
+      {
+        "name": "dado-2-left",
+        "corner": [
+          8.625,
+          0.75,
+          27.5
+        ],
+        "size": [
+          0.25,
+          16.625,
+          0.75
+        ]
+      },
+      {
+        "name": "dado-2-right",
+        "corner": [
+          9.125,
+          0.75,
+          27.5
+        ],
+        "size": [
+          0.25,
+          16.625,
+          0.75
+        ]
+      },
+      {
+        "name": "light-wire-relief",
+        "corner": [
+          8.625,
+          0.75,
+          10.0
+        ],
+        "size": [
+          0.75,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "name": "light-wire-relief",
+        "corner": [
+          8.625,
+          0.75,
+          18.0
+        ],
+        "size": [
+          0.75,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "name": "light-wire-relief",
+        "corner": [
+          8.625,
+          0.75,
+          26.0
+        ],
+        "size": [
+          0.75,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "name": "light-wire-relief",
+        "corner": [
+          8.625,
+          0.75,
+          34.0
+        ],
+        "size": [
+          0.75,
+          0.25,
+          0.25
+        ]
+      }
+    ],
+    "blank_lwt_in": [
+      31.75,
+      16.625,
+      0.75
+    ],
+    "source": {
+      "part": "DIV-1",
+      "definition": "87277",
+      "source_instance_path": [
+        "87087"
+      ],
+      "source_bounds_in": [
+        [
+          8.625,
+          0.6400000000000006,
+          4.012736305081731
+        ],
+        [
+          9.375,
+          17.269932982984493,
+          35.77547261016346
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          8.625,
+          0.75,
+          4.0
+        ],
+        [
+          9.375,
+          17.375,
+          35.75
+        ]
+      ]
+    }
+  },
+  {
+    "id": "DIV-2",
+    "group": "DIV",
+    "name": "Divider 2",
+    "corner": [
+      16.625,
+      0.75,
+      4.0
+    ],
+    "size": [
+      0.75,
+      16.625,
+      31.75
+    ],
+    "source_definition": "87277",
+    "material": "plywood_3_4",
+    "grain_axis": 2,
+    "cuts": [
+      {
+        "name": "dado-0-left",
+        "corner": [
+          16.625,
+          0.75,
+          11.5
+        ],
+        "size": [
+          0.25,
+          16.625,
+          0.75
+        ]
+      },
+      {
+        "name": "dado-0-right",
+        "corner": [
+          17.125,
+          0.75,
+          11.5
+        ],
+        "size": [
+          0.25,
+          16.625,
+          0.75
+        ]
+      },
+      {
+        "name": "dado-1-left",
+        "corner": [
+          16.625,
+          0.75,
+          19.5
+        ],
+        "size": [
+          0.25,
+          16.625,
+          0.75
+        ]
+      },
+      {
+        "name": "dado-1-right",
+        "corner": [
+          17.125,
+          0.75,
+          19.5
+        ],
+        "size": [
+          0.25,
+          16.625,
+          0.75
+        ]
+      },
+      {
+        "name": "dado-2-left",
+        "corner": [
+          16.625,
+          0.75,
+          27.5
+        ],
+        "size": [
+          0.25,
+          16.625,
+          0.75
+        ]
+      },
+      {
+        "name": "dado-2-right",
+        "corner": [
+          17.125,
+          0.75,
+          27.5
+        ],
+        "size": [
+          0.25,
+          16.625,
+          0.75
+        ]
+      },
+      {
+        "name": "light-wire-relief",
+        "corner": [
+          16.625,
+          0.75,
+          10.0
+        ],
+        "size": [
+          0.75,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "name": "light-wire-relief",
+        "corner": [
+          16.625,
+          0.75,
+          18.0
+        ],
+        "size": [
+          0.75,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "name": "light-wire-relief",
+        "corner": [
+          16.625,
+          0.75,
+          26.0
+        ],
+        "size": [
+          0.75,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "name": "light-wire-relief",
+        "corner": [
+          16.625,
+          0.75,
+          34.0
+        ],
+        "size": [
+          0.75,
+          0.25,
+          0.25
+        ]
+      }
+    ],
+    "blank_lwt_in": [
+      31.75,
+      16.625,
+      0.75
+    ],
+    "source": {
+      "part": "DIV-2",
+      "definition": "87277",
+      "source_instance_path": [
+        "88457"
+      ],
+      "source_bounds_in": [
+        [
+          16.625,
+          0.6400000000000006,
+          4.0
+        ],
+        [
+          17.375,
+          17.269932982984493,
+          35.76273630508173
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          16.625,
+          0.75,
+          4.0
+        ],
+        [
+          17.375,
+          17.375,
+          35.75
+        ]
+      ]
+    }
+  },
+  {
+    "id": "BOT",
+    "group": "TOPBOT",
+    "name": "Bot",
+    "corner": [
+      1.75,
+      0.75,
+      3.5
+    ],
+    "size": [
+      22.5,
+      17.375,
+      0.75
+    ],
+    "source_definition": "89912",
+    "material": "plywood_3_4",
+    "grain_axis": 0,
+    "cuts": [
+      {
+        "name": "divider-dado-0",
+        "corner": [
+          8.625,
+          0.75,
+          4.0
+        ],
+        "size": [
+          0.75,
+          17.375,
+          0.25
+        ]
+      },
+      {
+        "name": "divider-dado-1",
+        "corner": [
+          16.625,
+          0.75,
+          4.0
+        ],
+        "size": [
+          0.75,
+          17.375,
+          0.25
+        ]
+      },
+      {
+        "name": "back-groove",
+        "corner": [
+          1.75,
+          17.375,
+          4.0
+        ],
+        "size": [
+          22.5,
+          0.25,
+          0.25
+        ]
+      }
+    ],
+    "blank_lwt_in": [
+      22.5,
+      17.375,
+      0.75
+    ],
+    "source": {
+      "part": "BOT",
+      "definition": "89912",
+      "source_instance_path": [
+        "89911"
+      ],
+      "source_bounds_in": [
+        [
+          1.75,
+          0.6400000000000006,
+          3.5
+        ],
+        [
+          24.25,
+          18.0,
+          4.262736305081731
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          1.75,
+          0.75,
+          3.5
+        ],
+        [
+          24.25,
+          18.125,
+          4.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "TOP",
+    "group": "TOPBOT",
+    "name": "Top",
+    "corner": [
+      1.75,
+      0.75,
+      35.5
+    ],
+    "size": [
+      22.5,
+      17.375,
+      0.75
+    ],
+    "source_definition": "89912",
+    "material": "plywood_3_4",
+    "grain_axis": 0,
+    "cuts": [
+      {
+        "name": "divider-dado-0",
+        "corner": [
+          8.625,
+          0.75,
+          35.5
+        ],
+        "size": [
+          0.75,
+          17.375,
+          0.25
+        ]
+      },
+      {
+        "name": "divider-dado-1",
+        "corner": [
+          16.625,
+          0.75,
+          35.5
+        ],
+        "size": [
+          0.75,
+          17.375,
+          0.25
+        ]
+      },
+      {
+        "name": "back-groove",
+        "corner": [
+          1.75,
+          17.375,
+          35.5
+        ],
+        "size": [
+          22.5,
+          0.25,
+          0.25
+        ]
+      }
+    ],
+    "blank_lwt_in": [
+      22.5,
+      17.375,
+      0.75
+    ],
+    "source": {
+      "part": "TOP",
+      "definition": "89912",
+      "source_instance_path": [
+        "89941"
+      ],
+      "source_bounds_in": [
+        [
+          1.75,
+          0.6400000000000006,
+          35.5
+        ],
+        [
+          24.25,
+          18.0,
+          36.26273630508173
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          1.75,
+          0.75,
+          35.5
+        ],
+        [
+          24.25,
+          18.125,
+          36.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "SH-L1",
+    "group": "SHELF-OUT",
+    "name": "Shelf L1",
+    "corner": [
+      1.75,
+      0.75,
+      11.5
+    ],
+    "size": [
+      7.125,
+      16.625,
+      0.75
+    ],
+    "source_definition": "89139",
+    "material": "plywood_3_4",
+    "grain_axis": 1,
+    "cuts": [],
+    "blank_lwt_in": [
+      16.625,
+      7.125,
+      0.75
+    ],
+    "source": {
+      "part": "SH-L1",
+      "definition": "89139",
+      "source_instance_path": [
+        "89259"
+      ],
+      "source_bounds_in": [
+        [
+          1.75,
+          0.6400000000000006,
+          11.51273630508173
+        ],
+        [
+          8.875,
+          17.26993298298449,
+          12.26273630508173
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          1.75,
+          0.75,
+          11.5
+        ],
+        [
+          8.875,
+          17.375,
+          12.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "SH-C1",
+    "group": "SHELF-CENTER",
+    "name": "Shelf C1",
+    "corner": [
+      9.125,
+      0.75,
+      11.5
+    ],
+    "size": [
+      7.75,
+      16.625,
+      0.75
+    ],
+    "source_definition": "89502",
+    "material": "plywood_3_4",
+    "grain_axis": 1,
+    "cuts": [],
+    "blank_lwt_in": [
+      16.625,
+      7.75,
+      0.75
+    ],
+    "source": {
+      "part": "SH-C1",
+      "definition": "89502",
+      "source_instance_path": [
+        "89357"
+      ],
+      "source_bounds_in": [
+        [
+          9.122234606707963,
+          0.6400000000000006,
+          11.51273630508173
+        ],
+        [
+          16.875,
+          17.269932982984493,
+          12.26273630508173
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          9.125,
+          0.75,
+          11.5
+        ],
+        [
+          16.875,
+          17.375,
+          12.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "SH-R1",
+    "group": "SHELF-OUT",
+    "name": "Shelf R1",
+    "corner": [
+      17.125,
+      0.75,
+      11.5
+    ],
+    "size": [
+      7.125,
+      16.625,
+      0.75
+    ],
+    "source_definition": "89139",
+    "material": "plywood_3_4",
+    "grain_axis": 1,
+    "cuts": [],
+    "blank_lwt_in": [
+      16.625,
+      7.125,
+      0.75
+    ],
+    "source": {
+      "part": "SH-R1",
+      "definition": "89139",
+      "source_instance_path": [
+        "89455"
+      ],
+      "source_bounds_in": [
+        [
+          17.125,
+          0.6400000000000006,
+          11.5
+        ],
+        [
+          24.25,
+          17.26993298298449,
+          12.25
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          17.125,
+          0.75,
+          11.5
+        ],
+        [
+          24.25,
+          17.375,
+          12.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "SH-L2",
+    "group": "SHELF-OUT",
+    "name": "Shelf L2",
+    "corner": [
+      1.75,
+      0.75,
+      19.5
+    ],
+    "size": [
+      7.125,
+      16.625,
+      0.75
+    ],
+    "source_definition": "89139",
+    "material": "plywood_3_4",
+    "grain_axis": 1,
+    "cuts": [],
+    "blank_lwt_in": [
+      16.625,
+      7.125,
+      0.75
+    ],
+    "source": {
+      "part": "SH-L2",
+      "definition": "89139",
+      "source_instance_path": [
+        "89214"
+      ],
+      "source_bounds_in": [
+        [
+          1.75,
+          0.6400000000000006,
+          19.52820542489188
+        ],
+        [
+          8.875,
+          17.26993298298449,
+          20.27820542489188
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          1.75,
+          0.75,
+          19.5
+        ],
+        [
+          8.875,
+          17.375,
+          20.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "SH-C2",
+    "group": "SHELF-CENTER",
+    "name": "Shelf C2",
+    "corner": [
+      9.125,
+      0.75,
+      19.5
+    ],
+    "size": [
+      7.75,
+      16.625,
+      0.75
+    ],
+    "source_definition": "89502",
+    "material": "plywood_3_4",
+    "grain_axis": 1,
+    "cuts": [],
+    "blank_lwt_in": [
+      16.625,
+      7.75,
+      0.75
+    ],
+    "source": {
+      "part": "SH-C2",
+      "definition": "89502",
+      "source_instance_path": [
+        "89356"
+      ],
+      "source_bounds_in": [
+        [
+          9.122234606707963,
+          0.6400000000000006,
+          19.52820542489188
+        ],
+        [
+          16.875,
+          17.269932982984493,
+          20.27820542489188
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          9.125,
+          0.75,
+          19.5
+        ],
+        [
+          16.875,
+          17.375,
+          20.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "SH-R2",
+    "group": "SHELF-OUT",
+    "name": "Shelf R2",
+    "corner": [
+      17.125,
+      0.75,
+      19.5
+    ],
+    "size": [
+      7.125,
+      16.625,
+      0.75
+    ],
+    "source_definition": "89139",
+    "material": "plywood_3_4",
+    "grain_axis": 1,
+    "cuts": [],
+    "blank_lwt_in": [
+      16.625,
+      7.125,
+      0.75
+    ],
+    "source": {
+      "part": "SH-R2",
+      "definition": "89139",
+      "source_instance_path": [
+        "89454"
+      ],
+      "source_bounds_in": [
+        [
+          17.125,
+          0.6400000000000006,
+          19.51546911981015
+        ],
+        [
+          24.25,
+          17.26993298298449,
+          20.26546911981015
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          17.125,
+          0.75,
+          19.5
+        ],
+        [
+          24.25,
+          17.375,
+          20.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "SH-L3",
+    "group": "SHELF-OUT",
+    "name": "Shelf L3",
+    "corner": [
+      1.75,
+      0.75,
+      27.5
+    ],
+    "size": [
+      7.125,
+      16.625,
+      0.75
+    ],
+    "source_definition": "89139",
+    "material": "plywood_3_4",
+    "grain_axis": 1,
+    "cuts": [],
+    "blank_lwt_in": [
+      16.625,
+      7.125,
+      0.75
+    ],
+    "source": {
+      "part": "SH-L3",
+      "definition": "89139",
+      "source_instance_path": [
+        "89169"
+      ],
+      "source_bounds_in": [
+        [
+          1.75,
+          0.6400000000000006,
+          27.51273630508173
+        ],
+        [
+          8.875,
+          17.26993298298449,
+          28.26273630508173
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          1.75,
+          0.75,
+          27.5
+        ],
+        [
+          8.875,
+          17.375,
+          28.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "SH-C3",
+    "group": "SHELF-CENTER",
+    "name": "Shelf C3",
+    "corner": [
+      9.125,
+      0.75,
+      27.5
+    ],
+    "size": [
+      7.75,
+      16.625,
+      0.75
+    ],
+    "source_definition": "89502",
+    "material": "plywood_3_4",
+    "grain_axis": 1,
+    "cuts": [],
+    "blank_lwt_in": [
+      16.625,
+      7.75,
+      0.75
+    ],
+    "source": {
+      "part": "SH-C3",
+      "definition": "89502",
+      "source_instance_path": [
+        "89355"
+      ],
+      "source_bounds_in": [
+        [
+          9.122234606707963,
+          0.6400000000000006,
+          27.51273630508173
+        ],
+        [
+          16.875,
+          17.269932982984493,
+          28.26273630508173
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          9.125,
+          0.75,
+          27.5
+        ],
+        [
+          16.875,
+          17.375,
+          28.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "SH-R3",
+    "group": "SHELF-OUT",
+    "name": "Shelf R3",
+    "corner": [
+      17.125,
+      0.75,
+      27.5
+    ],
+    "size": [
+      7.125,
+      16.625,
+      0.75
+    ],
+    "source_definition": "89139",
+    "material": "plywood_3_4",
+    "grain_axis": 1,
+    "cuts": [],
+    "blank_lwt_in": [
+      16.625,
+      7.125,
+      0.75
+    ],
+    "source": {
+      "part": "SH-R3",
+      "definition": "89139",
+      "source_instance_path": [
+        "89453"
+      ],
+      "source_bounds_in": [
+        [
+          17.125,
+          0.6400000000000006,
+          27.5
+        ],
+        [
+          24.25,
+          17.26993298298449,
+          28.25
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          17.125,
+          0.75,
+          27.5
+        ],
+        [
+          24.25,
+          17.375,
+          28.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "BACK",
+    "group": "BACK",
+    "name": "Back",
+    "corner": [
+      1.78125,
+      17.375,
+      4.03125
+    ],
+    "size": [
+      22.4375,
+      0.25,
+      31.6875
+    ],
+    "source_definition": "90470",
+    "material": "plywood_1_4",
+    "grain_axis": 2,
+    "cuts": [],
+    "blank_lwt_in": [
+      31.6875,
+      22.4375,
+      0.25
+    ],
+    "source": {
+      "part": "BACK",
+      "definition": "90470",
+      "source_instance_path": [
+        "90469"
+      ],
+      "source_bounds_in": [
+        [
+          1.75,
+          17.25,
+          4.012736305081731
+        ],
+        [
+          24.249999999999986,
+          17.4375,
+          35.75
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          1.78125,
+          17.375,
+          4.03125
+        ],
+        [
+          24.21875,
+          17.625,
+          35.71875
+        ]
+      ]
+    }
+  },
+  {
+    "id": "ST-1",
+    "group": "STILE",
+    "name": "Stile 1",
+    "corner": [
+      0,
+      0,
+      2.25
+    ],
+    "size": [
+      2,
+      0.75,
+      34.0
+    ],
+    "source_definition": "87665",
+    "material": "maple",
+    "grain_axis": 2,
+    "cuts": [],
+    "blank_lwt_in": [
+      34.0,
+      2,
+      0.75
+    ],
+    "source": {
+      "part": "ST-1",
+      "definition": "87665",
+      "source_instance_path": [
+        "87664"
+      ],
+      "source_bounds_in": [
+        [
+          0.0,
+          -0.10999999999999943,
+          2.262736305081731
+        ],
+        [
+          2.0,
+          0.6400000000000006,
+          36.26273630508173
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          0,
+          0,
+          2.25
+        ],
+        [
+          2,
+          0.75,
+          36.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "ST-2",
+    "group": "STILE",
+    "name": "Stile 2",
+    "corner": [
+      8.0,
+      0,
+      2.25
+    ],
+    "size": [
+      2,
+      0.75,
+      34.0
+    ],
+    "source_definition": "87665",
+    "material": "maple",
+    "grain_axis": 2,
+    "cuts": [],
+    "blank_lwt_in": [
+      34.0,
+      2,
+      0.75
+    ],
+    "source": {
+      "part": "ST-2",
+      "definition": "87665",
+      "source_instance_path": [
+        "87859"
+      ],
+      "source_bounds_in": [
+        [
+          8.0,
+          -0.10999999999999943,
+          2.262736305081731
+        ],
+        [
+          10.0,
+          0.6400000000000006,
+          36.26273630508173
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          8.0,
+          0,
+          2.25
+        ],
+        [
+          10.0,
+          0.75,
+          36.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "ST-3",
+    "group": "STILE",
+    "name": "Stile 3",
+    "corner": [
+      16.0,
+      0,
+      2.25
+    ],
+    "size": [
+      2,
+      0.75,
+      34.0
+    ],
+    "source_definition": "87665",
+    "material": "maple",
+    "grain_axis": 2,
+    "cuts": [],
+    "blank_lwt_in": [
+      34.0,
+      2,
+      0.75
+    ],
+    "source": {
+      "part": "ST-3",
+      "definition": "87665",
+      "source_instance_path": [
+        "87878"
+      ],
+      "source_bounds_in": [
+        [
+          16.0,
+          -0.10999999999999943,
+          2.262736305081731
+        ],
+        [
+          18.0,
+          0.6400000000000006,
+          36.26273630508173
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          16.0,
+          0,
+          2.25
+        ],
+        [
+          18.0,
+          0.75,
+          36.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "ST-4",
+    "group": "STILE",
+    "name": "Stile 4",
+    "corner": [
+      24,
+      0,
+      2.25
+    ],
+    "size": [
+      2,
+      0.75,
+      34.0
+    ],
+    "source_definition": "87665",
+    "material": "maple",
+    "grain_axis": 2,
+    "cuts": [],
+    "blank_lwt_in": [
+      34.0,
+      2,
+      0.75
+    ],
+    "source": {
+      "part": "ST-4",
+      "definition": "87665",
+      "source_instance_path": [
+        "88507"
+      ],
+      "source_bounds_in": [
+        [
+          24.0,
+          -0.10999999999999943,
+          2.262736305081731
+        ],
+        [
+          26.0,
+          0.6400000000000006,
+          36.26273630508173
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          24,
+          0,
+          2.25
+        ],
+        [
+          26,
+          0.75,
+          36.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "RA-11",
+    "group": "RAIL",
+    "name": "Rail 11",
+    "corner": [
+      2,
+      0,
+      2.25
+    ],
+    "size": [
+      6.0,
+      0.75,
+      2
+    ],
+    "source_definition": "87913",
+    "material": "maple",
+    "grain_axis": 0,
+    "cuts": [],
+    "blank_lwt_in": [
+      6.0,
+      2,
+      0.75
+    ],
+    "source": {
+      "part": "RA-11",
+      "definition": "87913",
+      "source_instance_path": [
+        "87912"
+      ],
+      "source_bounds_in": [
+        [
+          2.0,
+          -0.10999999999999943,
+          2.26273630508173
+        ],
+        [
+          8.0,
+          0.6399999999999997,
+          4.26273630508173
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          2,
+          0,
+          2.25
+        ],
+        [
+          8.0,
+          0.75,
+          4.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "RA-12",
+    "group": "RAIL",
+    "name": "Rail 12",
+    "corner": [
+      10.0,
+      0,
+      2.25
+    ],
+    "size": [
+      6.0,
+      0.75,
+      2
+    ],
+    "source_definition": "87913",
+    "material": "maple",
+    "grain_axis": 0,
+    "cuts": [],
+    "blank_lwt_in": [
+      6.0,
+      2,
+      0.75
+    ],
+    "source": {
+      "part": "RA-12",
+      "definition": "87913",
+      "source_instance_path": [
+        "88179"
+      ],
+      "source_bounds_in": [
+        [
+          10.0,
+          -0.10999999999999943,
+          2.26273630508173
+        ],
+        [
+          16.0,
+          0.6399999999999997,
+          4.26273630508173
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          10.0,
+          0,
+          2.25
+        ],
+        [
+          16.0,
+          0.75,
+          4.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "RA-13",
+    "group": "RAIL",
+    "name": "Rail 13",
+    "corner": [
+      18.0,
+      0,
+      2.25
+    ],
+    "size": [
+      6.0,
+      0.75,
+      2
+    ],
+    "source_definition": "87913",
+    "material": "maple",
+    "grain_axis": 0,
+    "cuts": [],
+    "blank_lwt_in": [
+      6.0,
+      2,
+      0.75
+    ],
+    "source": {
+      "part": "RA-13",
+      "definition": "87913",
+      "source_instance_path": [
+        "88557"
+      ],
+      "source_bounds_in": [
+        [
+          18.0,
+          -0.10999999999999943,
+          2.26273630508173
+        ],
+        [
+          24.0,
+          0.6399999999999997,
+          4.26273630508173
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          18.0,
+          0,
+          2.25
+        ],
+        [
+          24.0,
+          0.75,
+          4.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "RA-21",
+    "group": "RAIL",
+    "name": "Rail 21",
+    "corner": [
+      2,
+      0,
+      10.25
+    ],
+    "size": [
+      6.0,
+      0.75,
+      2
+    ],
+    "source_definition": "87913",
+    "material": "maple",
+    "grain_axis": 0,
+    "cuts": [],
+    "blank_lwt_in": [
+      6.0,
+      2,
+      0.75
+    ],
+    "source": {
+      "part": "RA-21",
+      "definition": "87913",
+      "source_instance_path": [
+        "87943"
+      ],
+      "source_bounds_in": [
+        [
+          2.0,
+          -0.10999999999999943,
+          10.26273630508173
+        ],
+        [
+          8.0,
+          0.6399999999999997,
+          12.26273630508173
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          2,
+          0,
+          10.25
+        ],
+        [
+          8.0,
+          0.75,
+          12.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "RA-22",
+    "group": "RAIL",
+    "name": "Rail 22",
+    "corner": [
+      10.0,
+      0,
+      10.25
+    ],
+    "size": [
+      6.0,
+      0.75,
+      2
+    ],
+    "source_definition": "87913",
+    "material": "maple",
+    "grain_axis": 0,
+    "cuts": [],
+    "blank_lwt_in": [
+      6.0,
+      2,
+      0.75
+    ],
+    "source": {
+      "part": "RA-22",
+      "definition": "87913",
+      "source_instance_path": [
+        "88180"
+      ],
+      "source_bounds_in": [
+        [
+          10.0,
+          -0.10999999999999943,
+          10.26273630508173
+        ],
+        [
+          16.0,
+          0.6399999999999997,
+          12.26273630508173
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          10.0,
+          0,
+          10.25
+        ],
+        [
+          16.0,
+          0.75,
+          12.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "RA-23",
+    "group": "RAIL",
+    "name": "Rail 23",
+    "corner": [
+      18.0,
+      0,
+      10.25
+    ],
+    "size": [
+      6.0,
+      0.75,
+      2
+    ],
+    "source_definition": "87913",
+    "material": "maple",
+    "grain_axis": 0,
+    "cuts": [],
+    "blank_lwt_in": [
+      6.0,
+      2,
+      0.75
+    ],
+    "source": {
+      "part": "RA-23",
+      "definition": "87913",
+      "source_instance_path": [
+        "88558"
+      ],
+      "source_bounds_in": [
+        [
+          18.0,
+          -0.10999999999999943,
+          10.26273630508173
+        ],
+        [
+          24.0,
+          0.6399999999999997,
+          12.26273630508173
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          18.0,
+          0,
+          10.25
+        ],
+        [
+          24.0,
+          0.75,
+          12.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "RA-31",
+    "group": "RAIL",
+    "name": "Rail 31",
+    "corner": [
+      2,
+      0,
+      18.25
+    ],
+    "size": [
+      6.0,
+      0.75,
+      2
+    ],
+    "source_definition": "87913",
+    "material": "maple",
+    "grain_axis": 0,
+    "cuts": [],
+    "blank_lwt_in": [
+      6.0,
+      2,
+      0.75
+    ],
+    "source": {
+      "part": "RA-31",
+      "definition": "87913",
+      "source_instance_path": [
+        "87989"
+      ],
+      "source_bounds_in": [
+        [
+          2.0,
+          -0.10999999999999943,
+          18.288199005429973
+        ],
+        [
+          8.0,
+          0.6399999999999997,
+          20.288199005429973
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          2,
+          0,
+          18.25
+        ],
+        [
+          8.0,
+          0.75,
+          20.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "RA-32",
+    "group": "RAIL",
+    "name": "Rail 32",
+    "corner": [
+      10.0,
+      0,
+      18.25
+    ],
+    "size": [
+      6.0,
+      0.75,
+      2
+    ],
+    "source_definition": "87913",
+    "material": "maple",
+    "grain_axis": 0,
+    "cuts": [],
+    "blank_lwt_in": [
+      6.0,
+      2,
+      0.75
+    ],
+    "source": {
+      "part": "RA-32",
+      "definition": "87913",
+      "source_instance_path": [
+        "88181"
+      ],
+      "source_bounds_in": [
+        [
+          10.0,
+          -0.10999999999999943,
+          18.288199005429973
+        ],
+        [
+          16.0,
+          0.6399999999999997,
+          20.288199005429973
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          10.0,
+          0,
+          18.25
+        ],
+        [
+          16.0,
+          0.75,
+          20.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "RA-33",
+    "group": "RAIL",
+    "name": "Rail 33",
+    "corner": [
+      18.0,
+      0,
+      18.25
+    ],
+    "size": [
+      6.0,
+      0.75,
+      2
+    ],
+    "source_definition": "87913",
+    "material": "maple",
+    "grain_axis": 0,
+    "cuts": [],
+    "blank_lwt_in": [
+      6.0,
+      2,
+      0.75
+    ],
+    "source": {
+      "part": "RA-33",
+      "definition": "87913",
+      "source_instance_path": [
+        "88559"
+      ],
+      "source_bounds_in": [
+        [
+          18.0,
+          -0.10999999999999943,
+          18.288199005429973
+        ],
+        [
+          24.0,
+          0.6399999999999997,
+          20.288199005429973
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          18.0,
+          0,
+          18.25
+        ],
+        [
+          24.0,
+          0.75,
+          20.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "RA-41",
+    "group": "RAIL",
+    "name": "Rail 41",
+    "corner": [
+      2,
+      0,
+      26.25
+    ],
+    "size": [
+      6.0,
+      0.75,
+      2
+    ],
+    "source_definition": "87913",
+    "material": "maple",
+    "grain_axis": 0,
+    "cuts": [],
+    "blank_lwt_in": [
+      6.0,
+      2,
+      0.75
+    ],
+    "source": {
+      "part": "RA-41",
+      "definition": "87913",
+      "source_instance_path": [
+        "88034"
+      ],
+      "source_bounds_in": [
+        [
+          2.0,
+          -0.10999999999999943,
+          26.26273630508173
+        ],
+        [
+          8.0,
+          0.6399999999999997,
+          28.26273630508173
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          2,
+          0,
+          26.25
+        ],
+        [
+          8.0,
+          0.75,
+          28.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "RA-42",
+    "group": "RAIL",
+    "name": "Rail 42",
+    "corner": [
+      10.0,
+      0,
+      26.25
+    ],
+    "size": [
+      6.0,
+      0.75,
+      2
+    ],
+    "source_definition": "87913",
+    "material": "maple",
+    "grain_axis": 0,
+    "cuts": [],
+    "blank_lwt_in": [
+      6.0,
+      2,
+      0.75
+    ],
+    "source": {
+      "part": "RA-42",
+      "definition": "87913",
+      "source_instance_path": [
+        "88182"
+      ],
+      "source_bounds_in": [
+        [
+          10.0,
+          -0.10999999999999943,
+          26.26273630508173
+        ],
+        [
+          16.0,
+          0.6399999999999997,
+          28.26273630508173
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          10.0,
+          0,
+          26.25
+        ],
+        [
+          16.0,
+          0.75,
+          28.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "RA-43",
+    "group": "RAIL",
+    "name": "Rail 43",
+    "corner": [
+      18.0,
+      0,
+      26.25
+    ],
+    "size": [
+      6.0,
+      0.75,
+      2
+    ],
+    "source_definition": "87913",
+    "material": "maple",
+    "grain_axis": 0,
+    "cuts": [],
+    "blank_lwt_in": [
+      6.0,
+      2,
+      0.75
+    ],
+    "source": {
+      "part": "RA-43",
+      "definition": "87913",
+      "source_instance_path": [
+        "88560"
+      ],
+      "source_bounds_in": [
+        [
+          18.0,
+          -0.10999999999999943,
+          26.26273630508173
+        ],
+        [
+          24.0,
+          0.6399999999999997,
+          28.26273630508173
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          18.0,
+          0,
+          26.25
+        ],
+        [
+          24.0,
+          0.75,
+          28.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "RA-51",
+    "group": "RAIL",
+    "name": "Rail 51",
+    "corner": [
+      2,
+      0,
+      34.25
+    ],
+    "size": [
+      6.0,
+      0.75,
+      2
+    ],
+    "source_definition": "87913",
+    "material": "maple",
+    "grain_axis": 0,
+    "cuts": [],
+    "blank_lwt_in": [
+      6.0,
+      2,
+      0.75
+    ],
+    "source": {
+      "part": "RA-51",
+      "definition": "87913",
+      "source_instance_path": [
+        "88079"
+      ],
+      "source_bounds_in": [
+        [
+          2.0,
+          -0.10999999999999943,
+          34.26273630508173
+        ],
+        [
+          8.0,
+          0.6399999999999997,
+          36.26273630508173
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          2,
+          0,
+          34.25
+        ],
+        [
+          8.0,
+          0.75,
+          36.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "RA-52",
+    "group": "RAIL",
+    "name": "Rail 52",
+    "corner": [
+      10.0,
+      0,
+      34.25
+    ],
+    "size": [
+      6.0,
+      0.75,
+      2
+    ],
+    "source_definition": "87913",
+    "material": "maple",
+    "grain_axis": 0,
+    "cuts": [],
+    "blank_lwt_in": [
+      6.0,
+      2,
+      0.75
+    ],
+    "source": {
+      "part": "RA-52",
+      "definition": "87913",
+      "source_instance_path": [
+        "88183"
+      ],
+      "source_bounds_in": [
+        [
+          10.0,
+          -0.10999999999999943,
+          34.26273630508173
+        ],
+        [
+          16.0,
+          0.6399999999999997,
+          36.26273630508173
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          10.0,
+          0,
+          34.25
+        ],
+        [
+          16.0,
+          0.75,
+          36.25
+        ]
+      ]
+    }
+  },
+  {
+    "id": "RA-53",
+    "group": "RAIL",
+    "name": "Rail 53",
+    "corner": [
+      18.0,
+      0,
+      34.25
+    ],
+    "size": [
+      6.0,
+      0.75,
+      2
+    ],
+    "source_definition": "87913",
+    "material": "maple",
+    "grain_axis": 0,
+    "cuts": [],
+    "blank_lwt_in": [
+      6.0,
+      2,
+      0.75
+    ],
+    "source": {
+      "part": "RA-53",
+      "definition": "87913",
+      "source_instance_path": [
+        "88561"
+      ],
+      "source_bounds_in": [
+        [
+          18.0,
+          -0.10999999999999943,
+          34.26273630508173
+        ],
+        [
+          24.0,
+          0.6399999999999997,
+          36.26273630508173
+        ]
+      ],
+      "normalized_bounds_in": [
+        [
+          18.0,
+          0,
+          34.25
+        ],
+        [
+          24.0,
+          0.75,
+          36.25
+        ]
+      ]
+    }
+  }
+]

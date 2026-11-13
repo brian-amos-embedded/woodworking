@@ -1,0 +1,14 @@
+interface:
+  display_name: Extract SketchUp Models
+  short_description: Extract SketchUp geometry directly with Python
+  default_prompt: Use $sketchup-extract to extract my SketchUp components directly
+    with Python for SolidCraft.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

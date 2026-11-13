@@ -1,0 +1,1257 @@
+{
+  "name": "Soda organizer 2",
+  "revision": "R3",
+  "status": "Reviewed geometry; nominal-stock fabrication draft",
+  "parameters_in": {
+    "W": 26,
+    "H": 36.25,
+    "D": 18.125,
+    "T": 0.75,
+    "FT": 0.75,
+    "F": 2,
+    "G": 0.25,
+    "B": 0.25,
+    "bottom_z": 3.5,
+    "frame_bottom": 2.25,
+    "step": 8,
+    "back_clearance": 0.0625,
+    "base_h": 3.5,
+    "base_d": 1.5,
+    "wire_h": 0.25,
+    "wire_d": 0.25
+  },
+  "derived_expressions": {
+    "bay": "(W-4*F)/3",
+    "div1": "F+bay+F/2-T/2",
+    "div2": "2*F+2*bay+F/2-T/2",
+    "rear": "D-FT",
+    "shelf_depth": "rear-FT",
+    "panel_start": "F-G",
+    "panel_width": "W-2*F+2*G"
+  },
+  "parts": [
+    {
+      "id": "SIDE-L",
+      "group": "SIDE",
+      "name": "Outer side L",
+      "corner": [
+        "F-T",
+        "FT",
+        0
+      ],
+      "size": [
+        "T",
+        "D-FT",
+        "H"
+      ],
+      "source_definition": "86774",
+      "material": "plywood_3_4",
+      "grain_axis": 2,
+      "cuts": [
+        {
+          "name": "shelf-dado-0",
+          "corner": [
+            "F-G",
+            "FT",
+            "bottom_z"
+          ],
+          "size": [
+            "G",
+            "D-FT",
+            "T"
+          ]
+        },
+        {
+          "name": "shelf-dado-1",
+          "corner": [
+            "F-G",
+            "FT",
+            "bottom_z+step"
+          ],
+          "size": [
+            "G",
+            "D-FT",
+            "T"
+          ]
+        },
+        {
+          "name": "shelf-dado-2",
+          "corner": [
+            "F-G",
+            "FT",
+            "bottom_z+2*step"
+          ],
+          "size": [
+            "G",
+            "D-FT",
+            "T"
+          ]
+        },
+        {
+          "name": "shelf-dado-3",
+          "corner": [
+            "F-G",
+            "FT",
+            "bottom_z+3*step"
+          ],
+          "size": [
+            "G",
+            "D-FT",
+            "T"
+          ]
+        },
+        {
+          "name": "shelf-dado-4",
+          "corner": [
+            "F-G",
+            "FT",
+            "H-T"
+          ],
+          "size": [
+            "G",
+            "D-FT",
+            "T"
+          ]
+        },
+        {
+          "name": "back-groove",
+          "corner": [
+            "F-G",
+            "rear",
+            0
+          ],
+          "size": [
+            "G",
+            "B",
+            "H"
+          ]
+        },
+        {
+          "name": "baseboard-relief",
+          "corner": [
+            "F-T",
+            "D-base_d",
+            0
+          ],
+          "size": [
+            "T",
+            "base_d",
+            "base_h"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SIDE-R",
+      "group": "SIDE",
+      "name": "Outer side R",
+      "corner": [
+        "W-F",
+        "FT",
+        0
+      ],
+      "size": [
+        "T",
+        "D-FT",
+        "H"
+      ],
+      "source_definition": "86774",
+      "material": "plywood_3_4",
+      "grain_axis": 2,
+      "cuts": [
+        {
+          "name": "shelf-dado-0",
+          "corner": [
+            "W-F",
+            "FT",
+            "bottom_z"
+          ],
+          "size": [
+            "G",
+            "D-FT",
+            "T"
+          ]
+        },
+        {
+          "name": "shelf-dado-1",
+          "corner": [
+            "W-F",
+            "FT",
+            "bottom_z+step"
+          ],
+          "size": [
+            "G",
+            "D-FT",
+            "T"
+          ]
+        },
+        {
+          "name": "shelf-dado-2",
+          "corner": [
+            "W-F",
+            "FT",
+            "bottom_z+2*step"
+          ],
+          "size": [
+            "G",
+            "D-FT",
+            "T"
+          ]
+        },
+        {
+          "name": "shelf-dado-3",
+          "corner": [
+            "W-F",
+            "FT",
+            "bottom_z+3*step"
+          ],
+          "size": [
+            "G",
+            "D-FT",
+            "T"
+          ]
+        },
+        {
+          "name": "shelf-dado-4",
+          "corner": [
+            "W-F",
+            "FT",
+            "H-T"
+          ],
+          "size": [
+            "G",
+            "D-FT",
+            "T"
+          ]
+        },
+        {
+          "name": "back-groove",
+          "corner": [
+            "W-F",
+            "rear",
+            0
+          ],
+          "size": [
+            "G",
+            "B",
+            "H"
+          ]
+        },
+        {
+          "name": "baseboard-relief",
+          "corner": [
+            "W-F",
+            "D-base_d",
+            0
+          ],
+          "size": [
+            "T",
+            "base_d",
+            "base_h"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DIV-1",
+      "group": "DIV",
+      "name": "Divider 1",
+      "corner": [
+        "div1",
+        "FT",
+        "bottom_z+T-G"
+      ],
+      "size": [
+        "T",
+        "shelf_depth",
+        "H-T+G-(bottom_z+T-G)"
+      ],
+      "source_definition": "87277",
+      "material": "plywood_3_4",
+      "grain_axis": 2,
+      "cuts": [
+        {
+          "name": "dado-0-left",
+          "corner": [
+            "div1",
+            "FT",
+            "bottom_z+step"
+          ],
+          "size": [
+            "G",
+            "shelf_depth",
+            "T"
+          ]
+        },
+        {
+          "name": "dado-0-right",
+          "corner": [
+            "div1+T-G",
+            "FT",
+            "bottom_z+step"
+          ],
+          "size": [
+            "G",
+            "shelf_depth",
+            "T"
+          ]
+        },
+        {
+          "name": "dado-1-left",
+          "corner": [
+            "div1",
+            "FT",
+            "bottom_z+2*step"
+          ],
+          "size": [
+            "G",
+            "shelf_depth",
+            "T"
+          ]
+        },
+        {
+          "name": "dado-1-right",
+          "corner": [
+            "div1+T-G",
+            "FT",
+            "bottom_z+2*step"
+          ],
+          "size": [
+            "G",
+            "shelf_depth",
+            "T"
+          ]
+        },
+        {
+          "name": "dado-2-left",
+          "corner": [
+            "div1",
+            "FT",
+            "bottom_z+3*step"
+          ],
+          "size": [
+            "G",
+            "shelf_depth",
+            "T"
+          ]
+        },
+        {
+          "name": "dado-2-right",
+          "corner": [
+            "div1+T-G",
+            "FT",
+            "bottom_z+3*step"
+          ],
+          "size": [
+            "G",
+            "shelf_depth",
+            "T"
+          ]
+        },
+        {
+          "name": "light-wire-relief",
+          "corner": [
+            "div1",
+            "FT",
+            "bottom_z+step+T-F-wire_h"
+          ],
+          "size": [
+            "T",
+            "wire_d",
+            "wire_h"
+          ]
+        },
+        {
+          "name": "light-wire-relief",
+          "corner": [
+            "div1",
+            "FT",
+            "bottom_z+2*step+T-F-wire_h"
+          ],
+          "size": [
+            "T",
+            "wire_d",
+            "wire_h"
+          ]
+        },
+        {
+          "name": "light-wire-relief",
+          "corner": [
+            "div1",
+            "FT",
+            "bottom_z+3*step+T-F-wire_h"
+          ],
+          "size": [
+            "T",
+            "wire_d",
+            "wire_h"
+          ]
+        },
+        {
+          "name": "light-wire-relief",
+          "corner": [
+            "div1",
+            "FT",
+            "H-F-wire_h"
+          ],
+          "size": [
+            "T",
+            "wire_d",
+            "wire_h"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DIV-2",
+      "group": "DIV",
+      "name": "Divider 2",
+      "corner": [
+        "div2",
+        "FT",
+        "bottom_z+T-G"
+      ],
+      "size": [
+        "T",
+        "shelf_depth",
+        "H-T+G-(bottom_z+T-G)"
+      ],
+      "source_definition": "87277",
+      "material": "plywood_3_4",
+      "grain_axis": 2,
+      "cuts": [
+        {
+          "name": "dado-0-left",
+          "corner": [
+            "div2",
+            "FT",
+            "bottom_z+step"
+          ],
+          "size": [
+            "G",
+            "shelf_depth",
+            "T"
+          ]
+        },
+        {
+          "name": "dado-0-right",
+          "corner": [
+            "div2+T-G",
+            "FT",
+            "bottom_z+step"
+          ],
+          "size": [
+            "G",
+            "shelf_depth",
+            "T"
+          ]
+        },
+        {
+          "name": "dado-1-left",
+          "corner": [
+            "div2",
+            "FT",
+            "bottom_z+2*step"
+          ],
+          "size": [
+            "G",
+            "shelf_depth",
+            "T"
+          ]
+        },
+        {
+          "name": "dado-1-right",
+          "corner": [
+            "div2+T-G",
+            "FT",
+            "bottom_z+2*step"
+          ],
+          "size": [
+            "G",
+            "shelf_depth",
+            "T"
+          ]
+        },
+        {
+          "name": "dado-2-left",
+          "corner": [
+            "div2",
+            "FT",
+            "bottom_z+3*step"
+          ],
+          "size": [
+            "G",
+            "shelf_depth",
+            "T"
+          ]
+        },
+        {
+          "name": "dado-2-right",
+          "corner": [
+            "div2+T-G",
+            "FT",
+            "bottom_z+3*step"
+          ],
+          "size": [
+            "G",
+            "shelf_depth",
+            "T"
+          ]
+        },
+        {
+          "name": "light-wire-relief",
+          "corner": [
+            "div2",
+            "FT",
+            "bottom_z+step+T-F-wire_h"
+          ],
+          "size": [
+            "T",
+            "wire_d",
+            "wire_h"
+          ]
+        },
+        {
+          "name": "light-wire-relief",
+          "corner": [
+            "div2",
+            "FT",
+            "bottom_z+2*step+T-F-wire_h"
+          ],
+          "size": [
+            "T",
+            "wire_d",
+            "wire_h"
+          ]
+        },
+        {
+          "name": "light-wire-relief",
+          "corner": [
+            "div2",
+            "FT",
+            "bottom_z+3*step+T-F-wire_h"
+          ],
+          "size": [
+            "T",
+            "wire_d",
+            "wire_h"
+          ]
+        },
+        {
+          "name": "light-wire-relief",
+          "corner": [
+            "div2",
+            "FT",
+            "H-F-wire_h"
+          ],
+          "size": [
+            "T",
+            "wire_d",
+            "wire_h"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BOT",
+      "group": "TOPBOT",
+      "name": "Bot",
+      "corner": [
+        "panel_start",
+        "FT",
+        "bottom_z"
+      ],
+      "size": [
+        "panel_width",
+        "D-FT",
+        "T"
+      ],
+      "source_definition": "89912",
+      "material": "plywood_3_4",
+      "grain_axis": 0,
+      "cuts": [
+        {
+          "name": "divider-dado-0",
+          "corner": [
+            "div1",
+            "FT",
+            "bottom_z+T-G"
+          ],
+          "size": [
+            "T",
+            "D-FT",
+            "G"
+          ]
+        },
+        {
+          "name": "divider-dado-1",
+          "corner": [
+            "div2",
+            "FT",
+            "bottom_z+T-G"
+          ],
+          "size": [
+            "T",
+            "D-FT",
+            "G"
+          ]
+        },
+        {
+          "name": "back-groove",
+          "corner": [
+            "panel_start",
+            "rear",
+            "bottom_z+T-G"
+          ],
+          "size": [
+            "panel_width",
+            "B",
+            "G"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TOP",
+      "group": "TOPBOT",
+      "name": "Top",
+      "corner": [
+        "panel_start",
+        "FT",
+        "H-T"
+      ],
+      "size": [
+        "panel_width",
+        "D-FT",
+        "T"
+      ],
+      "source_definition": "89912",
+      "material": "plywood_3_4",
+      "grain_axis": 0,
+      "cuts": [
+        {
+          "name": "divider-dado-0",
+          "corner": [
+            "div1",
+            "FT",
+            "H-T"
+          ],
+          "size": [
+            "T",
+            "D-FT",
+            "G"
+          ]
+        },
+        {
+          "name": "divider-dado-1",
+          "corner": [
+            "div2",
+            "FT",
+            "H-T"
+          ],
+          "size": [
+            "T",
+            "D-FT",
+            "G"
+          ]
+        },
+        {
+          "name": "back-groove",
+          "corner": [
+            "panel_start",
+            "rear",
+            "H-T"
+          ],
+          "size": [
+            "panel_width",
+            "B",
+            "G"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SH-L1",
+      "group": "SHELF-OUT",
+      "name": "Shelf L1",
+      "corner": [
+        "F-G",
+        "FT",
+        "bottom_z+step"
+      ],
+      "size": [
+        "div1+G-(F-G)",
+        "shelf_depth",
+        "T"
+      ],
+      "source_definition": "89139",
+      "material": "plywood_3_4",
+      "grain_axis": 1,
+      "cuts": []
+    },
+    {
+      "id": "SH-C1",
+      "group": "SHELF-CENTER",
+      "name": "Shelf C1",
+      "corner": [
+        "div1+T-G",
+        "FT",
+        "bottom_z+step"
+      ],
+      "size": [
+        "div2+G-(div1+T-G)",
+        "shelf_depth",
+        "T"
+      ],
+      "source_definition": "89502",
+      "material": "plywood_3_4",
+      "grain_axis": 1,
+      "cuts": []
+    },
+    {
+      "id": "SH-R1",
+      "group": "SHELF-OUT",
+      "name": "Shelf R1",
+      "corner": [
+        "div2+T-G",
+        "FT",
+        "bottom_z+step"
+      ],
+      "size": [
+        "W-F+G-(div2+T-G)",
+        "shelf_depth",
+        "T"
+      ],
+      "source_definition": "89139",
+      "material": "plywood_3_4",
+      "grain_axis": 1,
+      "cuts": []
+    },
+    {
+      "id": "SH-L2",
+      "group": "SHELF-OUT",
+      "name": "Shelf L2",
+      "corner": [
+        "F-G",
+        "FT",
+        "bottom_z+2*step"
+      ],
+      "size": [
+        "div1+G-(F-G)",
+        "shelf_depth",
+        "T"
+      ],
+      "source_definition": "89139",
+      "material": "plywood_3_4",
+      "grain_axis": 1,
+      "cuts": []
+    },
+    {
+      "id": "SH-C2",
+      "group": "SHELF-CENTER",
+      "name": "Shelf C2",
+      "corner": [
+        "div1+T-G",
+        "FT",
+        "bottom_z+2*step"
+      ],
+      "size": [
+        "div2+G-(div1+T-G)",
+        "shelf_depth",
+        "T"
+      ],
+      "source_definition": "89502",
+      "material": "plywood_3_4",
+      "grain_axis": 1,
+      "cuts": []
+    },
+    {
+      "id": "SH-R2",
+      "group": "SHELF-OUT",
+      "name": "Shelf R2",
+      "corner": [
+        "div2+T-G",
+        "FT",
+        "bottom_z+2*step"
+      ],
+      "size": [
+        "W-F+G-(div2+T-G)",
+        "shelf_depth",
+        "T"
+      ],
+      "source_definition": "89139",
+      "material": "plywood_3_4",
+      "grain_axis": 1,
+      "cuts": []
+    },
+    {
+      "id": "SH-L3",
+      "group": "SHELF-OUT",
+      "name": "Shelf L3",
+      "corner": [
+        "F-G",
+        "FT",
+        "bottom_z+3*step"
+      ],
+      "size": [
+        "div1+G-(F-G)",
+        "shelf_depth",
+        "T"
+      ],
+      "source_definition": "89139",
+      "material": "plywood_3_4",
+      "grain_axis": 1,
+      "cuts": []
+    },
+    {
+      "id": "SH-C3",
+      "group": "SHELF-CENTER",
+      "name": "Shelf C3",
+      "corner": [
+        "div1+T-G",
+        "FT",
+        "bottom_z+3*step"
+      ],
+      "size": [
+        "div2+G-(div1+T-G)",
+        "shelf_depth",
+        "T"
+      ],
+      "source_definition": "89502",
+      "material": "plywood_3_4",
+      "grain_axis": 1,
+      "cuts": []
+    },
+    {
+      "id": "SH-R3",
+      "group": "SHELF-OUT",
+      "name": "Shelf R3",
+      "corner": [
+        "div2+T-G",
+        "FT",
+        "bottom_z+3*step"
+      ],
+      "size": [
+        "W-F+G-(div2+T-G)",
+        "shelf_depth",
+        "T"
+      ],
+      "source_definition": "89139",
+      "material": "plywood_3_4",
+      "grain_axis": 1,
+      "cuts": []
+    },
+    {
+      "id": "BACK",
+      "group": "BACK",
+      "name": "Back",
+      "corner": [
+        "panel_start+back_clearance/2",
+        "rear",
+        "bottom_z+T-G+back_clearance/2"
+      ],
+      "size": [
+        "panel_width-back_clearance",
+        "B",
+        "H-T+G-(bottom_z+T-G)-back_clearance"
+      ],
+      "source_definition": "90470",
+      "material": "plywood_1_4",
+      "grain_axis": 2,
+      "cuts": []
+    },
+    {
+      "id": "ST-1",
+      "group": "STILE",
+      "name": "Stile 1",
+      "corner": [
+        0,
+        0,
+        "frame_bottom"
+      ],
+      "size": [
+        "F",
+        "FT",
+        "H-frame_bottom"
+      ],
+      "source_definition": "87665",
+      "material": "maple",
+      "grain_axis": 2,
+      "cuts": []
+    },
+    {
+      "id": "ST-2",
+      "group": "STILE",
+      "name": "Stile 2",
+      "corner": [
+        "F+bay",
+        0,
+        "frame_bottom"
+      ],
+      "size": [
+        "F",
+        "FT",
+        "H-frame_bottom"
+      ],
+      "source_definition": "87665",
+      "material": "maple",
+      "grain_axis": 2,
+      "cuts": []
+    },
+    {
+      "id": "ST-3",
+      "group": "STILE",
+      "name": "Stile 3",
+      "corner": [
+        "2*F+2*bay",
+        0,
+        "frame_bottom"
+      ],
+      "size": [
+        "F",
+        "FT",
+        "H-frame_bottom"
+      ],
+      "source_definition": "87665",
+      "material": "maple",
+      "grain_axis": 2,
+      "cuts": []
+    },
+    {
+      "id": "ST-4",
+      "group": "STILE",
+      "name": "Stile 4",
+      "corner": [
+        "W-F",
+        0,
+        "frame_bottom"
+      ],
+      "size": [
+        "F",
+        "FT",
+        "H-frame_bottom"
+      ],
+      "source_definition": "87665",
+      "material": "maple",
+      "grain_axis": 2,
+      "cuts": []
+    },
+    {
+      "id": "RA-11",
+      "group": "RAIL",
+      "name": "Rail 11",
+      "corner": [
+        "F",
+        0,
+        "frame_bottom+F-F"
+      ],
+      "size": [
+        "bay",
+        "FT",
+        "F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-12",
+      "group": "RAIL",
+      "name": "Rail 12",
+      "corner": [
+        "2*F+bay",
+        0,
+        "frame_bottom+F-F"
+      ],
+      "size": [
+        "bay",
+        "FT",
+        "F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-13",
+      "group": "RAIL",
+      "name": "Rail 13",
+      "corner": [
+        "3*F+2*bay",
+        0,
+        "frame_bottom+F-F"
+      ],
+      "size": [
+        "bay",
+        "FT",
+        "F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-21",
+      "group": "RAIL",
+      "name": "Rail 21",
+      "corner": [
+        "F",
+        0,
+        "bottom_z+step+T-F"
+      ],
+      "size": [
+        "bay",
+        "FT",
+        "F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-22",
+      "group": "RAIL",
+      "name": "Rail 22",
+      "corner": [
+        "2*F+bay",
+        0,
+        "bottom_z+step+T-F"
+      ],
+      "size": [
+        "bay",
+        "FT",
+        "F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-23",
+      "group": "RAIL",
+      "name": "Rail 23",
+      "corner": [
+        "3*F+2*bay",
+        0,
+        "bottom_z+step+T-F"
+      ],
+      "size": [
+        "bay",
+        "FT",
+        "F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-31",
+      "group": "RAIL",
+      "name": "Rail 31",
+      "corner": [
+        "F",
+        0,
+        "bottom_z+2*step+T-F"
+      ],
+      "size": [
+        "bay",
+        "FT",
+        "F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-32",
+      "group": "RAIL",
+      "name": "Rail 32",
+      "corner": [
+        "2*F+bay",
+        0,
+        "bottom_z+2*step+T-F"
+      ],
+      "size": [
+        "bay",
+        "FT",
+        "F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-33",
+      "group": "RAIL",
+      "name": "Rail 33",
+      "corner": [
+        "3*F+2*bay",
+        0,
+        "bottom_z+2*step+T-F"
+      ],
+      "size": [
+        "bay",
+        "FT",
+        "F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-41",
+      "group": "RAIL",
+      "name": "Rail 41",
+      "corner": [
+        "F",
+        0,
+        "bottom_z+3*step+T-F"
+      ],
+      "size": [
+        "bay",
+        "FT",
+        "F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-42",
+      "group": "RAIL",
+      "name": "Rail 42",
+      "corner": [
+        "2*F+bay",
+        0,
+        "bottom_z+3*step+T-F"
+      ],
+      "size": [
+        "bay",
+        "FT",
+        "F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-43",
+      "group": "RAIL",
+      "name": "Rail 43",
+      "corner": [
+        "3*F+2*bay",
+        0,
+        "bottom_z+3*step+T-F"
+      ],
+      "size": [
+        "bay",
+        "FT",
+        "F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-51",
+      "group": "RAIL",
+      "name": "Rail 51",
+      "corner": [
+        "F",
+        0,
+        "H-F"
+      ],
+      "size": [
+        "bay",
+        "FT",
+        "F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-52",
+      "group": "RAIL",
+      "name": "Rail 52",
+      "corner": [
+        "2*F+bay",
+        0,
+        "H-F"
+      ],
+      "size": [
+        "bay",
+        "FT",
+        "F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-53",
+      "group": "RAIL",
+      "name": "Rail 53",
+      "corner": [
+        "3*F+2*bay",
+        0,
+        "H-F"
+      ],
+      "size": [
+        "bay",
+        "FT",
+        "F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    }
+  ],
+  "shop": {
+    "kerf_in": 0.125,
+    "hardwood_default_board_in": [
+      6,
+      96
+    ],
+    "sheet_in": [
+      48,
+      96
+    ],
+    "edge_trim_in": 0.25,
+    "hardwood_rough_width_allowance_in": 0.125,
+    "hardwood_rough_length_allowance_in": 1.0,
+    "back_total_edge_clearance_in": 0.0625,
+    "grain": "sheet grain along 96 inch; longest shelf dimension; top/bottom across cabinet width"
+  },
+  "confirmed": [
+    "Normalize source dimensions to practical sizes",
+    "Saw kerf 1/8 inch",
+    "Use nominal 1/4 inch plywood back"
+  ],
+  "assumptions": [
+    "3/4 inch stock modeled exactly 0.750 inch; measure actual plywood before machining.",
+    "1/4 inch back modeled exactly 0.250 inch; test-fit grooves to actual panel.",
+    "Dado depth 1/4 inch supported by source geometry; exact-width nominal dado, no extra clearance.",
+    "Back width and height each shortened 1/16 inch for assembly clearance.",
+    "Hardwood face frame: butt joints, glue and pocket screws; screw boring not modeled.",
+    "Sheet perimeter trim 1/4 inch each edge; verify actual sheet size and edge condition.",
+    "Hardwood rough allowance: +1/8 inch width, +1 inch length.",
+    "Run side dados, side back grooves and panel divider dados through; use stopped cuts only where an exit must be hidden or a functional constraint requires them.",
+    "No doors or hardware added; source organizer has neither."
+  ]
+}

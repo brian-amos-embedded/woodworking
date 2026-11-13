@@ -1,0 +1,670 @@
+[
+  {
+    "stock": [
+      48,
+      96
+    ],
+    "trim": 0.25,
+    "kerf": 0.125,
+    "cuts": [
+      {
+        "parent": "S1",
+        "parent_rect": [
+          0.25,
+          0.25,
+          47.5,
+          95.5
+        ],
+        "first": "S1A",
+        "second": "S1B",
+        "action": "Rip",
+        "keep": 17.375
+      },
+      {
+        "parent": "S1B",
+        "parent_rect": [
+          17.75,
+          0.25,
+          30.0,
+          95.5
+        ],
+        "first": "S1BA",
+        "second": "S1BB",
+        "action": "Rip",
+        "keep": 17.375
+      },
+      {
+        "parent": "S1BB",
+        "parent_rect": [
+          35.25,
+          0.25,
+          12.5,
+          95.5
+        ],
+        "first": "S1BBA",
+        "second": "S1BBB",
+        "action": "Rip",
+        "keep": 7.75
+      },
+      {
+        "parent": "S1A",
+        "parent_rect": [
+          0.25,
+          0.25,
+          17.375,
+          95.5
+        ],
+        "first": "S1AA",
+        "second": "S1AB",
+        "action": "Crosscut",
+        "keep": 36.25
+      },
+      {
+        "parent": "S1AB",
+        "parent_rect": [
+          0.25,
+          36.625,
+          17.375,
+          59.125
+        ],
+        "first": "S1ABA",
+        "second": "S1ABB",
+        "action": "Crosscut",
+        "keep": 36.25
+      },
+      {
+        "parent": "S1ABB",
+        "parent_rect": [
+          0.25,
+          73.0,
+          17.375,
+          22.75
+        ],
+        "first": "S1ABBA",
+        "second": "S1ABBB",
+        "action": "Crosscut",
+        "keep": 22.5
+      },
+      {
+        "parent": "S1BA",
+        "parent_rect": [
+          17.75,
+          0.25,
+          17.375,
+          95.5
+        ],
+        "first": "S1BAA",
+        "second": "S1BAB",
+        "action": "Crosscut",
+        "keep": 31.75
+      },
+      {
+        "parent": "S1BAA",
+        "parent_rect": [
+          17.75,
+          0.25,
+          17.375,
+          31.75
+        ],
+        "first": "S1BAAA",
+        "second": "S1BAAB",
+        "action": "Rip",
+        "keep": 16.625
+      },
+      {
+        "parent": "S1BAB",
+        "parent_rect": [
+          17.75,
+          32.125,
+          17.375,
+          63.625
+        ],
+        "first": "S1BABA",
+        "second": "S1BABB",
+        "action": "Crosscut",
+        "keep": 31.75
+      },
+      {
+        "parent": "S1BABA",
+        "parent_rect": [
+          17.75,
+          32.125,
+          17.375,
+          31.75
+        ],
+        "first": "S1BABAA",
+        "second": "S1BABAB",
+        "action": "Rip",
+        "keep": 16.625
+      },
+      {
+        "parent": "S1BABB",
+        "parent_rect": [
+          17.75,
+          64.0,
+          17.375,
+          31.75
+        ],
+        "first": "S1BABBA",
+        "second": "S1BABBB",
+        "action": "Crosscut",
+        "keep": 22.5
+      },
+      {
+        "parent": "S1BBA",
+        "parent_rect": [
+          35.25,
+          0.25,
+          7.75,
+          95.5
+        ],
+        "first": "S1BBAA",
+        "second": "S1BBAB",
+        "action": "Crosscut",
+        "keep": 16.625
+      },
+      {
+        "parent": "S1BBAB",
+        "parent_rect": [
+          35.25,
+          17.0,
+          7.75,
+          78.75
+        ],
+        "first": "S1BBABA",
+        "second": "S1BBABB",
+        "action": "Crosscut",
+        "keep": 16.625
+      },
+      {
+        "parent": "S1BBABB",
+        "parent_rect": [
+          35.25,
+          33.75,
+          7.75,
+          62.0
+        ],
+        "first": "S1BBABBA",
+        "second": "S1BBABBB",
+        "action": "Crosscut",
+        "keep": 16.625
+      },
+      {
+        "parent": "S1BBABBB",
+        "parent_rect": [
+          35.25,
+          50.5,
+          7.75,
+          45.25
+        ],
+        "first": "S1BBABBBA",
+        "second": "S1BBABBBB",
+        "action": "Crosscut",
+        "keep": 16.625
+      },
+      {
+        "parent": "S1BBABBBA",
+        "parent_rect": [
+          35.25,
+          50.5,
+          7.75,
+          16.625
+        ],
+        "first": "S1BBABBBAA",
+        "second": "S1BBABBBAB",
+        "action": "Rip",
+        "keep": 7.125
+      },
+      {
+        "parent": "S1BBABBBB",
+        "parent_rect": [
+          35.25,
+          67.25,
+          7.75,
+          28.5
+        ],
+        "first": "S1BBABBBBA",
+        "second": "S1BBABBBBB",
+        "action": "Crosscut",
+        "keep": 16.625
+      },
+      {
+        "parent": "S1BBABBBBA",
+        "parent_rect": [
+          35.25,
+          67.25,
+          7.75,
+          16.625
+        ],
+        "first": "S1BBABBBBAA",
+        "second": "S1BBABBBBAB",
+        "action": "Rip",
+        "keep": 7.125
+      }
+    ],
+    "parts": {
+      "SIDE-L": [
+        0.25,
+        0.25,
+        17.375,
+        36.25
+      ],
+      "SIDE-R": [
+        0.25,
+        36.625,
+        17.375,
+        36.25
+      ],
+      "TOP": [
+        0.25,
+        73.0,
+        17.375,
+        22.5
+      ],
+      "DIV-1": [
+        17.75,
+        0.25,
+        16.625,
+        31.75
+      ],
+      "DIV-2": [
+        17.75,
+        32.125,
+        16.625,
+        31.75
+      ],
+      "BOT": [
+        17.75,
+        64.0,
+        17.375,
+        22.5
+      ],
+      "SH-C1": [
+        35.25,
+        0.25,
+        7.75,
+        16.625
+      ],
+      "SH-C2": [
+        35.25,
+        17.0,
+        7.75,
+        16.625
+      ],
+      "SH-C3": [
+        35.25,
+        33.75,
+        7.75,
+        16.625
+      ],
+      "SH-L1": [
+        35.25,
+        50.5,
+        7.125,
+        16.625
+      ],
+      "SH-R1": [
+        35.25,
+        67.25,
+        7.125,
+        16.625
+      ]
+    },
+    "part_labels": {
+      "S1AA": "SIDE-L",
+      "S1ABA": "SIDE-R",
+      "S1ABBA": "TOP",
+      "S1BAAA": "DIV-1",
+      "S1BABAA": "DIV-2",
+      "S1BABBA": "BOT",
+      "S1BBAA": "SH-C1",
+      "S1BBABA": "SH-C2",
+      "S1BBABBA": "SH-C3",
+      "S1BBABBBAA": "SH-L1",
+      "S1BBABBBBAA": "SH-R1"
+    },
+    "offcuts": [
+      [
+        "Sheet offcut",
+        "S1BBB",
+        [
+          43.125,
+          0.25,
+          4.625,
+          95.5
+        ]
+      ],
+      [
+        "Strip offcut",
+        "S1ABBB",
+        [
+          0.25,
+          95.625,
+          17.375,
+          0.125
+        ]
+      ],
+      [
+        "DIV-1 side offcut",
+        "S1BAAB",
+        [
+          34.5,
+          0.25,
+          0.625,
+          31.75
+        ]
+      ],
+      [
+        "DIV-2 side offcut",
+        "S1BABAB",
+        [
+          34.5,
+          32.125,
+          0.625,
+          31.75
+        ]
+      ],
+      [
+        "Strip offcut",
+        "S1BABBB",
+        [
+          17.75,
+          86.625,
+          17.375,
+          9.125
+        ]
+      ],
+      [
+        "SH-L1 side offcut",
+        "S1BBABBBAB",
+        [
+          42.5,
+          50.5,
+          0.5,
+          16.625
+        ]
+      ],
+      [
+        "SH-R1 side offcut",
+        "S1BBABBBBAB",
+        [
+          42.5,
+          67.25,
+          0.5,
+          16.625
+        ]
+      ],
+      [
+        "Strip offcut",
+        "S1BBABBBBB",
+        [
+          35.25,
+          84.0,
+          7.75,
+          11.75
+        ]
+      ]
+    ],
+    "name": "S1",
+    "material": "plywood_3_4",
+    "lanes": [
+      [
+        "SIDE-L",
+        "SIDE-R",
+        "TOP"
+      ],
+      [
+        "DIV-1",
+        "DIV-2",
+        "BOT"
+      ],
+      [
+        "SH-C1",
+        "SH-C2",
+        "SH-C3",
+        "SH-L1",
+        "SH-R1"
+      ]
+    ]
+  },
+  {
+    "stock": [
+      16,
+      36
+    ],
+    "trim": 0.25,
+    "kerf": 0.125,
+    "cuts": [
+      {
+        "parent": "S2",
+        "parent_rect": [
+          0.25,
+          0.25,
+          15.5,
+          35.5
+        ],
+        "first": "S2A",
+        "second": "S2B",
+        "action": "Rip",
+        "keep": 7.125
+      },
+      {
+        "parent": "S2B",
+        "parent_rect": [
+          7.5,
+          0.25,
+          8.25,
+          35.5
+        ],
+        "first": "S2BA",
+        "second": "S2BB",
+        "action": "Rip",
+        "keep": 7.125
+      },
+      {
+        "parent": "S2A",
+        "parent_rect": [
+          0.25,
+          0.25,
+          7.125,
+          35.5
+        ],
+        "first": "S2AA",
+        "second": "S2AB",
+        "action": "Crosscut",
+        "keep": 16.625
+      },
+      {
+        "parent": "S2AB",
+        "parent_rect": [
+          0.25,
+          17.0,
+          7.125,
+          18.75
+        ],
+        "first": "S2ABA",
+        "second": "S2ABB",
+        "action": "Crosscut",
+        "keep": 16.625
+      },
+      {
+        "parent": "S2BA",
+        "parent_rect": [
+          7.5,
+          0.25,
+          7.125,
+          35.5
+        ],
+        "first": "S2BAA",
+        "second": "S2BAB",
+        "action": "Crosscut",
+        "keep": 16.625
+      },
+      {
+        "parent": "S2BAB",
+        "parent_rect": [
+          7.5,
+          17.0,
+          7.125,
+          18.75
+        ],
+        "first": "S2BABA",
+        "second": "S2BABB",
+        "action": "Crosscut",
+        "keep": 16.625
+      }
+    ],
+    "parts": {
+      "SH-L2": [
+        0.25,
+        0.25,
+        7.125,
+        16.625
+      ],
+      "SH-L3": [
+        0.25,
+        17.0,
+        7.125,
+        16.625
+      ],
+      "SH-R2": [
+        7.5,
+        0.25,
+        7.125,
+        16.625
+      ],
+      "SH-R3": [
+        7.5,
+        17.0,
+        7.125,
+        16.625
+      ]
+    },
+    "part_labels": {
+      "S2AA": "SH-L2",
+      "S2ABA": "SH-L3",
+      "S2BAA": "SH-R2",
+      "S2BABA": "SH-R3"
+    },
+    "offcuts": [
+      [
+        "Sheet offcut",
+        "S2BB",
+        [
+          14.75,
+          0.25,
+          1.0,
+          35.5
+        ]
+      ],
+      [
+        "Strip offcut",
+        "S2ABB",
+        [
+          0.25,
+          33.75,
+          7.125,
+          2.0
+        ]
+      ],
+      [
+        "Strip offcut",
+        "S2BABB",
+        [
+          7.5,
+          33.75,
+          7.125,
+          2.0
+        ]
+      ]
+    ],
+    "name": "S2",
+    "material": "plywood_3_4",
+    "lanes": [
+      [
+        "SH-L2",
+        "SH-L3"
+      ],
+      [
+        "SH-R2",
+        "SH-R3"
+      ]
+    ]
+  },
+  {
+    "stock": [
+      24,
+      36
+    ],
+    "trim": 0.25,
+    "kerf": 0.125,
+    "cuts": [
+      {
+        "parent": "S3",
+        "parent_rect": [
+          0.25,
+          0.25,
+          23.5,
+          35.5
+        ],
+        "first": "S3A",
+        "second": "S3B",
+        "action": "Rip",
+        "keep": 22.4375
+      },
+      {
+        "parent": "S3A",
+        "parent_rect": [
+          0.25,
+          0.25,
+          22.4375,
+          35.5
+        ],
+        "first": "S3AA",
+        "second": "S3AB",
+        "action": "Crosscut",
+        "keep": 31.6875
+      }
+    ],
+    "parts": {
+      "BACK": [
+        0.25,
+        0.25,
+        22.4375,
+        31.6875
+      ]
+    },
+    "part_labels": {
+      "S3AA": "BACK"
+    },
+    "offcuts": [
+      [
+        "Sheet offcut",
+        "S3B",
+        [
+          22.8125,
+          0.25,
+          0.9375,
+          35.5
+        ]
+      ],
+      [
+        "Strip offcut",
+        "S3AB",
+        [
+          0.25,
+          32.0625,
+          22.4375,
+          3.6875
+        ]
+      ]
+    ],
+    "name": "S3",
+    "material": "plywood_1_4",
+    "lanes": [
+      [
+        "BACK"
+      ]
+    ]
+  }
+]

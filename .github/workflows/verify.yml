@@ -1,0 +1,14 @@
+name: Verify headless CAD
+on: [push, workflow_dispatch]
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build --platform linux/amd64 -t woodworking-solidcraft:0.40.1 .
+      - run: mkdir -p work && chmod 0777 work
+      - run: docker run --rm --platform linux/amd64 --mount type=bind,source="$PWD/work",target=/work --entrypoint python3 woodworking-solidcraft:0.40.1 /opt/trial/scripts/smoke_mcp.py --output /work
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cad-smoke-results
+          path: work/

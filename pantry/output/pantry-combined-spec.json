@@ -1,0 +1,1770 @@
+{
+  "name": "Pantry side bays",
+  "revision": "R1",
+  "parameters_in": {
+    "bay": 20.75,
+    "center": 26,
+    "depth": 18.125,
+    "height": 36.25,
+    "top_t": 1.5,
+    "stock": 0.75,
+    "rail_h": 2,
+    "cleat_h": 1,
+    "lap": 0.5,
+    "nose": 1.5,
+    "cleat_travel": 0.125,
+    "left_rear": 12,
+    "right_rear": 15,
+    "shelf_z": 12,
+    "fit": 0.0625,
+    "pin_w": 1.5,
+    "pin_bottom": 3.5,
+    "side_lip": 0,
+    "apron_gap": 0.125,
+    "led_d": 0.375,
+    "led_h": 0.625,
+    "led_end": 0.125,
+    "angle_leg": 0.625,
+    "org_W": 26,
+    "org_H": 36.25,
+    "org_D": 18.125,
+    "org_T": 0.75,
+    "org_FT": 0.75,
+    "org_F": 2,
+    "org_G": 0.25,
+    "org_B": 0.25,
+    "org_bottom_z": 3.5,
+    "org_frame_bottom": 2.25,
+    "org_step": 8,
+    "org_back_clearance": 0.0625,
+    "org_base_h": 3.5,
+    "org_base_d": 1.5,
+    "org_wire_h": 0.25,
+    "org_wire_d": 0.25
+  },
+  "derived_expressions": {
+    "org_bay": "(org_W-4*org_F)/3",
+    "org_div1": "org_F+org_bay+org_F/2-org_T/2",
+    "org_div2": "2*org_F+2*org_bay+org_F/2-org_T/2",
+    "org_rear": "org_D-org_FT",
+    "org_shelf_depth": "org_rear-org_FT",
+    "org_panel_start": "org_F-org_G",
+    "org_panel_width": "org_W-2*org_F+2*org_G"
+  },
+  "parts": [
+    {
+      "id": "TOP-01",
+      "name": "TOP-01",
+      "material": "butcherblock",
+      "corner": [
+        "-bay",
+        0,
+        "height"
+      ],
+      "size": [
+        "center+2*bay",
+        "depth",
+        "top_t"
+      ],
+      "cuts": [
+        {
+          "name": "Left stopped underside dado",
+          "corner": [
+            "-bay+side_lip",
+            "nose",
+            "height"
+          ],
+          "size": [
+            "stock",
+            "depth-nose",
+            "lap"
+          ]
+        },
+        {
+          "name": "Right stopped underside dado",
+          "corner": [
+            "center+bay-side_lip-stock",
+            "nose",
+            "height"
+          ],
+          "size": [
+            "stock",
+            "depth-nose",
+            "lap"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CL-L",
+      "name": "CL-L",
+      "material": "maple",
+      "corner": [
+        "-bay+side_lip",
+        "nose+cleat_travel",
+        "height+lap-cleat_h"
+      ],
+      "size": [
+        "stock",
+        "depth-nose-cleat_travel",
+        "cleat_h"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "ST-L",
+      "name": "ST-L",
+      "material": "maple",
+      "corner": [
+        "-bay",
+        0,
+        "pin_bottom"
+      ],
+      "size": [
+        "rail_h",
+        "stock",
+        "height-pin_bottom"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "PB-L",
+      "name": "PB-L",
+      "material": "maple",
+      "corner": [
+        "-bay",
+        "stock",
+        "pin_bottom"
+      ],
+      "size": [
+        "stock",
+        "2*stock",
+        "height+lap-cleat_h-pin_bottom"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "PS-L",
+      "name": "PS-L",
+      "material": "maple",
+      "corner": [
+        "-bay",
+        "left_rear",
+        "pin_bottom"
+      ],
+      "size": [
+        "stock",
+        "pin_w",
+        "height+lap-cleat_h-pin_bottom"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "TR-L",
+      "name": "TR-L",
+      "material": "maple",
+      "corner": [
+        "-bay+rail_h",
+        0,
+        "height-rail_h"
+      ],
+      "size": [
+        "bay-rail_h",
+        "stock",
+        "rail_h"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "SH-L",
+      "name": "SH-L",
+      "material": "plywood_3_4",
+      "corner": [
+        "-bay+stock+fit",
+        "2*stock",
+        "shelf_z"
+      ],
+      "size": [
+        "bay-stock-2*fit",
+        "depth-2*stock-fit",
+        "stock"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "FR-L",
+      "name": "FR-L",
+      "material": "maple",
+      "corner": [
+        "-bay+rail_h+apron_gap",
+        "stock",
+        "shelf_z+stock-rail_h"
+      ],
+      "size": [
+        "bay-rail_h-2*apron_gap",
+        "stock",
+        "rail_h"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "LED-SH-L",
+      "name": "LED-SH-L",
+      "material": "lighting",
+      "corner": [
+        "-bay+rail_h+apron_gap",
+        "2*stock",
+        "shelf_z+stock-rail_h"
+      ],
+      "size": [
+        "bay-rail_h-2*apron_gap",
+        "led_d",
+        "led_h"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "LED-TR-L",
+      "name": "LED-TR-L",
+      "material": "lighting",
+      "corner": [
+        "-bay+rail_h",
+        "stock",
+        "height-rail_h"
+      ],
+      "size": [
+        "bay-rail_h",
+        "led_d",
+        "led_h"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "CL-R",
+      "name": "CL-R",
+      "material": "maple",
+      "corner": [
+        "center+bay-side_lip-stock",
+        "nose+cleat_travel",
+        "height+lap-cleat_h"
+      ],
+      "size": [
+        "stock",
+        "depth-nose-cleat_travel",
+        "cleat_h"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "ST-R",
+      "name": "ST-R",
+      "material": "maple",
+      "corner": [
+        "center+bay-rail_h",
+        0,
+        "pin_bottom"
+      ],
+      "size": [
+        "rail_h",
+        "stock",
+        "height-pin_bottom"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "PB-R",
+      "name": "PB-R",
+      "material": "maple",
+      "corner": [
+        "center+bay-stock",
+        "stock",
+        "pin_bottom"
+      ],
+      "size": [
+        "stock",
+        "2*stock",
+        "height+lap-cleat_h-pin_bottom"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "PS-R",
+      "name": "PS-R",
+      "material": "maple",
+      "corner": [
+        "center+bay-stock",
+        "right_rear",
+        "pin_bottom"
+      ],
+      "size": [
+        "stock",
+        "pin_w",
+        "height+lap-cleat_h-pin_bottom"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "TR-R",
+      "name": "TR-R",
+      "material": "maple",
+      "corner": [
+        "center",
+        0,
+        "height-rail_h"
+      ],
+      "size": [
+        "bay-rail_h",
+        "stock",
+        "rail_h"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "SH-R",
+      "name": "SH-R",
+      "material": "plywood_3_4",
+      "corner": [
+        "center+fit",
+        "2*stock",
+        "shelf_z"
+      ],
+      "size": [
+        "bay-stock-2*fit",
+        "depth-2*stock-fit",
+        "stock"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "FR-R",
+      "name": "FR-R",
+      "material": "maple",
+      "corner": [
+        "center+apron_gap",
+        "stock",
+        "shelf_z+stock-rail_h"
+      ],
+      "size": [
+        "bay-rail_h-2*apron_gap",
+        "stock",
+        "rail_h"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "LED-SH-R",
+      "name": "LED-SH-R",
+      "material": "lighting",
+      "corner": [
+        "center+apron_gap",
+        "2*stock",
+        "shelf_z+stock-rail_h"
+      ],
+      "size": [
+        "bay-rail_h-2*apron_gap",
+        "led_d",
+        "led_h"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "LED-TR-R",
+      "name": "LED-TR-R",
+      "material": "lighting",
+      "corner": [
+        "center",
+        "stock",
+        "height-rail_h"
+      ],
+      "size": [
+        "bay-rail_h",
+        "led_d",
+        "led_h"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "SIDE-L",
+      "group": "SIDE",
+      "name": "Outer side L",
+      "corner": [
+        "org_F-org_T",
+        "org_FT",
+        0
+      ],
+      "size": [
+        "org_T",
+        "org_D-org_FT",
+        "org_H"
+      ],
+      "source_definition": "86774",
+      "material": "plywood_3_4",
+      "grain_axis": 2,
+      "cuts": [
+        {
+          "name": "shelf-dado-0",
+          "corner": [
+            "org_F-org_G",
+            "org_FT",
+            "org_bottom_z"
+          ],
+          "size": [
+            "org_G",
+            "org_D-org_FT",
+            "org_T"
+          ]
+        },
+        {
+          "name": "shelf-dado-1",
+          "corner": [
+            "org_F-org_G",
+            "org_FT",
+            "org_bottom_z+org_step"
+          ],
+          "size": [
+            "org_G",
+            "org_D-org_FT",
+            "org_T"
+          ]
+        },
+        {
+          "name": "shelf-dado-2",
+          "corner": [
+            "org_F-org_G",
+            "org_FT",
+            "org_bottom_z+2*org_step"
+          ],
+          "size": [
+            "org_G",
+            "org_D-org_FT",
+            "org_T"
+          ]
+        },
+        {
+          "name": "shelf-dado-3",
+          "corner": [
+            "org_F-org_G",
+            "org_FT",
+            "org_bottom_z+3*org_step"
+          ],
+          "size": [
+            "org_G",
+            "org_D-org_FT",
+            "org_T"
+          ]
+        },
+        {
+          "name": "shelf-dado-4",
+          "corner": [
+            "org_F-org_G",
+            "org_FT",
+            "org_H-org_T"
+          ],
+          "size": [
+            "org_G",
+            "org_D-org_FT",
+            "org_T"
+          ]
+        },
+        {
+          "name": "back-groove",
+          "corner": [
+            "org_F-org_G",
+            "org_rear",
+            0
+          ],
+          "size": [
+            "org_G",
+            "org_B",
+            "org_H"
+          ]
+        },
+        {
+          "name": "baseboard-relief",
+          "corner": [
+            "org_F-org_T",
+            "org_D-org_base_d",
+            0
+          ],
+          "size": [
+            "org_T",
+            "org_base_d",
+            "org_base_h"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SIDE-R",
+      "group": "SIDE",
+      "name": "Outer side R",
+      "corner": [
+        "org_W-org_F",
+        "org_FT",
+        0
+      ],
+      "size": [
+        "org_T",
+        "org_D-org_FT",
+        "org_H"
+      ],
+      "source_definition": "86774",
+      "material": "plywood_3_4",
+      "grain_axis": 2,
+      "cuts": [
+        {
+          "name": "shelf-dado-0",
+          "corner": [
+            "org_W-org_F",
+            "org_FT",
+            "org_bottom_z"
+          ],
+          "size": [
+            "org_G",
+            "org_D-org_FT",
+            "org_T"
+          ]
+        },
+        {
+          "name": "shelf-dado-1",
+          "corner": [
+            "org_W-org_F",
+            "org_FT",
+            "org_bottom_z+org_step"
+          ],
+          "size": [
+            "org_G",
+            "org_D-org_FT",
+            "org_T"
+          ]
+        },
+        {
+          "name": "shelf-dado-2",
+          "corner": [
+            "org_W-org_F",
+            "org_FT",
+            "org_bottom_z+2*org_step"
+          ],
+          "size": [
+            "org_G",
+            "org_D-org_FT",
+            "org_T"
+          ]
+        },
+        {
+          "name": "shelf-dado-3",
+          "corner": [
+            "org_W-org_F",
+            "org_FT",
+            "org_bottom_z+3*org_step"
+          ],
+          "size": [
+            "org_G",
+            "org_D-org_FT",
+            "org_T"
+          ]
+        },
+        {
+          "name": "shelf-dado-4",
+          "corner": [
+            "org_W-org_F",
+            "org_FT",
+            "org_H-org_T"
+          ],
+          "size": [
+            "org_G",
+            "org_D-org_FT",
+            "org_T"
+          ]
+        },
+        {
+          "name": "back-groove",
+          "corner": [
+            "org_W-org_F",
+            "org_rear",
+            0
+          ],
+          "size": [
+            "org_G",
+            "org_B",
+            "org_H"
+          ]
+        },
+        {
+          "name": "baseboard-relief",
+          "corner": [
+            "org_W-org_F",
+            "org_D-org_base_d",
+            0
+          ],
+          "size": [
+            "org_T",
+            "org_base_d",
+            "org_base_h"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DIV-1",
+      "group": "DIV",
+      "name": "Divider 1",
+      "corner": [
+        "org_div1",
+        "org_FT",
+        "org_bottom_z+org_T-org_G"
+      ],
+      "size": [
+        "org_T",
+        "org_shelf_depth",
+        "org_H-org_T+org_G-(org_bottom_z+org_T-org_G)"
+      ],
+      "source_definition": "87277",
+      "material": "plywood_3_4",
+      "grain_axis": 2,
+      "cuts": [
+        {
+          "name": "dado-0-left",
+          "corner": [
+            "org_div1",
+            "org_FT",
+            "org_bottom_z+org_step"
+          ],
+          "size": [
+            "org_G",
+            "org_shelf_depth",
+            "org_T"
+          ]
+        },
+        {
+          "name": "dado-0-right",
+          "corner": [
+            "org_div1+org_T-org_G",
+            "org_FT",
+            "org_bottom_z+org_step"
+          ],
+          "size": [
+            "org_G",
+            "org_shelf_depth",
+            "org_T"
+          ]
+        },
+        {
+          "name": "dado-1-left",
+          "corner": [
+            "org_div1",
+            "org_FT",
+            "org_bottom_z+2*org_step"
+          ],
+          "size": [
+            "org_G",
+            "org_shelf_depth",
+            "org_T"
+          ]
+        },
+        {
+          "name": "dado-1-right",
+          "corner": [
+            "org_div1+org_T-org_G",
+            "org_FT",
+            "org_bottom_z+2*org_step"
+          ],
+          "size": [
+            "org_G",
+            "org_shelf_depth",
+            "org_T"
+          ]
+        },
+        {
+          "name": "dado-2-left",
+          "corner": [
+            "org_div1",
+            "org_FT",
+            "org_bottom_z+3*org_step"
+          ],
+          "size": [
+            "org_G",
+            "org_shelf_depth",
+            "org_T"
+          ]
+        },
+        {
+          "name": "dado-2-right",
+          "corner": [
+            "org_div1+org_T-org_G",
+            "org_FT",
+            "org_bottom_z+3*org_step"
+          ],
+          "size": [
+            "org_G",
+            "org_shelf_depth",
+            "org_T"
+          ]
+        },
+        {
+          "name": "light-wire-relief",
+          "corner": [
+            "org_div1",
+            "org_FT",
+            "org_bottom_z+org_step+org_T-org_F-org_wire_h"
+          ],
+          "size": [
+            "org_T",
+            "org_wire_d",
+            "org_wire_h"
+          ]
+        },
+        {
+          "name": "light-wire-relief",
+          "corner": [
+            "org_div1",
+            "org_FT",
+            "org_bottom_z+2*org_step+org_T-org_F-org_wire_h"
+          ],
+          "size": [
+            "org_T",
+            "org_wire_d",
+            "org_wire_h"
+          ]
+        },
+        {
+          "name": "light-wire-relief",
+          "corner": [
+            "org_div1",
+            "org_FT",
+            "org_bottom_z+3*org_step+org_T-org_F-org_wire_h"
+          ],
+          "size": [
+            "org_T",
+            "org_wire_d",
+            "org_wire_h"
+          ]
+        },
+        {
+          "name": "light-wire-relief",
+          "corner": [
+            "org_div1",
+            "org_FT",
+            "org_H-org_F-org_wire_h"
+          ],
+          "size": [
+            "org_T",
+            "org_wire_d",
+            "org_wire_h"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DIV-2",
+      "group": "DIV",
+      "name": "Divider 2",
+      "corner": [
+        "org_div2",
+        "org_FT",
+        "org_bottom_z+org_T-org_G"
+      ],
+      "size": [
+        "org_T",
+        "org_shelf_depth",
+        "org_H-org_T+org_G-(org_bottom_z+org_T-org_G)"
+      ],
+      "source_definition": "87277",
+      "material": "plywood_3_4",
+      "grain_axis": 2,
+      "cuts": [
+        {
+          "name": "dado-0-left",
+          "corner": [
+            "org_div2",
+            "org_FT",
+            "org_bottom_z+org_step"
+          ],
+          "size": [
+            "org_G",
+            "org_shelf_depth",
+            "org_T"
+          ]
+        },
+        {
+          "name": "dado-0-right",
+          "corner": [
+            "org_div2+org_T-org_G",
+            "org_FT",
+            "org_bottom_z+org_step"
+          ],
+          "size": [
+            "org_G",
+            "org_shelf_depth",
+            "org_T"
+          ]
+        },
+        {
+          "name": "dado-1-left",
+          "corner": [
+            "org_div2",
+            "org_FT",
+            "org_bottom_z+2*org_step"
+          ],
+          "size": [
+            "org_G",
+            "org_shelf_depth",
+            "org_T"
+          ]
+        },
+        {
+          "name": "dado-1-right",
+          "corner": [
+            "org_div2+org_T-org_G",
+            "org_FT",
+            "org_bottom_z+2*org_step"
+          ],
+          "size": [
+            "org_G",
+            "org_shelf_depth",
+            "org_T"
+          ]
+        },
+        {
+          "name": "dado-2-left",
+          "corner": [
+            "org_div2",
+            "org_FT",
+            "org_bottom_z+3*org_step"
+          ],
+          "size": [
+            "org_G",
+            "org_shelf_depth",
+            "org_T"
+          ]
+        },
+        {
+          "name": "dado-2-right",
+          "corner": [
+            "org_div2+org_T-org_G",
+            "org_FT",
+            "org_bottom_z+3*org_step"
+          ],
+          "size": [
+            "org_G",
+            "org_shelf_depth",
+            "org_T"
+          ]
+        },
+        {
+          "name": "light-wire-relief",
+          "corner": [
+            "org_div2",
+            "org_FT",
+            "org_bottom_z+org_step+org_T-org_F-org_wire_h"
+          ],
+          "size": [
+            "org_T",
+            "org_wire_d",
+            "org_wire_h"
+          ]
+        },
+        {
+          "name": "light-wire-relief",
+          "corner": [
+            "org_div2",
+            "org_FT",
+            "org_bottom_z+2*org_step+org_T-org_F-org_wire_h"
+          ],
+          "size": [
+            "org_T",
+            "org_wire_d",
+            "org_wire_h"
+          ]
+        },
+        {
+          "name": "light-wire-relief",
+          "corner": [
+            "org_div2",
+            "org_FT",
+            "org_bottom_z+3*org_step+org_T-org_F-org_wire_h"
+          ],
+          "size": [
+            "org_T",
+            "org_wire_d",
+            "org_wire_h"
+          ]
+        },
+        {
+          "name": "light-wire-relief",
+          "corner": [
+            "org_div2",
+            "org_FT",
+            "org_H-org_F-org_wire_h"
+          ],
+          "size": [
+            "org_T",
+            "org_wire_d",
+            "org_wire_h"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BOT",
+      "group": "TOPBOT",
+      "name": "Bot",
+      "corner": [
+        "org_panel_start",
+        "org_FT",
+        "org_bottom_z"
+      ],
+      "size": [
+        "org_panel_width",
+        "org_D-org_FT",
+        "org_T"
+      ],
+      "source_definition": "89912",
+      "material": "plywood_3_4",
+      "grain_axis": 0,
+      "cuts": [
+        {
+          "name": "divider-dado-0",
+          "corner": [
+            "org_div1",
+            "org_FT",
+            "org_bottom_z+org_T-org_G"
+          ],
+          "size": [
+            "org_T",
+            "org_D-org_FT",
+            "org_G"
+          ]
+        },
+        {
+          "name": "divider-dado-1",
+          "corner": [
+            "org_div2",
+            "org_FT",
+            "org_bottom_z+org_T-org_G"
+          ],
+          "size": [
+            "org_T",
+            "org_D-org_FT",
+            "org_G"
+          ]
+        },
+        {
+          "name": "back-groove",
+          "corner": [
+            "org_panel_start",
+            "org_rear",
+            "org_bottom_z+org_T-org_G"
+          ],
+          "size": [
+            "org_panel_width",
+            "org_B",
+            "org_G"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TOP",
+      "group": "TOPBOT",
+      "name": "Top",
+      "corner": [
+        "org_panel_start",
+        "org_FT",
+        "org_H-org_T"
+      ],
+      "size": [
+        "org_panel_width",
+        "org_D-org_FT",
+        "org_T"
+      ],
+      "source_definition": "89912",
+      "material": "plywood_3_4",
+      "grain_axis": 0,
+      "cuts": [
+        {
+          "name": "divider-dado-0",
+          "corner": [
+            "org_div1",
+            "org_FT",
+            "org_H-org_T"
+          ],
+          "size": [
+            "org_T",
+            "org_D-org_FT",
+            "org_G"
+          ]
+        },
+        {
+          "name": "divider-dado-1",
+          "corner": [
+            "org_div2",
+            "org_FT",
+            "org_H-org_T"
+          ],
+          "size": [
+            "org_T",
+            "org_D-org_FT",
+            "org_G"
+          ]
+        },
+        {
+          "name": "back-groove",
+          "corner": [
+            "org_panel_start",
+            "org_rear",
+            "org_H-org_T"
+          ],
+          "size": [
+            "org_panel_width",
+            "org_B",
+            "org_G"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SH-L1",
+      "group": "SHELF-OUT",
+      "name": "Shelf L1",
+      "corner": [
+        "org_F-org_G",
+        "org_FT",
+        "org_bottom_z+org_step"
+      ],
+      "size": [
+        "org_div1+org_G-(org_F-org_G)",
+        "org_shelf_depth",
+        "org_T"
+      ],
+      "source_definition": "89139",
+      "material": "plywood_3_4",
+      "grain_axis": 1,
+      "cuts": []
+    },
+    {
+      "id": "SH-C1",
+      "group": "SHELF-CENTER",
+      "name": "Shelf C1",
+      "corner": [
+        "org_div1+org_T-org_G",
+        "org_FT",
+        "org_bottom_z+org_step"
+      ],
+      "size": [
+        "org_div2+org_G-(org_div1+org_T-org_G)",
+        "org_shelf_depth",
+        "org_T"
+      ],
+      "source_definition": "89502",
+      "material": "plywood_3_4",
+      "grain_axis": 1,
+      "cuts": []
+    },
+    {
+      "id": "SH-R1",
+      "group": "SHELF-OUT",
+      "name": "Shelf R1",
+      "corner": [
+        "org_div2+org_T-org_G",
+        "org_FT",
+        "org_bottom_z+org_step"
+      ],
+      "size": [
+        "org_W-org_F+org_G-(org_div2+org_T-org_G)",
+        "org_shelf_depth",
+        "org_T"
+      ],
+      "source_definition": "89139",
+      "material": "plywood_3_4",
+      "grain_axis": 1,
+      "cuts": []
+    },
+    {
+      "id": "SH-L2",
+      "group": "SHELF-OUT",
+      "name": "Shelf L2",
+      "corner": [
+        "org_F-org_G",
+        "org_FT",
+        "org_bottom_z+2*org_step"
+      ],
+      "size": [
+        "org_div1+org_G-(org_F-org_G)",
+        "org_shelf_depth",
+        "org_T"
+      ],
+      "source_definition": "89139",
+      "material": "plywood_3_4",
+      "grain_axis": 1,
+      "cuts": []
+    },
+    {
+      "id": "SH-C2",
+      "group": "SHELF-CENTER",
+      "name": "Shelf C2",
+      "corner": [
+        "org_div1+org_T-org_G",
+        "org_FT",
+        "org_bottom_z+2*org_step"
+      ],
+      "size": [
+        "org_div2+org_G-(org_div1+org_T-org_G)",
+        "org_shelf_depth",
+        "org_T"
+      ],
+      "source_definition": "89502",
+      "material": "plywood_3_4",
+      "grain_axis": 1,
+      "cuts": []
+    },
+    {
+      "id": "SH-R2",
+      "group": "SHELF-OUT",
+      "name": "Shelf R2",
+      "corner": [
+        "org_div2+org_T-org_G",
+        "org_FT",
+        "org_bottom_z+2*org_step"
+      ],
+      "size": [
+        "org_W-org_F+org_G-(org_div2+org_T-org_G)",
+        "org_shelf_depth",
+        "org_T"
+      ],
+      "source_definition": "89139",
+      "material": "plywood_3_4",
+      "grain_axis": 1,
+      "cuts": []
+    },
+    {
+      "id": "SH-L3",
+      "group": "SHELF-OUT",
+      "name": "Shelf L3",
+      "corner": [
+        "org_F-org_G",
+        "org_FT",
+        "org_bottom_z+3*org_step"
+      ],
+      "size": [
+        "org_div1+org_G-(org_F-org_G)",
+        "org_shelf_depth",
+        "org_T"
+      ],
+      "source_definition": "89139",
+      "material": "plywood_3_4",
+      "grain_axis": 1,
+      "cuts": []
+    },
+    {
+      "id": "SH-C3",
+      "group": "SHELF-CENTER",
+      "name": "Shelf C3",
+      "corner": [
+        "org_div1+org_T-org_G",
+        "org_FT",
+        "org_bottom_z+3*org_step"
+      ],
+      "size": [
+        "org_div2+org_G-(org_div1+org_T-org_G)",
+        "org_shelf_depth",
+        "org_T"
+      ],
+      "source_definition": "89502",
+      "material": "plywood_3_4",
+      "grain_axis": 1,
+      "cuts": []
+    },
+    {
+      "id": "SH-R3",
+      "group": "SHELF-OUT",
+      "name": "Shelf R3",
+      "corner": [
+        "org_div2+org_T-org_G",
+        "org_FT",
+        "org_bottom_z+3*org_step"
+      ],
+      "size": [
+        "org_W-org_F+org_G-(org_div2+org_T-org_G)",
+        "org_shelf_depth",
+        "org_T"
+      ],
+      "source_definition": "89139",
+      "material": "plywood_3_4",
+      "grain_axis": 1,
+      "cuts": []
+    },
+    {
+      "id": "BACK",
+      "group": "BACK",
+      "name": "Back",
+      "corner": [
+        "org_panel_start+org_back_clearance/2",
+        "org_rear",
+        "org_bottom_z+org_T-org_G+org_back_clearance/2"
+      ],
+      "size": [
+        "org_panel_width-org_back_clearance",
+        "org_B",
+        "org_H-org_T+org_G-(org_bottom_z+org_T-org_G)-org_back_clearance"
+      ],
+      "source_definition": "90470",
+      "material": "plywood_1_4",
+      "grain_axis": 2,
+      "cuts": []
+    },
+    {
+      "id": "ST-1",
+      "group": "STILE",
+      "name": "Stile 1",
+      "corner": [
+        0,
+        0,
+        "org_frame_bottom"
+      ],
+      "size": [
+        "org_F",
+        "org_FT",
+        "org_H-org_frame_bottom"
+      ],
+      "source_definition": "87665",
+      "material": "maple",
+      "grain_axis": 2,
+      "cuts": []
+    },
+    {
+      "id": "ST-2",
+      "group": "STILE",
+      "name": "Stile 2",
+      "corner": [
+        "org_F+org_bay",
+        0,
+        "org_frame_bottom"
+      ],
+      "size": [
+        "org_F",
+        "org_FT",
+        "org_H-org_frame_bottom"
+      ],
+      "source_definition": "87665",
+      "material": "maple",
+      "grain_axis": 2,
+      "cuts": []
+    },
+    {
+      "id": "ST-3",
+      "group": "STILE",
+      "name": "Stile 3",
+      "corner": [
+        "2*org_F+2*org_bay",
+        0,
+        "org_frame_bottom"
+      ],
+      "size": [
+        "org_F",
+        "org_FT",
+        "org_H-org_frame_bottom"
+      ],
+      "source_definition": "87665",
+      "material": "maple",
+      "grain_axis": 2,
+      "cuts": []
+    },
+    {
+      "id": "ST-4",
+      "group": "STILE",
+      "name": "Stile 4",
+      "corner": [
+        "org_W-org_F",
+        0,
+        "org_frame_bottom"
+      ],
+      "size": [
+        "org_F",
+        "org_FT",
+        "org_H-org_frame_bottom"
+      ],
+      "source_definition": "87665",
+      "material": "maple",
+      "grain_axis": 2,
+      "cuts": []
+    },
+    {
+      "id": "RA-11",
+      "group": "RAIL",
+      "name": "Rail 11",
+      "corner": [
+        "org_F",
+        0,
+        "org_frame_bottom+org_F-org_F"
+      ],
+      "size": [
+        "org_bay",
+        "org_FT",
+        "org_F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-12",
+      "group": "RAIL",
+      "name": "Rail 12",
+      "corner": [
+        "2*org_F+org_bay",
+        0,
+        "org_frame_bottom+org_F-org_F"
+      ],
+      "size": [
+        "org_bay",
+        "org_FT",
+        "org_F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-13",
+      "group": "RAIL",
+      "name": "Rail 13",
+      "corner": [
+        "3*org_F+2*org_bay",
+        0,
+        "org_frame_bottom+org_F-org_F"
+      ],
+      "size": [
+        "org_bay",
+        "org_FT",
+        "org_F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-21",
+      "group": "RAIL",
+      "name": "Rail 21",
+      "corner": [
+        "org_F",
+        0,
+        "org_bottom_z+org_step+org_T-org_F"
+      ],
+      "size": [
+        "org_bay",
+        "org_FT",
+        "org_F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-22",
+      "group": "RAIL",
+      "name": "Rail 22",
+      "corner": [
+        "2*org_F+org_bay",
+        0,
+        "org_bottom_z+org_step+org_T-org_F"
+      ],
+      "size": [
+        "org_bay",
+        "org_FT",
+        "org_F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-23",
+      "group": "RAIL",
+      "name": "Rail 23",
+      "corner": [
+        "3*org_F+2*org_bay",
+        0,
+        "org_bottom_z+org_step+org_T-org_F"
+      ],
+      "size": [
+        "org_bay",
+        "org_FT",
+        "org_F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-31",
+      "group": "RAIL",
+      "name": "Rail 31",
+      "corner": [
+        "org_F",
+        0,
+        "org_bottom_z+2*org_step+org_T-org_F"
+      ],
+      "size": [
+        "org_bay",
+        "org_FT",
+        "org_F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-32",
+      "group": "RAIL",
+      "name": "Rail 32",
+      "corner": [
+        "2*org_F+org_bay",
+        0,
+        "org_bottom_z+2*org_step+org_T-org_F"
+      ],
+      "size": [
+        "org_bay",
+        "org_FT",
+        "org_F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-33",
+      "group": "RAIL",
+      "name": "Rail 33",
+      "corner": [
+        "3*org_F+2*org_bay",
+        0,
+        "org_bottom_z+2*org_step+org_T-org_F"
+      ],
+      "size": [
+        "org_bay",
+        "org_FT",
+        "org_F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-41",
+      "group": "RAIL",
+      "name": "Rail 41",
+      "corner": [
+        "org_F",
+        0,
+        "org_bottom_z+3*org_step+org_T-org_F"
+      ],
+      "size": [
+        "org_bay",
+        "org_FT",
+        "org_F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-42",
+      "group": "RAIL",
+      "name": "Rail 42",
+      "corner": [
+        "2*org_F+org_bay",
+        0,
+        "org_bottom_z+3*org_step+org_T-org_F"
+      ],
+      "size": [
+        "org_bay",
+        "org_FT",
+        "org_F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-43",
+      "group": "RAIL",
+      "name": "Rail 43",
+      "corner": [
+        "3*org_F+2*org_bay",
+        0,
+        "org_bottom_z+3*org_step+org_T-org_F"
+      ],
+      "size": [
+        "org_bay",
+        "org_FT",
+        "org_F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-51",
+      "group": "RAIL",
+      "name": "Rail 51",
+      "corner": [
+        "org_F",
+        0,
+        "org_H-org_F"
+      ],
+      "size": [
+        "org_bay",
+        "org_FT",
+        "org_F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-52",
+      "group": "RAIL",
+      "name": "Rail 52",
+      "corner": [
+        "2*org_F+org_bay",
+        0,
+        "org_H-org_F"
+      ],
+      "size": [
+        "org_bay",
+        "org_FT",
+        "org_F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "RA-53",
+      "group": "RAIL",
+      "name": "Rail 53",
+      "corner": [
+        "3*org_F+2*org_bay",
+        0,
+        "org_H-org_F"
+      ],
+      "size": [
+        "org_bay",
+        "org_FT",
+        "org_F"
+      ],
+      "source_definition": "87913",
+      "material": "maple",
+      "grain_axis": 0,
+      "cuts": []
+    },
+    {
+      "id": "LED-RA-21",
+      "name": "Angled channel envelope",
+      "material": "lighting",
+      "corner": [
+        "org_F+led_end",
+        "org_FT",
+        "org_bottom_z+org_step+org_T-org_F-angle_leg"
+      ],
+      "size": [
+        "org_bay-2*led_end",
+        0.625,
+        0.625
+      ],
+      "cuts": []
+    },
+    {
+      "id": "LED-RA-22",
+      "name": "Angled channel envelope",
+      "material": "lighting",
+      "corner": [
+        "2*org_F+org_bay+led_end",
+        "org_FT",
+        "org_bottom_z+org_step+org_T-org_F-angle_leg"
+      ],
+      "size": [
+        "org_bay-2*led_end",
+        0.625,
+        0.625
+      ],
+      "cuts": []
+    },
+    {
+      "id": "LED-RA-23",
+      "name": "Angled channel envelope",
+      "material": "lighting",
+      "corner": [
+        "3*org_F+2*org_bay+led_end",
+        "org_FT",
+        "org_bottom_z+org_step+org_T-org_F-angle_leg"
+      ],
+      "size": [
+        "org_bay-2*led_end",
+        0.625,
+        0.625
+      ],
+      "cuts": []
+    },
+    {
+      "id": "LED-RA-31",
+      "name": "Angled channel envelope",
+      "material": "lighting",
+      "corner": [
+        "org_F+led_end",
+        "org_FT",
+        "org_bottom_z+2*org_step+org_T-org_F-angle_leg"
+      ],
+      "size": [
+        "org_bay-2*led_end",
+        0.625,
+        0.625
+      ],
+      "cuts": []
+    },
+    {
+      "id": "LED-RA-32",
+      "name": "Angled channel envelope",
+      "material": "lighting",
+      "corner": [
+        "2*org_F+org_bay+led_end",
+        "org_FT",
+        "org_bottom_z+2*org_step+org_T-org_F-angle_leg"
+      ],
+      "size": [
+        "org_bay-2*led_end",
+        0.625,
+        0.625
+      ],
+      "cuts": []
+    },
+    {
+      "id": "LED-RA-33",
+      "name": "Angled channel envelope",
+      "material": "lighting",
+      "corner": [
+        "3*org_F+2*org_bay+led_end",
+        "org_FT",
+        "org_bottom_z+2*org_step+org_T-org_F-angle_leg"
+      ],
+      "size": [
+        "org_bay-2*led_end",
+        0.625,
+        0.625
+      ],
+      "cuts": []
+    },
+    {
+      "id": "LED-RA-41",
+      "name": "Angled channel envelope",
+      "material": "lighting",
+      "corner": [
+        "org_F+led_end",
+        "org_FT",
+        "org_bottom_z+3*org_step+org_T-org_F-angle_leg"
+      ],
+      "size": [
+        "org_bay-2*led_end",
+        0.625,
+        0.625
+      ],
+      "cuts": []
+    },
+    {
+      "id": "LED-RA-42",
+      "name": "Angled channel envelope",
+      "material": "lighting",
+      "corner": [
+        "2*org_F+org_bay+led_end",
+        "org_FT",
+        "org_bottom_z+3*org_step+org_T-org_F-angle_leg"
+      ],
+      "size": [
+        "org_bay-2*led_end",
+        0.625,
+        0.625
+      ],
+      "cuts": []
+    },
+    {
+      "id": "LED-RA-43",
+      "name": "Angled channel envelope",
+      "material": "lighting",
+      "corner": [
+        "3*org_F+2*org_bay+led_end",
+        "org_FT",
+        "org_bottom_z+3*org_step+org_T-org_F-angle_leg"
+      ],
+      "size": [
+        "org_bay-2*led_end",
+        0.625,
+        0.625
+      ],
+      "cuts": []
+    },
+    {
+      "id": "LED-RA-51",
+      "name": "Angled channel envelope",
+      "material": "lighting",
+      "corner": [
+        "org_F+led_end",
+        "org_FT",
+        "org_H-org_F-angle_leg"
+      ],
+      "size": [
+        "org_bay-2*led_end",
+        0.625,
+        0.625
+      ],
+      "cuts": []
+    },
+    {
+      "id": "LED-RA-52",
+      "name": "Angled channel envelope",
+      "material": "lighting",
+      "corner": [
+        "2*org_F+org_bay+led_end",
+        "org_FT",
+        "org_H-org_F-angle_leg"
+      ],
+      "size": [
+        "org_bay-2*led_end",
+        0.625,
+        0.625
+      ],
+      "cuts": []
+    },
+    {
+      "id": "LED-RA-53",
+      "name": "Angled channel envelope",
+      "material": "lighting",
+      "corner": [
+        "3*org_F+2*org_bay+led_end",
+        "org_FT",
+        "org_H-org_F-angle_leg"
+      ],
+      "size": [
+        "org_bay-2*led_end",
+        0.625,
+        0.625
+      ],
+      "cuts": []
+    }
+  ]
+}

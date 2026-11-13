@@ -1,0 +1,12 @@
+{
+  "name": "Woodworking CAD",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+  "remoteUser": "cad",
+  "overrideCommand": true,
+  "containerEnv": {
+    "SOLIDCRAFT_GPU": "cpu"
+  }
+}

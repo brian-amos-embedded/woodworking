@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "solidcraft": {
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "-i",
+        "--platform",
+        "linux/amd64",
+        "--mount",
+        "type=bind,source=/ABSOLUTE/PATH/TO/work,target=/work",
+        "woodworking-solidcraft:0.40.1"
+      ]
+    }
+  }
+}

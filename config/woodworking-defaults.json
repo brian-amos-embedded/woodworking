@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "display_units": "in",
+  "geometry_units": "mm",
+  "hardwood": {
+    "species": "hard maple",
+    "purchase_thickness": "4/4",
+    "finished_thickness_in": 0.75,
+    "frame_width_in": 2
+  },
+  "sheet": {
+    "material": "maple plywood",
+    "nominal_thickness_in": 0.75,
+    "measured_thickness_in": null,
+    "nominal_size_in": [
+      48,
+      96
+    ]
+  },
+  "carcass_joint": {
+    "provisional_dado_depth_in": 0.25,
+    "requires_confirmation": "Does 0.25 inch describe depth or width?",
+    "fit_clearance_in": null
+  },
+  "door": {
+    "groove_width_in": 0.25,
+    "groove_depth_in": 0.5,
+    "panel_material": null,
+    "panel_clearance_in": null,
+    "joint_options": [
+      "stub_tenon",
+      "pocket_screwed_butt"
+    ],
+    "selected_joint": null
+  },
+  "cutting": {
+    "kerf_in": null,
+    "edge_trim_in": null,
+    "guillotine_only": true,
+    "respect_grain": true
+  },
+  "release_policy": "Unconfirmed values must be resolved before fabrication output."
+}

@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "server": {
+    "name": "solidcraft",
+    "title": "SolidCraft",
+    "version": "0.40.1"
+  },
+  "checks": [
+    "initialize",
+    "tools/list",
+    "create 24 x 2 x 0.75 inch solid",
+    "exact bounding box and volume",
+    "parameter change to 30 inches and restore",
+    "save/reopen",
+    "STEP export",
+    "GLB export",
+    "CPU screenshot"
+  ],
+  "fixture": "test rail only; pantry not imported"
+}

@@ -1,0 +1,8 @@
+services:
+  solidcraft:
+    build: .
+    platform: linux/amd64
+    image: woodworking-solidcraft:0.40.1
+    stdin_open: true
+    volumes:
+      - ./work:/work

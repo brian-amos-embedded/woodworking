@@ -1,0 +1,7 @@
+material,group,quantity,grain_length_in,cross_width_in,thickness_in,part_ids
+3/4 in maple plywood,SIDE,2,36.25,17.375,0.75,SIDE-L SIDE-R
+3/4 in maple plywood,DIV,2,31.75,16.625,0.75,DIV-1 DIV-2
+3/4 in maple plywood,TOPBOT,2,22.5,17.375,0.75,BOT TOP
+3/4 in maple plywood,SHELF-OUT,6,16.625,7.125,0.75,SH-L1 SH-R1 SH-L2 SH-R2 SH-L3 SH-R3
+3/4 in maple plywood,SHELF-CENTER,3,16.625,7.75,0.75,SH-C1 SH-C2 SH-C3
+1/4 in maple plywood,BACK,1,31.6875,22.4375,0.25,BACK

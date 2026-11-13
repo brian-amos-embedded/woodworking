@@ -1,0 +1,77 @@
+{
+  "boolean_ms": 176.558,
+  "budget_exceeded": false,
+  "budget_s": 90.0,
+  "checked": 19,
+  "count": 0,
+  "interferences": [],
+  "ms": 31.086,
+  "pairs_candidate": 26,
+  "pairs_cleared": 0,
+  "pairs_excluded": 0,
+  "pairs_intersected": 26,
+  "pairs_not_checked": 0,
+  "skipped_pairs": 0,
+  "slowest": [
+    {
+      "a": "TOP-01",
+      "b": "TR-R",
+      "boolean_ms": 23.98,
+      "ms": 23.982,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "TOP-01",
+      "b": "CL-R",
+      "boolean_ms": 21.771,
+      "ms": 21.772,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "TOP-01",
+      "b": "ST-R",
+      "boolean_ms": 20.513,
+      "ms": 20.515,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "TOP-01",
+      "b": "ST-L",
+      "boolean_ms": 15.867,
+      "ms": 15.868,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "TOP-01",
+      "b": "TR-L",
+      "boolean_ms": 11.466,
+      "ms": 11.467,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "TOP-01",
+      "b": "CL-L",
+      "boolean_ms": 10.991,
+      "ms": 10.993,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "CL-L",
+      "b": "PS-L",
+      "boolean_ms": 8.055,
+      "ms": 8.07,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "TR-R",
+      "b": "LED-TR-R",
+      "boolean_ms": 7.037,
+      "ms": 7.038,
+      "tessellate_ms": 0.0
+    }
+  ],
+  "tessellate_ms": 0.0,
+  "threads": 9,
+  "truncated": false,
+  "unchecked": []
+}

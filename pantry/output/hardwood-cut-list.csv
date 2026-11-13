@@ -1,0 +1,3 @@
+group,quantity,final_length_in,final_width_in,final_thickness_in,rough_length_in,rough_width_in,nominal_rough_thickness_in,part_ids
+STILE,4,34.0,2,0.75,35.0,2.125,1,ST-1 ST-2 ST-3 ST-4
+RAIL,15,6.0,2,0.75,7.0,2.125,1,RA-11 RA-12 RA-13 RA-21 RA-22 RA-23 RA-31 RA-32 RA-33 RA-41 RA-42 RA-43 RA-51 RA-52 RA-53

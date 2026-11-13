@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soda organizer 2 | Hardwood board planner</title>
+<style>
+:root{color-scheme:light;font:16px system-ui,sans-serif;color:#18364b;background:#eef3f2}
+body{max-width:920px;margin:40px auto;padding:0 20px}h1{line-height:1.1;margin-bottom:10px}h2{font-size:1.15rem}
+section{background:white;border:1px solid #cddbd9;border-radius:12px;padding:20px;margin:16px 0}
+table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:8px 5px;border-bottom:1px solid #e5eceb}
+input{width:100%;box-sizing:border-box;padding:8px;border:1px solid #829997;border-radius:5px;font:inherit}
+button{padding:9px 12px;border:1px solid #537773;border-radius:6px;background:white;color:inherit;font:inherit;cursor:pointer}
+button[type=submit]{background:#18364b;color:white}.actions{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.kerf{display:inline-block;margin-top:14px}.kerf input{width:7em}
+details{margin:12px 0}summary{cursor:pointer;font-weight:600}li{margin:.3em 0}.error{color:#912c20}
+@media print{body{margin:0;background:white}form,.intro{display:none}details{break-inside:avoid}}
+</style>
+<h1>Hardwood board planner</h1>
+<p>Soda organizer 2 · 4/4 hard maple · inches</p>
+<section class="intro">
+  <h2>Rough blanks</h2>
+  <p id="demand"></p>
+  <p>Enter each board’s minimum usable rectangular width and length after allowing for edge cleanup, end checks, and defects. Enter separate sound rectangles if a defect splits a board. Use decimals or fractions such as <strong>5 1/2</strong>.</p>
+</section>
+<form id="boards">
+<section>
+  <h2>Available stock</h2>
+  <table><thead><tr><th scope="col">Board</th><th scope="col">Min. width (in)</th><th scope="col">Min. length (in)</th><th scope="col">Remove</th></tr></thead><tbody id="rows"></tbody></table>
+  <label class="kerf">Saw kerf (in) <input id="kerf" value="__KERF_DEFAULT__" required></label>
+  <div class="actions"><button type="button" id="add">Add board</button><button type="submit">Plan cuts</button></div>
+</section>
+</form>
+<section id="output" aria-live="polite" hidden></section>
+<script>
+const demand = __DEMAND__;
+const defaultBoard = __BOARD_DEFAULT__;
+const EPS = 1e-8;
+
+// Count the kerf between pieces and allow the last cut to overhang the waste edge.
+function fits(count, length, span, kerf) {
+  return count === 0 || length + (count - 1) * kerf <= span + EPS;
+}
+
+function choices(board, groups, kerf) {
+  const [long, short] = groups;
+  const stripWidth = long.width;
+  const lanes = [];
+  for (let a = 0; a <= long.ids.length; a++) {
+    for (let b = 0; b <= short.ids.length; b++) {
+      if ((a || b) && fits(a + b, a * long.length + b * short.length, board.length, kerf)) {
+        lanes.push([a, b]);
+      }
+    }
+  }
+  // Keep the fewest rips for each achievable count pair.
+  const states = new Map([['0,0', {a:0, b:0, lanes:[]}]]);
+  const maxLanes = Math.min(long.ids.length + short.ids.length,
+    Math.floor((board.width + kerf + EPS) / (stripWidth + kerf)));
+  for (let i = 0; i < maxLanes; i++) {
+    const previous = [...states.values()].filter(state => state.lanes.length === i);
+    for (const state of previous) {
+      for (const lane of lanes) {
+        const a = state.a + lane[0], b = state.b + lane[1], key = a + ',' + b;
+        if (a <= long.ids.length && b <= short.ids.length && !states.has(key)) {
+          states.set(key, {a, b, lanes:[...state.lanes, lane]});
+        }
+      }
+    }
+  }
+  return [...states.values()];
+}
+
+function planBoards(boards, groups, kerf) {
+  if (groups.length !== 2 || groups[0].width !== groups[1].width) {
+    throw new Error('This planner requires two blank lengths at a common rough width.');
+  }
+  let states = new Map([['0,0', {a:0, b:0, area:0, rips:0, used:[]}]]);
+  for (const board of boards) {
+    const next = new Map(states);
+    const options = choices(board, groups, kerf).filter(option => option.lanes.length);
+    for (const state of states.values()) {
+      for (const option of options) {
+        const a = state.a + option.a, b = state.b + option.b, key = a + ',' + b;
+        if (a > groups[0].ids.length || b > groups[1].ids.length) continue;
+        const area = state.area + board.width * board.length;
+        const rips = state.rips + option.lanes.length;
+        const old = next.get(key);
+        if (!old || area < old.area - EPS || (Math.abs(area - old.area) < EPS && rips < old.rips)) {
+          next.set(key, {a, b, area, rips, used:[...state.used, {board, lanes:option.lanes}]});
+        }
+      }
+    }
+    states = next;
+  }
+  return [...states.values()].sort((x,y) =>
+    (y.a+y.b) - (x.a+x.b) || y.a - x.a || x.area - y.area || x.rips - y.rips)[0];
+}
+
+function parseInches(value) {
+  const input = value.trim();
+  const fraction = input.match(/^(?:(\d+)\s+)?(\d+)\s*\/\s*(\d+)$/);
+  const result = fraction ? Number(fraction[1] || 0) + Number(fraction[2]) / Number(fraction[3])
+    : /^\d*\.?\d+$/.test(input) ? Number(input) : NaN;
+  if (!Number.isFinite(result) || result <= 0) throw new Error('Use a positive inch measurement.');
+  return result;
+}
+
+if (typeof module !== 'undefined') module.exports = {planBoards, parseInches};
+if (typeof document !== 'undefined') {
+  const rows = document.getElementById('rows');
+  const output = document.getElementById('output');
+  const groups = demand.slice().sort((a,b) => b.length-a.length);
+  const fmt = value => Number(value.toFixed(4)).toString();
+  let boardNumber = 0;
+  document.getElementById('demand').textContent = groups.map(group =>
+    group.ids.length + ' ' + group.name.toLowerCase() + 's at ' + fmt(group.length) + ' × ' + fmt(group.width) + ' in').join(' · ');
+
+  function addBoard() {
+    const id = 'B' + ++boardNumber;
+    const row = rows.insertRow();
+    row.dataset.id = id;
+    row.insertCell().textContent = id;
+    for (const [index, dimension] of ['width','length'].entries()) {
+      const input = document.createElement('input');
+      input.required = true;
+      input.value = defaultBoard[index];
+      input.setAttribute('aria-label', id + ' minimum ' + dimension);
+      row.insertCell().append(input);
+    }
+    const remove = document.createElement('button');
+    remove.type = 'button';
+    remove.textContent = 'Remove';
+    remove.setAttribute('aria-label','Remove board ' + id);
+    remove.onclick = () => {row.remove(); if (!rows.rows.length) addBoard();};
+    row.insertCell().append(remove);
+  }
+  document.getElementById('add').onclick = addBoard;
+
+  document.getElementById('boards').onsubmit = event => {
+    event.preventDefault();
+    output.hidden = false;
+    output.replaceChildren();
+    function add(tag, text, parent = output) {
+      const item = document.createElement(tag);
+      item.textContent = text;
+      parent.append(item);
+      return item;
+    }
+    try {
+      const kerf = parseInches(document.getElementById('kerf').value);
+      const boards = [...rows.rows].map(row => {
+        try {
+          const [width,length] = [...row.querySelectorAll('input')].map(input => parseInches(input.value));
+          return {id:row.dataset.id, width, length};
+        } catch (error) {
+          throw new Error(row.dataset.id + '. ' + error.message);
+        }
+      });
+      const result = planBoards(boards, groups, kerf);
+      const total = groups.reduce((sum, group) => sum + group.ids.length, 0);
+      add('h2', (result.a + result.b) + ' of ' + total + ' blanks fit');
+      const missing = groups.map((group,index) => group.ids.length - [result.a,result.b][index]);
+      if (missing.some(Boolean)) add('p', 'Still needed: ' + groups.map((group,index) =>
+        missing[index] + ' ' + group.name.toLowerCase() + 's at ' + fmt(group.length) + ' × ' + fmt(group.width) + ' in').join(', '));
+      if (result.used.length) add('p', 'Rip the listed strips from the straight edge, then crosscut each strip in the listed order. Kerf goes on the waste side.');
+      const indices = [0,0];
+      for (const {board,lanes} of result.used) {
+        const details = add('details','');
+        details.open = true;
+        const width = groups[0].width;
+        add('summary', board.id + ' · ' + fmt(board.width) + ' × ' + fmt(board.length) + ' in · Rip ' +
+          lanes.length + (lanes.length === 1 ? ' strip at ' : ' strips at ') + fmt(width) + ' in', details);
+        const list = add('ol','',details);
+        for (const lane of lanes) {
+          const cuts = groups.flatMap((group,i) => Array.from({length:lane[i]}, () =>
+            group.ids[indices[i]++] + ' at ' + fmt(group.length) + ' in'));
+          add('li', cuts.join(' → '), list);
+        }
+      }
+      const used = new Set(result.used.map(item => item.board.id));
+      const unused = boards.filter(board => !used.has(board.id)).map(board => board.id);
+      if (unused.length) add('p', 'Unused boards: ' + unused.join(', '));
+      if (result.used.length) {
+        const print = add('button', 'Print plan');
+        print.onclick = () => window.print();
+      }
+    } catch (error) {
+      add('p', error.message).className = 'error';
+    }
+  };
+  const standard = {width:defaultBoard[0], length:defaultBoard[1]};
+  const kerf = parseInches(document.getElementById('kerf').value);
+  const total = groups.reduce((sum, group) => sum + group.ids.length, 0);
+  const boards = [];
+  while (boards.length < total) {
+    const board = {...standard, id:'B' + (boards.length + 1)};
+    const previous = planBoards(boards, groups, kerf);
+    const next = planBoards([...boards, board], groups, kerf);
+    if (next.a + next.b === previous.a + previous.b) break;
+    boards.push(board);
+    if (next.a + next.b === total) break;
+  }
+  for (let i = 0; i < Math.max(1, boards.length); i++) addBoard();
+  document.getElementById('boards').requestSubmit();
+}
+</script>
+</html>

@@ -1,0 +1,14 @@
+interface:
+  display_name: Woodworking with SolidCraft
+  short_description: Model woodworking projects and prepare fabrication plans
+  default_prompt: Use $woodworking-solidcraft to design or revise my woodworking project
+    using my construction defaults.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
