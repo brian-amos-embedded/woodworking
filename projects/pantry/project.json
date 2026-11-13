@@ -1222,22 +1222,6 @@
       "cuts": []
     }
   ],
-  "shop": {
-    "kerf_in": 0.125,
-    "hardwood_default_board_in": [
-      6,
-      96
-    ],
-    "sheet_in": [
-      48,
-      96
-    ],
-    "edge_trim_in": 0.25,
-    "hardwood_rough_width_allowance_in": 0.125,
-    "hardwood_rough_length_allowance_in": 1.0,
-    "back_total_edge_clearance_in": 0.0625,
-    "grain": "sheet grain along 96 inch; longest shelf dimension; top/bottom across cabinet width"
-  },
   "confirmed": [
     "Normalize source dimensions to practical sizes",
     "Saw kerf 1/8 inch",

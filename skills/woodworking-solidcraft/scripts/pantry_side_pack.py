@@ -3,7 +3,7 @@ import json
 from reportlab.pdfgen import canvas
 from reportlab.lib import colors
 from cabinet_model import resolve
-from cutlist import ROOT, inch
+from pantry_cutlist import ROOT, SHOP, inch
 
 out = ROOT / 'output'
 spec = json.loads((out/'side-bays-spec.json').read_text())
@@ -78,7 +78,7 @@ for i,(key,material,label,axes) in enumerate(rows):
     line(383,y,' x '.join(map(inch,dims)))
     line(200,y-12,material,8)
 notes(359,[
-    '4/4 stock: start with two 6 x 96 in boards, with 1/8 in saw kerf.',
+    f"4/4 stock: two {' x '.join(map(inch, SHOP['hardwood_default_board_in']))} in boards, {inch(SHOP['kerf_in'])} in kerf.",
     'Board A: rip one 2 1/8 in and two 1 5/8 in rough strips.',
     '2 1/8 in strip: two 33 3/4 in stiles + one 19 3/4 in upper rail.',
     'First 1 5/8 in strip: two 33 1/4 in front pin backers.',
@@ -157,7 +157,7 @@ pdf.showPage()
 page('Shelf blanks and peg layout','Top views  |  Shelf front is at the bottom  |  Peg positions shown at the nominal fit')
 from sheet_layout import rip_first
 blanks = [(key, parts[key]['size'][1], parts[key]['size'][0]) for key in ('SH-L','SH-R')]
-layout = rip_first([blanks], (24,48), .125, .25, 'S1')
+layout = rip_first([blanks], (24,48), SHOP['kerf_in'], SHOP['edge_trim_in'], 'S1')
 line(42,664,'3/4 IN MAPLE PLYWOOD / 24 X 48 IN OFFCUT',10,True)
 x,y,s=80,460,7.5
 pdf.setStrokeColor(ink)
@@ -167,8 +167,8 @@ for key,(across,along,width,length) in layout['parts'].items():
     pdf.setFillColor(teal)
     pdf.rect(x+along*s,y+across*s,length*s,width*s,fill=1)
     line(x+along*s+10,y+45,key,10,True)
-line(42,438,'Trim 1/4 in per edge. Rip 16 9/16 in, then crosscut two 19 7/8 in blanks.')
-line(42,420,'The 1/8 in kerf is on the waste side. Template each shelf to its bay.')
+line(42,438,f"Trim {inch(SHOP['edge_trim_in'])} in per edge. Rip 16 9/16 in, then crosscut two 19 7/8 in blanks.")
+line(42,420,f"Keep the {inch(SHOP['kerf_in'])} in kerf on the waste side. Template each shelf to its bay.")
 for index,hand in enumerate(('L','R')):
     x,y,s=63+index*270,161,9
     shelf=parts['SH-'+hand]

@@ -26,12 +26,12 @@ docker run --rm --platform linux/amd64 --user "$(id -u):$(id -g)" \
   --entrypoint /bin/bash woodworking-solidcraft:0.40.1
 ```
 
-Run the pantry README commands in the container with `/usr/local/bin/solidcraft-cli`. The image includes ReportLab. For an interactive editor workspace, use the repo's dev container configuration. CI verifies the headless CAD smoke test, while the pantry rebuild runs the project-specific checks.
+Run `python /work/skills/woodworking-solidcraft/scripts/build_project.py /work/projects/pantry --cli /usr/local/bin/solidcraft-cli` in the container. The image includes ReportLab. For an interactive editor workspace, use the repo's dev container configuration. CI verifies the headless CAD smoke test, while the pantry rebuild runs the project-specific checks.
 
 ## Design and delivery
 
 - Work from the project inputs. Keep native `.sc` files, part IDs, geometry checks, and shop-pack revisions aligned.
 - Reopen the generated models, check dimensions and interference, then inspect the drawings. Record any assumptions about material, hardware, or installation fit.
 - Link the relevant native file and the one-click SolidCraft design URL. Use the public GitHub raw file URL, URL-encoded as the app's `open` parameter. See the pantry README for examples. For a pinned review, use a commit SHA instead of `main` in the raw URL.
-- Put reusable CAD and shop tooling in `skills/woodworking-solidcraft/scripts/`. Prefer project data and thin build entry points for job-specific geometry and drawing layouts. The pantry README sets the shared Python import path.
+- Put reusable CAD and shop tooling in `skills/woodworking-solidcraft/scripts/`. Keep project geometry and model build options in JSON. Settings in `projects/<name>/overrides.json` take precedence over `projects/defaults.json`. The pantry PDF templates remain tailored to the R3 layout.
 - Keep each new project under `projects/`. Use the shared skills for reusable practices and the project README for job-specific decisions.

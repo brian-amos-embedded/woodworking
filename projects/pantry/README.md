@@ -21,19 +21,17 @@ Click a model to open an editable copy from the current `main` branch.
 
 ## Rebuild
 
-From `projects/pantry`, rebuild with SolidCraft 0.40.1 and Python with ReportLab.
-The scripts here define the pantry geometry, build order, and shop-pack presentation.
-The CAD engine, MCP client, and sheet layout live in the shared woodworking skill:
+From the repository root, with Python 3.12+, ReportLab, and SolidCraft 0.40.1:
 
-    export PYTHONPATH="$(cd ../../skills/woodworking-solidcraft/scripts && pwd)${PYTHONPATH:+:$PYTHONPATH}"
+```sh
+python skills/woodworking-solidcraft/scripts/build_project.py projects/pantry --cli /absolute/path/to/solidcraft-cli
+```
 
-
-    python scripts/make_project.py
-    python scripts/model.py --cli /absolute/path/to/solidcraft-cli
-    python scripts/side_bays.py --cli /absolute/path/to/solidcraft-cli
-    python scripts/cutlist.py
-    mv output/soda-org-2-cutlist.pdf output/soda-organizer-R3-shop-pack.pdf
-    python scripts/side_pack.py
+`project.json` defines the organizer. The other two model specifications live
+in `source/`. The combined specification includes both component specifications. Keep the
+organizer and side-bay interface dimensions aligned when revising the design. `overrides.json` selects models, test dimensions,
+and the shop-pack template, and can override any setting in
+[projects/defaults.json](../defaults.json).
 
 The shop packs use nominal stock. Field-fit the side shelves and countertop.
 Verify the pins and extrusion end caps, wiring and clips before machining.

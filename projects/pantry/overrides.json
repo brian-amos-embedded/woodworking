@@ -1,0 +1,158 @@
+{
+  "shop": {
+    "grain": "sheet grain along 96 inch; longest shelf dimension; top/bottom across cabinet width",
+    "back_total_edge_clearance_in": 0.0625
+  },
+  "models": [
+    {
+      "name": "soda-org-2",
+      "spec": "project.json",
+      "prefix": "",
+      "exports": [
+        "step",
+        "glb"
+      ],
+      "views": [
+        "iso",
+        "front",
+        "back"
+      ],
+      "test": {
+        "W": 28,
+        "T": 0.71875
+      },
+      "isolated": {
+        "SIDE-L": [
+          "SIDE-L"
+        ],
+        "SIDE-R": [
+          "SIDE-R"
+        ],
+        "DIV": [
+          "DIV-1"
+        ],
+        "TOPBOT": [
+          "BOT"
+        ],
+        "SHELF-OUT": [
+          "SH-L1"
+        ],
+        "SHELF-CENTER": [
+          "SH-C1"
+        ],
+        "BACK": [
+          "BACK"
+        ],
+        "STILE": [
+          "ST-1"
+        ],
+        "RAIL": [
+          "RA-11"
+        ],
+        "FRAME": [
+          "ST-1",
+          "ST-2",
+          "ST-3",
+          "ST-4",
+          "RA-11",
+          "RA-12",
+          "RA-13",
+          "RA-21",
+          "RA-22",
+          "RA-23",
+          "RA-31",
+          "RA-32",
+          "RA-33",
+          "RA-41",
+          "RA-42",
+          "RA-43",
+          "RA-51",
+          "RA-52",
+          "RA-53"
+        ]
+      },
+      "camera": {
+        "SIDE-R": {
+          "yaw": 0.85,
+          "pitch": 0.35,
+          "distance": 1350
+        }
+      }
+    },
+    {
+      "name": "side-bays",
+      "spec": "source/side-bays.json",
+      "prefix": "side-bays-",
+      "views": [
+        "iso"
+      ]
+    },
+    {
+      "name": "pantry-combined",
+      "spec": "source/pantry-combined.json",
+      "prefix": "pantry-combined-",
+      "views": [
+        "iso"
+      ]
+    }
+  ],
+  "report": "pantry-r3",
+  "source": "source/soda-org-2.json",
+  "sheet_layouts": [
+    [
+      "S1",
+      "plywood_3_4",
+      null,
+      [
+        [
+          "SIDE-L",
+          "SIDE-R",
+          "TOP"
+        ],
+        [
+          "DIV-1",
+          "DIV-2",
+          "BOT"
+        ],
+        [
+          "SH-C1",
+          "SH-C2",
+          "SH-C3",
+          "SH-L1",
+          "SH-R1"
+        ]
+      ]
+    ],
+    [
+      "S2",
+      "plywood_3_4",
+      [
+        16,
+        36
+      ],
+      [
+        [
+          "SH-L2",
+          "SH-L3"
+        ],
+        [
+          "SH-R2",
+          "SH-R3"
+        ]
+      ]
+    ],
+    [
+      "S3",
+      "plywood_1_4",
+      [
+        24,
+        36
+      ],
+      [
+        [
+          "BACK"
+        ]
+      ]
+    ]
+  ]
+}

@@ -8,23 +8,26 @@ from reportlab.lib import colors
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 
-from joinery_views import draw_joinery
+from pantry_joinery_views import draw_joinery
 from pathlib import Path
 
 from cabinet_model import box_edges, resolve
 
-ROOT = Path(__file__).resolve().parents[1]
+import sys
+from project_config import load_project
+
+ROOT = Path(sys.argv[1]).resolve()
+CONFIG = load_project(ROOT)
 from sheet_layout import rip_first
 
 OUT = ROOT / 'output'
 PROJECT = json.loads((ROOT / 'project.json').read_text())
-SOURCE = json.loads((ROOT / 'source/soda-org-2.json').read_text())
+SOURCE = json.loads((ROOT / CONFIG['source']).read_text())
 PARTS = resolve(PROJECT)
-SHOP = PROJECT['shop']
+SHOP = CONFIG['shop']
 BLUE = colors.HexColor('#18364b')
 TEAL = colors.HexColor('#b6d8d3')
-MATERIAL = {'plywood_3_4': '3/4 in maple plywood', 'plywood_1_4': '1/4 in maple plywood',
-            'maple': 'Hard maple, 4/4 stock'}
+MATERIAL = CONFIG['materials']
 
 
 def inch(value):
@@ -81,16 +84,10 @@ def layouts():
     for part in PARTS:
         length, width, _ = stock_dims(part)
         blanks[part['id']] = (part['id'], width, length)
-    specs = [
-        ('S1', 'plywood_3_4', SHOP['sheet_in'], [
-            ['SIDE-L', 'SIDE-R', 'TOP'], ['DIV-1', 'DIV-2', 'BOT'],
-            ['SH-C1', 'SH-C2', 'SH-C3', 'SH-L1', 'SH-R1']]),
-        ('S2', 'plywood_3_4', (16, 36), [['SH-L2', 'SH-L3'], ['SH-R2', 'SH-R3']]),
-        ('S3', 'plywood_1_4', (24, 36), [['BACK']]),
-    ]
+    specs = CONFIG['sheet_layouts']
     result = []
     for name, material, stock, lanes in specs:
-        plan = rip_first([[blanks[key] for key in lane] for lane in lanes], stock,
+        plan = rip_first([[blanks[key] for key in lane] for lane in lanes], stock or SHOP['sheet_in'],
                          SHOP['kerf_in'], SHOP['edge_trim_in'], name)
         result.append(plan | {'name': name, 'material': material, 'lanes': lanes})
     expected = {p['id'] for p in PARTS if p['material'].startswith('plywood')}
@@ -122,7 +119,7 @@ def draw_hardwood_plan(pdf, page, line, inch, rough):
 
     for index, lanes in enumerate(board_lanes, 1):
         label = f'B{index}'
-        plan = rip_first([[blanks[key] for key in lane] for lane in lanes], stock, kerf, 0, label)
+        plan = rip_first([[blanks[key] for key in lane] for lane in lanes], stock or SHOP['sheet_in'], kerf, 0, label)
         x, y, scale = 64, 480 - (index - 1) * 189, 5
         line(42, y+54, f'{label}  |  Rip {len(lanes)} strip{"s" if len(lanes) != 1 else ""} at {inch(blanks[lanes[0][0]][1])} in', 12, True)
         pdf.setStrokeColor(BLUE)
@@ -162,7 +159,7 @@ def generate():
     bf = sum(qty * rough_l * rough_w / 144 for qty, _, _, _, rough_l, rough_w, _ in rough.values())
     demand = [{'name': group.title(), 'length': data[4], 'width': data[5], 'ids': data[6]}
               for group, data in rough.items()]
-    template = ROOT / 'scripts' / 'hardwood-board-planner.template.html'
+    template = Path(__file__).with_name('hardwood-board-planner.template.html')
     (OUT / 'hardwood-board-planner.html').write_text(
         template.read_text().replace('__DEMAND__', json.dumps(demand))
         .replace('__BOARD_DEFAULT__', json.dumps(SHOP['hardwood_default_board_in']))
@@ -237,7 +234,7 @@ def generate():
         name = plan['name']
         width, length = plan['stock']
         page(f'{name}  |  {MATERIAL[plan["material"]]}', f'{inch(width)} x {inch(length)} in stock  |  Grain along {inch(length)} in')
-        line(42, 672, 'Square and trim 1/4 in per edge. Keep the 1/8 in kerf on the waste side.', 9)
+        line(42, 672, f"Trim {inch(plan['trim'])} in per edge. Keep the {inch(plan['kerf'])} in kerf on the waste side.", 9)
         line(42, 655, "Rip the strips at the widths shown, then crosscut along each strip as drawn.", 9)
         scale = 5  # points per inch, identical on all stock diagrams
         ox, oy = 91, 610 - width*scale

@@ -16,8 +16,9 @@ To start in a new chat, connect GitHub with access to this repo and paste:
 
 | Path | Purpose |
 | --- | --- |
-| `projects/<project>/` | A project's README, design inputs, scripts, and deliverables |
-| `projects/pantry/project.json` and `scripts/` within that project | Soda organizer specification and pantry-specific geometry and drawing definitions |
+| `projects/<project>/` | A project's README, design inputs, overrides, and deliverables |
+| `projects/defaults.json` | Shared stock sizes, saw kerf, sheet trim, and rough-cut allowances |
+| `projects/pantry/project.json` and `overrides.json` | Organizer geometry and project-specific settings |
 | `projects/pantry/source/` | Extracted SketchUp reference geometry |
 | `projects/pantry/output/` | Native SolidCraft models, renders, shop packs, cut lists, and verification results |
 | `skills/` | Shared CAD engine, MCP client, and sheet layout, plus woodworking guidance and SketchUp extraction |

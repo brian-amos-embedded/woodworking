@@ -1,0 +1,21 @@
+{
+  "shop": {
+    "kerf_in": 0.125,
+    "hardwood_default_board_in": [
+      6,
+      96
+    ],
+    "sheet_in": [
+      48,
+      96
+    ],
+    "edge_trim_in": 0.25,
+    "hardwood_rough_width_allowance_in": 0.125,
+    "hardwood_rough_length_allowance_in": 1.0
+  },
+  "materials": {
+    "plywood_3_4": "3/4 in maple plywood",
+    "plywood_1_4": "1/4 in maple plywood",
+    "maple": "Hard maple, 4/4 stock"
+  }
+}
