@@ -1,9 +1,25 @@
 {
   "name": "Soda organizer with lighting",
-  "revision": "R4",
+  "revision": "R5",
   "parameters_in": {},
   "derived_expressions": {},
   "parts": [
+    {
+      "id": "LED-SODA-2",
+      "name": "Continuous rectangular channel row 2",
+      "material": "lighting",
+      "corner": [
+        "F+channel_end",
+        "FT",
+        "channel_z2"
+      ],
+      "size": [
+        "W-2*F-2*channel_end",
+        "channel_rect_depth",
+        "channel_rect_height"
+      ],
+      "cuts": []
+    },
     {
       "id": "LED-SODA-3",
       "name": "Continuous angled channel row 3",
@@ -12,6 +28,22 @@
         "F+channel_end",
         "FT",
         "channel_z3"
+      ],
+      "size": [
+        "W-2*F-2*channel_end",
+        "channel_flat",
+        "channel_flat"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "LED-SODA-4",
+      "name": "Continuous angled channel row 4",
+      "material": "lighting",
+      "corner": [
+        "F+channel_end",
+        "FT",
+        "channel_z4"
       ],
       "size": [
         "W-2*F-2*channel_end",

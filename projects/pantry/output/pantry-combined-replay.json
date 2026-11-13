@@ -346,6 +346,20 @@
     {
       "command": "parameters.change",
       "params": {
+        "name": "cab_org_channel_rect_depth",
+        "expression": "0.375 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_channel_rect_height",
+        "expression": "0.625 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
         "name": "cab_carcass_inset",
         "expression": "cab_organizer_stile_w-cab_organizer_side_t"
       }
@@ -432,6 +446,20 @@
       "params": {
         "name": "cab_org_channel_z5",
         "expression": "cab_org_h-cab_org_f+cab_org_channel_lift"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_channel_z2",
+        "expression": "cab_org_bottom_z+cab_org_step+cab_org_t-cab_org_f+cab_org_channel_lift"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_channel_z4",
+        "expression": "cab_org_bottom_z+3*cab_org_step+cab_org_t-cab_org_f+cab_org_channel_lift"
       }
     }
   ],
@@ -784,6 +812,21 @@
     {
       "command": "solid.box",
       "params": {
+        "name": "Continuous rectangular channel row 2",
+        "length": "cab_org_w-2*cab_org_f-2*cab_org_channel_end",
+        "width": "cab_org_channel_rect_depth",
+        "height": "cab_org_channel_rect_height",
+        "corner": [
+          "cab_org_f+cab_org_channel_end",
+          "cab_org_ft",
+          "cab_org_channel_z2"
+        ],
+        "body_name": "LED-SODA-2"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
         "name": "Continuous angled channel row 3",
         "length": "cab_org_w-2*cab_org_f-2*cab_org_channel_end",
         "width": "cab_org_channel_flat",
@@ -794,6 +837,21 @@
           "cab_org_channel_z3"
         ],
         "body_name": "LED-SODA-3"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Continuous angled channel row 4",
+        "length": "cab_org_w-2*cab_org_f-2*cab_org_channel_end",
+        "width": "cab_org_channel_flat",
+        "height": "cab_org_channel_flat",
+        "corner": [
+          "cab_org_f+cab_org_channel_end",
+          "cab_org_ft",
+          "cab_org_channel_z4"
+        ],
+        "body_name": "LED-SODA-4"
       }
     },
     {
@@ -1917,6 +1975,24 @@
     {
       "command": "solid.box",
       "params": {
+        "name": "rectangular-channel-relief",
+        "length": "cab_org_t",
+        "width": "cab_org_channel_rect_depth+cab_org_channel_clear",
+        "height": "cab_org_channel_rect_height+2*cab_org_channel_clear",
+        "corner": [
+          "cab_org_div1",
+          "cab_org_ft",
+          "cab_org_channel_z2-cab_org_channel_clear"
+        ],
+        "operation": "cut",
+        "targets": [
+          "DIV-1"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
         "name": "light-channel-relief",
         "length": "cab_org_t",
         "width": "cab_org_channel_flat+cab_org_channel_clear",
@@ -1925,6 +2001,24 @@
           "cab_org_div1",
           "cab_org_ft",
           "cab_org_channel_z3-cab_org_channel_clear"
+        ],
+        "operation": "cut",
+        "targets": [
+          "DIV-1"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "light-channel-relief",
+        "length": "cab_org_t",
+        "width": "cab_org_channel_flat+cab_org_channel_clear",
+        "height": "cab_org_channel_flat+2*cab_org_channel_clear",
+        "corner": [
+          "cab_org_div1",
+          "cab_org_ft",
+          "cab_org_channel_z4-cab_org_channel_clear"
         ],
         "operation": "cut",
         "targets": [
@@ -2061,6 +2155,24 @@
     {
       "command": "solid.box",
       "params": {
+        "name": "rectangular-channel-relief",
+        "length": "cab_org_t",
+        "width": "cab_org_channel_rect_depth+cab_org_channel_clear",
+        "height": "cab_org_channel_rect_height+2*cab_org_channel_clear",
+        "corner": [
+          "cab_org_div2",
+          "cab_org_ft",
+          "cab_org_channel_z2-cab_org_channel_clear"
+        ],
+        "operation": "cut",
+        "targets": [
+          "DIV-2"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
         "name": "light-channel-relief",
         "length": "cab_org_t",
         "width": "cab_org_channel_flat+cab_org_channel_clear",
@@ -2069,6 +2181,24 @@
           "cab_org_div2",
           "cab_org_ft",
           "cab_org_channel_z3-cab_org_channel_clear"
+        ],
+        "operation": "cut",
+        "targets": [
+          "DIV-2"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "light-channel-relief",
+        "length": "cab_org_t",
+        "width": "cab_org_channel_flat+cab_org_channel_clear",
+        "height": "cab_org_channel_flat+2*cab_org_channel_clear",
+        "corner": [
+          "cab_org_div2",
+          "cab_org_ft",
+          "cab_org_channel_z4-cab_org_channel_clear"
         ],
         "operation": "cut",
         "targets": [
@@ -2298,7 +2428,9 @@
           "LED-TR-L",
           "LED-MID-R",
           "LED-TR-R",
+          "LED-SODA-2",
           "LED-SODA-3",
+          "LED-SODA-4",
           "LED-SODA-5"
         ],
         "color": "#63768b"
@@ -2346,7 +2478,9 @@
           "BS-L",
           "BR-R",
           "BS-R",
+          "LED-SODA-2",
           "LED-SODA-3",
+          "LED-SODA-4",
           "LED-SODA-5",
           "SIDE-L",
           "SIDE-R",
@@ -2383,7 +2517,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 136,
+        "component": 142,
         "translate": [
           1136.6499999999999,
           0.0,
@@ -2398,7 +2532,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 120,
+        "component": 126,
         "translate": [
           1136.6499999999999,
           0.0,
@@ -2413,7 +2547,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 122,
+        "component": 128,
         "translate": [
           1136.6499999999999,
           0.0,
@@ -2428,7 +2562,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 124,
+        "component": 130,
         "translate": [
           1136.6499999999999,
           0.0,
@@ -2443,7 +2577,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 198,
+        "component": 208,
         "translate": [
           0.0,
           0.0,
@@ -2458,7 +2592,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 198,
+        "component": 208,
         "translate": [
           0.0,
           0.0,
@@ -2473,7 +2607,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 200,
+        "component": 210,
         "translate": [
           0.0,
           0.0,
@@ -2488,7 +2622,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 200,
+        "component": 210,
         "translate": [
           0.0,
           0.0,
@@ -2503,7 +2637,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 202,
+        "component": 212,
         "translate": [
           0.0,
           0.0,
@@ -2518,7 +2652,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 202,
+        "component": 212,
         "translate": [
           0.0,
           0.0,

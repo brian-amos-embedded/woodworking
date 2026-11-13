@@ -129,6 +129,20 @@
     {
       "command": "parameters.change",
       "params": {
+        "name": "cab_channel_rect_depth",
+        "expression": "0.375 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_channel_rect_height",
+        "expression": "0.625 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
         "name": "cab_bay",
         "expression": "(cab_w-4*cab_f)/3"
       }
@@ -188,9 +202,38 @@
         "name": "cab_channel_z5",
         "expression": "cab_h-cab_f+cab_channel_lift"
       }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_channel_z2",
+        "expression": "cab_bottom_z+cab_step+cab_t-cab_f+cab_channel_lift"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_channel_z4",
+        "expression": "cab_bottom_z+3*cab_step+cab_t-cab_f+cab_channel_lift"
+      }
     }
   ],
   "blanks": [
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Continuous rectangular channel row 2",
+        "length": "cab_w-2*cab_f-2*cab_channel_end",
+        "width": "cab_channel_rect_depth",
+        "height": "cab_channel_rect_height",
+        "corner": [
+          "cab_f+cab_channel_end",
+          "cab_ft",
+          "cab_channel_z2"
+        ],
+        "body_name": "LED-SODA-2"
+      }
+    },
     {
       "command": "solid.box",
       "params": {
@@ -204,6 +247,21 @@
           "cab_channel_z3"
         ],
         "body_name": "LED-SODA-3"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Continuous angled channel row 4",
+        "length": "cab_w-2*cab_f-2*cab_channel_end",
+        "width": "cab_channel_flat",
+        "height": "cab_channel_flat",
+        "corner": [
+          "cab_f+cab_channel_end",
+          "cab_ft",
+          "cab_channel_z4"
+        ],
+        "body_name": "LED-SODA-4"
       }
     },
     {
@@ -1111,6 +1169,24 @@
     {
       "command": "solid.box",
       "params": {
+        "name": "rectangular-channel-relief",
+        "length": "cab_t",
+        "width": "cab_channel_rect_depth+cab_channel_clear",
+        "height": "cab_channel_rect_height+2*cab_channel_clear",
+        "corner": [
+          "cab_div1",
+          "cab_ft",
+          "cab_channel_z2-cab_channel_clear"
+        ],
+        "operation": "cut",
+        "targets": [
+          "DIV-1"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
         "name": "light-channel-relief",
         "length": "cab_t",
         "width": "cab_channel_flat+cab_channel_clear",
@@ -1119,6 +1195,24 @@
           "cab_div1",
           "cab_ft",
           "cab_channel_z3-cab_channel_clear"
+        ],
+        "operation": "cut",
+        "targets": [
+          "DIV-1"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "light-channel-relief",
+        "length": "cab_t",
+        "width": "cab_channel_flat+cab_channel_clear",
+        "height": "cab_channel_flat+2*cab_channel_clear",
+        "corner": [
+          "cab_div1",
+          "cab_ft",
+          "cab_channel_z4-cab_channel_clear"
         ],
         "operation": "cut",
         "targets": [
@@ -1255,6 +1349,24 @@
     {
       "command": "solid.box",
       "params": {
+        "name": "rectangular-channel-relief",
+        "length": "cab_t",
+        "width": "cab_channel_rect_depth+cab_channel_clear",
+        "height": "cab_channel_rect_height+2*cab_channel_clear",
+        "corner": [
+          "cab_div2",
+          "cab_ft",
+          "cab_channel_z2-cab_channel_clear"
+        ],
+        "operation": "cut",
+        "targets": [
+          "DIV-2"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
         "name": "light-channel-relief",
         "length": "cab_t",
         "width": "cab_channel_flat+cab_channel_clear",
@@ -1263,6 +1375,24 @@
           "cab_div2",
           "cab_ft",
           "cab_channel_z3-cab_channel_clear"
+        ],
+        "operation": "cut",
+        "targets": [
+          "DIV-2"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "light-channel-relief",
+        "length": "cab_t",
+        "width": "cab_channel_flat+cab_channel_clear",
+        "height": "cab_channel_flat+2*cab_channel_clear",
+        "corner": [
+          "cab_div2",
+          "cab_ft",
+          "cab_channel_z4-cab_channel_clear"
         ],
         "operation": "cut",
         "targets": [
@@ -1461,7 +1591,9 @@
       "command": "appearance.assign",
       "params": {
         "bodies": [
+          "LED-SODA-2",
           "LED-SODA-3",
+          "LED-SODA-4",
           "LED-SODA-5"
         ],
         "color": "#63768b"
@@ -1486,7 +1618,9 @@
       "command": "component.from_bodies",
       "params": {
         "bodies": [
+          "LED-SODA-2",
           "LED-SODA-3",
+          "LED-SODA-4",
           "LED-SODA-5",
           "SIDE-L",
           "SIDE-R",
@@ -1523,7 +1657,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 125,
+        "component": 135,
         "translate": [
           0.0,
           0.0,
@@ -1538,7 +1672,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 125,
+        "component": 135,
         "translate": [
           0.0,
           0.0,
@@ -1553,7 +1687,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 127,
+        "component": 137,
         "translate": [
           0.0,
           0.0,
@@ -1568,7 +1702,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 127,
+        "component": 137,
         "translate": [
           0.0,
           0.0,
@@ -1583,7 +1717,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 129,
+        "component": 139,
         "translate": [
           0.0,
           0.0,
@@ -1598,7 +1732,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 129,
+        "component": 139,
         "translate": [
           0.0,
           0.0,
