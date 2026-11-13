@@ -112,7 +112,7 @@ def main():
     if cfg.get('report') == 'pantry-r3':
         for script in ('pantry_cutlist.py','pantry_side_pack.py'):
             subprocess.run([sys.executable, str(Path(__file__).with_name(script)), str(root)], check=True)
-        (out/'soda-org-2-cutlist.pdf').replace(out/'soda-organizer-R3-shop-pack.pdf')
+        (out/'soda-org-2-cutlist.pdf').replace(out/'soda-organizer-R4-shop-pack.pdf')
     elif cfg.get('report'):
         raise ValueError(f"Unknown report template: {cfg['report']}")
 

@@ -1,0 +1,2086 @@
+{
+  "parameters": [
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_bay",
+        "expression": "20.75 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_center",
+        "expression": "26 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_depth",
+        "expression": "18.125 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_height",
+        "expression": "36.25 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_top_t",
+        "expression": "1.5 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_stock",
+        "expression": "0.75 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_rail_h",
+        "expression": "2 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_cleat_h",
+        "expression": "1 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_lap",
+        "expression": "0.5 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_nose",
+        "expression": "1.5 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_cleat_travel",
+        "expression": "0.125 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_left_rear",
+        "expression": "12 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_right_rear",
+        "expression": "15 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_shelf_z",
+        "expression": "12 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_fit",
+        "expression": "0.0625 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_pin_w",
+        "expression": "1.5 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_pin_bottom",
+        "expression": "3.5 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_side_lip",
+        "expression": "0 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_apron_gap",
+        "expression": "0.125 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_led_d",
+        "expression": "0.375 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_led_h",
+        "expression": "0.625 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_led_end",
+        "expression": "0.125 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_angle_leg",
+        "expression": "0.625 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_middle_z",
+        "expression": "24 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_organizer_stile_w",
+        "expression": "2 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_organizer_side_t",
+        "expression": "0.75 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_pin_projection",
+        "expression": "0.25 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_front_overhang",
+        "expression": "1 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_w",
+        "expression": "26 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_h",
+        "expression": "36.25 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_d",
+        "expression": "18.125 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_t",
+        "expression": "0.75 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_ft",
+        "expression": "0.75 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_f",
+        "expression": "2 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_g",
+        "expression": "0.25 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_b",
+        "expression": "0.25 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_bottom_z",
+        "expression": "3.5 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_frame_bottom",
+        "expression": "2.25 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_step",
+        "expression": "8 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_back_clearance",
+        "expression": "0.0625 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_base_h",
+        "expression": "3.5 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_base_d",
+        "expression": "1.5 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_channel_flat",
+        "expression": "0.625 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_channel_clear",
+        "expression": "0.0625 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_channel_end",
+        "expression": "0.125 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_channel_lift",
+        "expression": "0.125 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_carcass_inset",
+        "expression": "cab_organizer_stile_w-cab_organizer_side_t"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_bay",
+        "expression": "(cab_org_w-4*cab_org_f)/3"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_div1",
+        "expression": "cab_org_f+cab_org_bay+cab_org_f/2-cab_org_t/2"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_div2",
+        "expression": "2*cab_org_f+2*cab_org_bay+cab_org_f/2-cab_org_t/2"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_rear",
+        "expression": "cab_org_d-cab_org_ft"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_shelf_depth",
+        "expression": "cab_org_rear-cab_org_ft"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_panel_start",
+        "expression": "cab_org_f-cab_org_g"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_panel_width",
+        "expression": "cab_org_w-2*cab_org_f+2*cab_org_g"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_channel_z3",
+        "expression": "cab_org_bottom_z+2*cab_org_step+cab_org_t-cab_org_f+cab_org_channel_lift"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_org_channel_z5",
+        "expression": "cab_org_h-cab_org_f+cab_org_channel_lift"
+      }
+    }
+  ],
+  "blanks": [
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Continuous angled channel row 3",
+        "length": "cab_org_w-2*cab_org_f-2*cab_org_channel_end",
+        "width": "cab_org_channel_flat",
+        "height": "cab_org_channel_flat",
+        "corner": [
+          "cab_org_f+cab_org_channel_end",
+          "cab_org_ft",
+          "cab_org_channel_z3"
+        ],
+        "body_name": "LED-SODA-3"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Continuous angled channel row 5",
+        "length": "cab_org_w-2*cab_org_f-2*cab_org_channel_end",
+        "width": "cab_org_channel_flat",
+        "height": "cab_org_channel_flat",
+        "corner": [
+          "cab_org_f+cab_org_channel_end",
+          "cab_org_ft",
+          "cab_org_channel_z5"
+        ],
+        "body_name": "LED-SODA-5"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "TOP-01",
+        "length": "cab_center+2*cab_bay",
+        "width": "cab_depth+cab_front_overhang",
+        "height": "cab_top_t",
+        "corner": [
+          "-cab_bay",
+          "-cab_front_overhang",
+          "cab_height"
+        ],
+        "body_name": "TOP-01"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "CL-L",
+        "length": "cab_stock",
+        "width": "cab_depth-cab_nose-cab_cleat_travel",
+        "height": "cab_cleat_h",
+        "corner": [
+          "-cab_bay+cab_side_lip",
+          "cab_nose+cab_cleat_travel",
+          "cab_height+cab_lap-cab_cleat_h"
+        ],
+        "body_name": "CL-L"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "ST-L",
+        "length": "cab_rail_h",
+        "width": "cab_stock",
+        "height": "cab_height-cab_pin_bottom",
+        "corner": [
+          "-cab_bay",
+          "0 in",
+          "cab_pin_bottom"
+        ],
+        "body_name": "ST-L"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "PB-L",
+        "length": "cab_stock",
+        "width": "2*cab_stock",
+        "height": "cab_height+cab_lap-cab_cleat_h-cab_pin_bottom",
+        "corner": [
+          "-cab_bay",
+          "cab_stock",
+          "cab_pin_bottom"
+        ],
+        "body_name": "PB-L"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "PS-L",
+        "length": "cab_stock",
+        "width": "cab_pin_w",
+        "height": "cab_height+cab_lap-cab_cleat_h-cab_pin_bottom",
+        "corner": [
+          "-cab_bay",
+          "cab_left_rear",
+          "cab_pin_bottom"
+        ],
+        "body_name": "PS-L"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "TR-L",
+        "length": "cab_bay-cab_rail_h",
+        "width": "cab_stock",
+        "height": "cab_rail_h",
+        "corner": [
+          "-cab_bay+cab_rail_h",
+          "0 in",
+          "cab_height-cab_rail_h"
+        ],
+        "body_name": "TR-L"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "SH-L",
+        "length": "cab_bay+cab_carcass_inset-cab_stock-2*cab_fit",
+        "width": "cab_depth-2*cab_stock-cab_fit",
+        "height": "cab_stock",
+        "corner": [
+          "-cab_bay+cab_stock+cab_fit",
+          "2*cab_stock",
+          "cab_shelf_z"
+        ],
+        "body_name": "SH-L"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "FR-L",
+        "length": "cab_bay-cab_rail_h-2*cab_apron_gap",
+        "width": "cab_stock",
+        "height": "cab_rail_h",
+        "corner": [
+          "-cab_bay+cab_rail_h+cab_apron_gap",
+          "cab_stock",
+          "cab_shelf_z+cab_stock-cab_rail_h"
+        ],
+        "body_name": "FR-L"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "LED-MID-L",
+        "length": "cab_bay-cab_rail_h-2*cab_apron_gap",
+        "width": "cab_led_d",
+        "height": "cab_led_h",
+        "corner": [
+          "-cab_bay+cab_rail_h+cab_apron_gap",
+          "cab_stock",
+          "cab_middle_z+cab_stock-cab_rail_h-cab_led_h"
+        ],
+        "body_name": "LED-MID-L"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "LED-TR-L",
+        "length": "cab_bay-cab_rail_h",
+        "width": "cab_led_d",
+        "height": "cab_led_h",
+        "corner": [
+          "-cab_bay+cab_rail_h",
+          "0 in",
+          "cab_height-cab_rail_h-cab_led_h"
+        ],
+        "body_name": "LED-TR-L"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "CL-R",
+        "length": "cab_stock",
+        "width": "cab_depth-cab_nose-cab_cleat_travel",
+        "height": "cab_cleat_h",
+        "corner": [
+          "cab_center+cab_bay-cab_side_lip-cab_stock",
+          "cab_nose+cab_cleat_travel",
+          "cab_height+cab_lap-cab_cleat_h"
+        ],
+        "body_name": "CL-R"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "ST-R",
+        "length": "cab_rail_h",
+        "width": "cab_stock",
+        "height": "cab_height-cab_pin_bottom",
+        "corner": [
+          "cab_center+cab_bay-cab_rail_h",
+          "0 in",
+          "cab_pin_bottom"
+        ],
+        "body_name": "ST-R"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "PB-R",
+        "length": "cab_stock",
+        "width": "2*cab_stock",
+        "height": "cab_height+cab_lap-cab_cleat_h-cab_pin_bottom",
+        "corner": [
+          "cab_center+cab_bay-cab_stock",
+          "cab_stock",
+          "cab_pin_bottom"
+        ],
+        "body_name": "PB-R"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "PS-R",
+        "length": "cab_stock",
+        "width": "cab_pin_w",
+        "height": "cab_height+cab_lap-cab_cleat_h-cab_pin_bottom",
+        "corner": [
+          "cab_center+cab_bay-cab_stock",
+          "cab_right_rear",
+          "cab_pin_bottom"
+        ],
+        "body_name": "PS-R"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "TR-R",
+        "length": "cab_bay-cab_rail_h",
+        "width": "cab_stock",
+        "height": "cab_rail_h",
+        "corner": [
+          "cab_center",
+          "0 in",
+          "cab_height-cab_rail_h"
+        ],
+        "body_name": "TR-R"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "SH-R",
+        "length": "cab_bay+cab_carcass_inset-cab_stock-2*cab_fit",
+        "width": "cab_depth-2*cab_stock-cab_fit",
+        "height": "cab_stock",
+        "corner": [
+          "cab_center-cab_carcass_inset+cab_fit",
+          "2*cab_stock",
+          "cab_shelf_z"
+        ],
+        "body_name": "SH-R"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "FR-R",
+        "length": "cab_bay-cab_rail_h-2*cab_apron_gap",
+        "width": "cab_stock",
+        "height": "cab_rail_h",
+        "corner": [
+          "cab_center+cab_apron_gap",
+          "cab_stock",
+          "cab_shelf_z+cab_stock-cab_rail_h"
+        ],
+        "body_name": "FR-R"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "LED-MID-R",
+        "length": "cab_bay-cab_rail_h-2*cab_apron_gap",
+        "width": "cab_led_d",
+        "height": "cab_led_h",
+        "corner": [
+          "cab_center+cab_apron_gap",
+          "cab_stock",
+          "cab_middle_z+cab_stock-cab_rail_h-cab_led_h"
+        ],
+        "body_name": "LED-MID-R"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "LED-TR-R",
+        "length": "cab_bay-cab_rail_h",
+        "width": "cab_led_d",
+        "height": "cab_led_h",
+        "corner": [
+          "cab_center",
+          "0 in",
+          "cab_height-cab_rail_h-cab_led_h"
+        ],
+        "body_name": "LED-TR-R"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "SH-MID-L",
+        "length": "cab_bay+cab_carcass_inset-cab_stock-2*cab_fit",
+        "width": "cab_depth-2*cab_stock-cab_fit",
+        "height": "cab_stock",
+        "corner": [
+          "-cab_bay+cab_stock+cab_fit",
+          "2*cab_stock",
+          "cab_middle_z"
+        ],
+        "body_name": "SH-MID-L"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "FR-MID-L",
+        "length": "cab_bay-cab_rail_h-2*cab_apron_gap",
+        "width": "cab_stock",
+        "height": "cab_rail_h",
+        "corner": [
+          "-cab_bay+cab_rail_h+cab_apron_gap",
+          "cab_stock",
+          "cab_middle_z+cab_stock-cab_rail_h"
+        ],
+        "body_name": "FR-MID-L"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "SH-MID-R",
+        "length": "cab_bay+cab_carcass_inset-cab_stock-2*cab_fit",
+        "width": "cab_depth-2*cab_stock-cab_fit",
+        "height": "cab_stock",
+        "corner": [
+          "cab_center-cab_carcass_inset+cab_fit",
+          "2*cab_stock",
+          "cab_middle_z"
+        ],
+        "body_name": "SH-MID-R"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "FR-MID-R",
+        "length": "cab_bay-cab_rail_h-2*cab_apron_gap",
+        "width": "cab_stock",
+        "height": "cab_rail_h",
+        "corner": [
+          "cab_center+cab_apron_gap",
+          "cab_stock",
+          "cab_middle_z+cab_stock-cab_rail_h"
+        ],
+        "body_name": "FR-MID-R"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Outer side L",
+        "length": "cab_org_t",
+        "width": "cab_org_d-cab_org_ft",
+        "height": "cab_org_h",
+        "corner": [
+          "cab_org_f-cab_org_t",
+          "cab_org_ft",
+          "0 in"
+        ],
+        "body_name": "SIDE-L"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Outer side R",
+        "length": "cab_org_t",
+        "width": "cab_org_d-cab_org_ft",
+        "height": "cab_org_h",
+        "corner": [
+          "cab_org_w-cab_org_f",
+          "cab_org_ft",
+          "0 in"
+        ],
+        "body_name": "SIDE-R"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Divider 1",
+        "length": "cab_org_t",
+        "width": "cab_org_shelf_depth",
+        "height": "cab_org_h-cab_org_t+cab_org_g-(cab_org_bottom_z+cab_org_t-cab_org_g)",
+        "corner": [
+          "cab_org_div1",
+          "cab_org_ft",
+          "cab_org_bottom_z+cab_org_t-cab_org_g"
+        ],
+        "body_name": "DIV-1"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Divider 2",
+        "length": "cab_org_t",
+        "width": "cab_org_shelf_depth",
+        "height": "cab_org_h-cab_org_t+cab_org_g-(cab_org_bottom_z+cab_org_t-cab_org_g)",
+        "corner": [
+          "cab_org_div2",
+          "cab_org_ft",
+          "cab_org_bottom_z+cab_org_t-cab_org_g"
+        ],
+        "body_name": "DIV-2"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Bot",
+        "length": "cab_org_panel_width",
+        "width": "cab_org_d-cab_org_ft",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_panel_start",
+          "cab_org_ft",
+          "cab_org_bottom_z"
+        ],
+        "body_name": "BOT"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Top",
+        "length": "cab_org_panel_width",
+        "width": "cab_org_d-cab_org_ft",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_panel_start",
+          "cab_org_ft",
+          "cab_org_h-cab_org_t"
+        ],
+        "body_name": "TOP"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Shelf L1",
+        "length": "cab_org_div1+cab_org_g-(cab_org_f-cab_org_g)",
+        "width": "cab_org_shelf_depth",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_f-cab_org_g",
+          "cab_org_ft",
+          "cab_org_bottom_z+cab_org_step"
+        ],
+        "body_name": "SH-L1"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Shelf C1",
+        "length": "cab_org_div2+cab_org_g-(cab_org_div1+cab_org_t-cab_org_g)",
+        "width": "cab_org_shelf_depth",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_div1+cab_org_t-cab_org_g",
+          "cab_org_ft",
+          "cab_org_bottom_z+cab_org_step"
+        ],
+        "body_name": "SH-C1"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Shelf R1",
+        "length": "cab_org_w-cab_org_f+cab_org_g-(cab_org_div2+cab_org_t-cab_org_g)",
+        "width": "cab_org_shelf_depth",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_div2+cab_org_t-cab_org_g",
+          "cab_org_ft",
+          "cab_org_bottom_z+cab_org_step"
+        ],
+        "body_name": "SH-R1"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Shelf L2",
+        "length": "cab_org_div1+cab_org_g-(cab_org_f-cab_org_g)",
+        "width": "cab_org_shelf_depth",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_f-cab_org_g",
+          "cab_org_ft",
+          "cab_org_bottom_z+2*cab_org_step"
+        ],
+        "body_name": "SH-L2"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Shelf C2",
+        "length": "cab_org_div2+cab_org_g-(cab_org_div1+cab_org_t-cab_org_g)",
+        "width": "cab_org_shelf_depth",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_div1+cab_org_t-cab_org_g",
+          "cab_org_ft",
+          "cab_org_bottom_z+2*cab_org_step"
+        ],
+        "body_name": "SH-C2"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Shelf R2",
+        "length": "cab_org_w-cab_org_f+cab_org_g-(cab_org_div2+cab_org_t-cab_org_g)",
+        "width": "cab_org_shelf_depth",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_div2+cab_org_t-cab_org_g",
+          "cab_org_ft",
+          "cab_org_bottom_z+2*cab_org_step"
+        ],
+        "body_name": "SH-R2"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Shelf L3",
+        "length": "cab_org_div1+cab_org_g-(cab_org_f-cab_org_g)",
+        "width": "cab_org_shelf_depth",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_f-cab_org_g",
+          "cab_org_ft",
+          "cab_org_bottom_z+3*cab_org_step"
+        ],
+        "body_name": "SH-L3"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Shelf C3",
+        "length": "cab_org_div2+cab_org_g-(cab_org_div1+cab_org_t-cab_org_g)",
+        "width": "cab_org_shelf_depth",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_div1+cab_org_t-cab_org_g",
+          "cab_org_ft",
+          "cab_org_bottom_z+3*cab_org_step"
+        ],
+        "body_name": "SH-C3"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Shelf R3",
+        "length": "cab_org_w-cab_org_f+cab_org_g-(cab_org_div2+cab_org_t-cab_org_g)",
+        "width": "cab_org_shelf_depth",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_div2+cab_org_t-cab_org_g",
+          "cab_org_ft",
+          "cab_org_bottom_z+3*cab_org_step"
+        ],
+        "body_name": "SH-R3"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Back",
+        "length": "cab_org_panel_width-cab_org_back_clearance",
+        "width": "cab_org_b",
+        "height": "cab_org_h-cab_org_t+cab_org_g-(cab_org_bottom_z+cab_org_t-cab_org_g)-cab_org_back_clearance",
+        "corner": [
+          "cab_org_panel_start+cab_org_back_clearance/2",
+          "cab_org_rear",
+          "cab_org_bottom_z+cab_org_t-cab_org_g+cab_org_back_clearance/2"
+        ],
+        "body_name": "BACK"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Stile 1",
+        "length": "cab_org_f",
+        "width": "cab_org_ft",
+        "height": "cab_org_h-cab_org_frame_bottom",
+        "corner": [
+          "0 in",
+          "0 in",
+          "cab_org_frame_bottom"
+        ],
+        "body_name": "ST-1"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Stile 2",
+        "length": "cab_org_f",
+        "width": "cab_org_ft",
+        "height": "cab_org_h-cab_org_frame_bottom",
+        "corner": [
+          "cab_org_f+cab_org_bay",
+          "0 in",
+          "cab_org_frame_bottom"
+        ],
+        "body_name": "ST-2"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Stile 3",
+        "length": "cab_org_f",
+        "width": "cab_org_ft",
+        "height": "cab_org_h-cab_org_frame_bottom",
+        "corner": [
+          "2*cab_org_f+2*cab_org_bay",
+          "0 in",
+          "cab_org_frame_bottom"
+        ],
+        "body_name": "ST-3"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Stile 4",
+        "length": "cab_org_f",
+        "width": "cab_org_ft",
+        "height": "cab_org_h-cab_org_frame_bottom",
+        "corner": [
+          "cab_org_w-cab_org_f",
+          "0 in",
+          "cab_org_frame_bottom"
+        ],
+        "body_name": "ST-4"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Rail 11",
+        "length": "cab_org_bay",
+        "width": "cab_org_ft",
+        "height": "cab_org_f",
+        "corner": [
+          "cab_org_f",
+          "0 in",
+          "cab_org_frame_bottom+cab_org_f-cab_org_f"
+        ],
+        "body_name": "RA-11"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Rail 12",
+        "length": "cab_org_bay",
+        "width": "cab_org_ft",
+        "height": "cab_org_f",
+        "corner": [
+          "2*cab_org_f+cab_org_bay",
+          "0 in",
+          "cab_org_frame_bottom+cab_org_f-cab_org_f"
+        ],
+        "body_name": "RA-12"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Rail 13",
+        "length": "cab_org_bay",
+        "width": "cab_org_ft",
+        "height": "cab_org_f",
+        "corner": [
+          "3*cab_org_f+2*cab_org_bay",
+          "0 in",
+          "cab_org_frame_bottom+cab_org_f-cab_org_f"
+        ],
+        "body_name": "RA-13"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Rail 21",
+        "length": "cab_org_bay",
+        "width": "cab_org_ft",
+        "height": "cab_org_f",
+        "corner": [
+          "cab_org_f",
+          "0 in",
+          "cab_org_bottom_z+cab_org_step+cab_org_t-cab_org_f"
+        ],
+        "body_name": "RA-21"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Rail 22",
+        "length": "cab_org_bay",
+        "width": "cab_org_ft",
+        "height": "cab_org_f",
+        "corner": [
+          "2*cab_org_f+cab_org_bay",
+          "0 in",
+          "cab_org_bottom_z+cab_org_step+cab_org_t-cab_org_f"
+        ],
+        "body_name": "RA-22"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Rail 23",
+        "length": "cab_org_bay",
+        "width": "cab_org_ft",
+        "height": "cab_org_f",
+        "corner": [
+          "3*cab_org_f+2*cab_org_bay",
+          "0 in",
+          "cab_org_bottom_z+cab_org_step+cab_org_t-cab_org_f"
+        ],
+        "body_name": "RA-23"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Rail 31",
+        "length": "cab_org_bay",
+        "width": "cab_org_ft",
+        "height": "cab_org_f",
+        "corner": [
+          "cab_org_f",
+          "0 in",
+          "cab_org_bottom_z+2*cab_org_step+cab_org_t-cab_org_f"
+        ],
+        "body_name": "RA-31"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Rail 32",
+        "length": "cab_org_bay",
+        "width": "cab_org_ft",
+        "height": "cab_org_f",
+        "corner": [
+          "2*cab_org_f+cab_org_bay",
+          "0 in",
+          "cab_org_bottom_z+2*cab_org_step+cab_org_t-cab_org_f"
+        ],
+        "body_name": "RA-32"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Rail 33",
+        "length": "cab_org_bay",
+        "width": "cab_org_ft",
+        "height": "cab_org_f",
+        "corner": [
+          "3*cab_org_f+2*cab_org_bay",
+          "0 in",
+          "cab_org_bottom_z+2*cab_org_step+cab_org_t-cab_org_f"
+        ],
+        "body_name": "RA-33"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Rail 41",
+        "length": "cab_org_bay",
+        "width": "cab_org_ft",
+        "height": "cab_org_f",
+        "corner": [
+          "cab_org_f",
+          "0 in",
+          "cab_org_bottom_z+3*cab_org_step+cab_org_t-cab_org_f"
+        ],
+        "body_name": "RA-41"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Rail 42",
+        "length": "cab_org_bay",
+        "width": "cab_org_ft",
+        "height": "cab_org_f",
+        "corner": [
+          "2*cab_org_f+cab_org_bay",
+          "0 in",
+          "cab_org_bottom_z+3*cab_org_step+cab_org_t-cab_org_f"
+        ],
+        "body_name": "RA-42"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Rail 43",
+        "length": "cab_org_bay",
+        "width": "cab_org_ft",
+        "height": "cab_org_f",
+        "corner": [
+          "3*cab_org_f+2*cab_org_bay",
+          "0 in",
+          "cab_org_bottom_z+3*cab_org_step+cab_org_t-cab_org_f"
+        ],
+        "body_name": "RA-43"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Rail 51",
+        "length": "cab_org_bay",
+        "width": "cab_org_ft",
+        "height": "cab_org_f",
+        "corner": [
+          "cab_org_f",
+          "0 in",
+          "cab_org_h-cab_org_f"
+        ],
+        "body_name": "RA-51"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Rail 52",
+        "length": "cab_org_bay",
+        "width": "cab_org_ft",
+        "height": "cab_org_f",
+        "corner": [
+          "2*cab_org_f+cab_org_bay",
+          "0 in",
+          "cab_org_h-cab_org_f"
+        ],
+        "body_name": "RA-52"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Rail 53",
+        "length": "cab_org_bay",
+        "width": "cab_org_ft",
+        "height": "cab_org_f",
+        "corner": [
+          "3*cab_org_f+2*cab_org_bay",
+          "0 in",
+          "cab_org_h-cab_org_f"
+        ],
+        "body_name": "RA-53"
+      }
+    }
+  ],
+  "joinery": [
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Left stopped underside dado",
+        "length": "cab_stock",
+        "width": "cab_depth-cab_nose",
+        "height": "cab_lap",
+        "corner": [
+          "-cab_bay+cab_side_lip",
+          "cab_nose",
+          "cab_height"
+        ],
+        "operation": "cut",
+        "targets": [
+          "TOP-01"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Right stopped underside dado",
+        "length": "cab_stock",
+        "width": "cab_depth-cab_nose",
+        "height": "cab_lap",
+        "corner": [
+          "cab_center+cab_bay-cab_side_lip-cab_stock",
+          "cab_nose",
+          "cab_height"
+        ],
+        "operation": "cut",
+        "targets": [
+          "TOP-01"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "shelf-dado-0",
+        "length": "cab_org_g",
+        "width": "cab_org_d-cab_org_ft",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_f-cab_org_g",
+          "cab_org_ft",
+          "cab_org_bottom_z"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SIDE-L"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "shelf-dado-1",
+        "length": "cab_org_g",
+        "width": "cab_org_d-cab_org_ft",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_f-cab_org_g",
+          "cab_org_ft",
+          "cab_org_bottom_z+cab_org_step"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SIDE-L"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "shelf-dado-2",
+        "length": "cab_org_g",
+        "width": "cab_org_d-cab_org_ft",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_f-cab_org_g",
+          "cab_org_ft",
+          "cab_org_bottom_z+2*cab_org_step"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SIDE-L"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "shelf-dado-3",
+        "length": "cab_org_g",
+        "width": "cab_org_d-cab_org_ft",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_f-cab_org_g",
+          "cab_org_ft",
+          "cab_org_bottom_z+3*cab_org_step"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SIDE-L"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "shelf-dado-4",
+        "length": "cab_org_g",
+        "width": "cab_org_d-cab_org_ft",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_f-cab_org_g",
+          "cab_org_ft",
+          "cab_org_h-cab_org_t"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SIDE-L"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "back-groove",
+        "length": "cab_org_g",
+        "width": "cab_org_b",
+        "height": "cab_org_h",
+        "corner": [
+          "cab_org_f-cab_org_g",
+          "cab_org_rear",
+          "0 in"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SIDE-L"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "baseboard-relief",
+        "length": "cab_org_t",
+        "width": "cab_org_base_d",
+        "height": "cab_org_base_h",
+        "corner": [
+          "cab_org_f-cab_org_t",
+          "cab_org_d-cab_org_base_d",
+          "0 in"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SIDE-L"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "shelf-dado-0",
+        "length": "cab_org_g",
+        "width": "cab_org_d-cab_org_ft",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_w-cab_org_f",
+          "cab_org_ft",
+          "cab_org_bottom_z"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SIDE-R"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "shelf-dado-1",
+        "length": "cab_org_g",
+        "width": "cab_org_d-cab_org_ft",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_w-cab_org_f",
+          "cab_org_ft",
+          "cab_org_bottom_z+cab_org_step"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SIDE-R"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "shelf-dado-2",
+        "length": "cab_org_g",
+        "width": "cab_org_d-cab_org_ft",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_w-cab_org_f",
+          "cab_org_ft",
+          "cab_org_bottom_z+2*cab_org_step"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SIDE-R"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "shelf-dado-3",
+        "length": "cab_org_g",
+        "width": "cab_org_d-cab_org_ft",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_w-cab_org_f",
+          "cab_org_ft",
+          "cab_org_bottom_z+3*cab_org_step"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SIDE-R"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "shelf-dado-4",
+        "length": "cab_org_g",
+        "width": "cab_org_d-cab_org_ft",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_w-cab_org_f",
+          "cab_org_ft",
+          "cab_org_h-cab_org_t"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SIDE-R"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "back-groove",
+        "length": "cab_org_g",
+        "width": "cab_org_b",
+        "height": "cab_org_h",
+        "corner": [
+          "cab_org_w-cab_org_f",
+          "cab_org_rear",
+          "0 in"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SIDE-R"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "baseboard-relief",
+        "length": "cab_org_t",
+        "width": "cab_org_base_d",
+        "height": "cab_org_base_h",
+        "corner": [
+          "cab_org_w-cab_org_f",
+          "cab_org_d-cab_org_base_d",
+          "0 in"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SIDE-R"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "dado-0-left",
+        "length": "cab_org_g",
+        "width": "cab_org_shelf_depth",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_div1",
+          "cab_org_ft",
+          "cab_org_bottom_z+cab_org_step"
+        ],
+        "operation": "cut",
+        "targets": [
+          "DIV-1"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "dado-0-right",
+        "length": "cab_org_g",
+        "width": "cab_org_shelf_depth",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_div1+cab_org_t-cab_org_g",
+          "cab_org_ft",
+          "cab_org_bottom_z+cab_org_step"
+        ],
+        "operation": "cut",
+        "targets": [
+          "DIV-1"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "dado-1-left",
+        "length": "cab_org_g",
+        "width": "cab_org_shelf_depth",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_div1",
+          "cab_org_ft",
+          "cab_org_bottom_z+2*cab_org_step"
+        ],
+        "operation": "cut",
+        "targets": [
+          "DIV-1"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "dado-1-right",
+        "length": "cab_org_g",
+        "width": "cab_org_shelf_depth",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_div1+cab_org_t-cab_org_g",
+          "cab_org_ft",
+          "cab_org_bottom_z+2*cab_org_step"
+        ],
+        "operation": "cut",
+        "targets": [
+          "DIV-1"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "dado-2-left",
+        "length": "cab_org_g",
+        "width": "cab_org_shelf_depth",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_div1",
+          "cab_org_ft",
+          "cab_org_bottom_z+3*cab_org_step"
+        ],
+        "operation": "cut",
+        "targets": [
+          "DIV-1"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "dado-2-right",
+        "length": "cab_org_g",
+        "width": "cab_org_shelf_depth",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_div1+cab_org_t-cab_org_g",
+          "cab_org_ft",
+          "cab_org_bottom_z+3*cab_org_step"
+        ],
+        "operation": "cut",
+        "targets": [
+          "DIV-1"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "light-channel-relief",
+        "length": "cab_org_t",
+        "width": "cab_org_channel_flat+cab_org_channel_clear",
+        "height": "cab_org_channel_flat+2*cab_org_channel_clear",
+        "corner": [
+          "cab_org_div1",
+          "cab_org_ft",
+          "cab_org_channel_z3-cab_org_channel_clear"
+        ],
+        "operation": "cut",
+        "targets": [
+          "DIV-1"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "light-channel-relief",
+        "length": "cab_org_t",
+        "width": "cab_org_channel_flat+cab_org_channel_clear",
+        "height": "cab_org_channel_flat+2*cab_org_channel_clear",
+        "corner": [
+          "cab_org_div1",
+          "cab_org_ft",
+          "cab_org_channel_z5-cab_org_channel_clear"
+        ],
+        "operation": "cut",
+        "targets": [
+          "DIV-1"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "dado-0-left",
+        "length": "cab_org_g",
+        "width": "cab_org_shelf_depth",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_div2",
+          "cab_org_ft",
+          "cab_org_bottom_z+cab_org_step"
+        ],
+        "operation": "cut",
+        "targets": [
+          "DIV-2"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "dado-0-right",
+        "length": "cab_org_g",
+        "width": "cab_org_shelf_depth",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_div2+cab_org_t-cab_org_g",
+          "cab_org_ft",
+          "cab_org_bottom_z+cab_org_step"
+        ],
+        "operation": "cut",
+        "targets": [
+          "DIV-2"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "dado-1-left",
+        "length": "cab_org_g",
+        "width": "cab_org_shelf_depth",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_div2",
+          "cab_org_ft",
+          "cab_org_bottom_z+2*cab_org_step"
+        ],
+        "operation": "cut",
+        "targets": [
+          "DIV-2"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "dado-1-right",
+        "length": "cab_org_g",
+        "width": "cab_org_shelf_depth",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_div2+cab_org_t-cab_org_g",
+          "cab_org_ft",
+          "cab_org_bottom_z+2*cab_org_step"
+        ],
+        "operation": "cut",
+        "targets": [
+          "DIV-2"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "dado-2-left",
+        "length": "cab_org_g",
+        "width": "cab_org_shelf_depth",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_div2",
+          "cab_org_ft",
+          "cab_org_bottom_z+3*cab_org_step"
+        ],
+        "operation": "cut",
+        "targets": [
+          "DIV-2"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "dado-2-right",
+        "length": "cab_org_g",
+        "width": "cab_org_shelf_depth",
+        "height": "cab_org_t",
+        "corner": [
+          "cab_org_div2+cab_org_t-cab_org_g",
+          "cab_org_ft",
+          "cab_org_bottom_z+3*cab_org_step"
+        ],
+        "operation": "cut",
+        "targets": [
+          "DIV-2"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "light-channel-relief",
+        "length": "cab_org_t",
+        "width": "cab_org_channel_flat+cab_org_channel_clear",
+        "height": "cab_org_channel_flat+2*cab_org_channel_clear",
+        "corner": [
+          "cab_org_div2",
+          "cab_org_ft",
+          "cab_org_channel_z3-cab_org_channel_clear"
+        ],
+        "operation": "cut",
+        "targets": [
+          "DIV-2"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "light-channel-relief",
+        "length": "cab_org_t",
+        "width": "cab_org_channel_flat+cab_org_channel_clear",
+        "height": "cab_org_channel_flat+2*cab_org_channel_clear",
+        "corner": [
+          "cab_org_div2",
+          "cab_org_ft",
+          "cab_org_channel_z5-cab_org_channel_clear"
+        ],
+        "operation": "cut",
+        "targets": [
+          "DIV-2"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "divider-dado-0",
+        "length": "cab_org_t",
+        "width": "cab_org_d-cab_org_ft",
+        "height": "cab_org_g",
+        "corner": [
+          "cab_org_div1",
+          "cab_org_ft",
+          "cab_org_bottom_z+cab_org_t-cab_org_g"
+        ],
+        "operation": "cut",
+        "targets": [
+          "BOT"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "divider-dado-1",
+        "length": "cab_org_t",
+        "width": "cab_org_d-cab_org_ft",
+        "height": "cab_org_g",
+        "corner": [
+          "cab_org_div2",
+          "cab_org_ft",
+          "cab_org_bottom_z+cab_org_t-cab_org_g"
+        ],
+        "operation": "cut",
+        "targets": [
+          "BOT"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "back-groove",
+        "length": "cab_org_panel_width",
+        "width": "cab_org_b",
+        "height": "cab_org_g",
+        "corner": [
+          "cab_org_panel_start",
+          "cab_org_rear",
+          "cab_org_bottom_z+cab_org_t-cab_org_g"
+        ],
+        "operation": "cut",
+        "targets": [
+          "BOT"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "divider-dado-0",
+        "length": "cab_org_t",
+        "width": "cab_org_d-cab_org_ft",
+        "height": "cab_org_g",
+        "corner": [
+          "cab_org_div1",
+          "cab_org_ft",
+          "cab_org_h-cab_org_t"
+        ],
+        "operation": "cut",
+        "targets": [
+          "TOP"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "divider-dado-1",
+        "length": "cab_org_t",
+        "width": "cab_org_d-cab_org_ft",
+        "height": "cab_org_g",
+        "corner": [
+          "cab_org_div2",
+          "cab_org_ft",
+          "cab_org_h-cab_org_t"
+        ],
+        "operation": "cut",
+        "targets": [
+          "TOP"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "back-groove",
+        "length": "cab_org_panel_width",
+        "width": "cab_org_b",
+        "height": "cab_org_g",
+        "corner": [
+          "cab_org_panel_start",
+          "cab_org_rear",
+          "cab_org_h-cab_org_t"
+        ],
+        "operation": "cut",
+        "targets": [
+          "TOP"
+        ]
+      }
+    }
+  ],
+  "appearance": [
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "SH-L",
+          "SH-R",
+          "SH-MID-L",
+          "SH-MID-R",
+          "SIDE-L",
+          "SIDE-R",
+          "DIV-1",
+          "DIV-2",
+          "BOT",
+          "TOP",
+          "SH-L1",
+          "SH-C1",
+          "SH-R1",
+          "SH-L2",
+          "SH-C2",
+          "SH-R2",
+          "SH-L3",
+          "SH-C3",
+          "SH-R3"
+        ],
+        "color": "#d7b688"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "BACK"
+        ],
+        "color": "#af8961"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "CL-L",
+          "ST-L",
+          "PB-L",
+          "PS-L",
+          "TR-L",
+          "FR-L",
+          "CL-R",
+          "ST-R",
+          "PB-R",
+          "PS-R",
+          "TR-R",
+          "FR-R",
+          "FR-MID-L",
+          "FR-MID-R",
+          "ST-1",
+          "ST-2",
+          "ST-3",
+          "ST-4",
+          "RA-11",
+          "RA-12",
+          "RA-13",
+          "RA-21",
+          "RA-22",
+          "RA-23",
+          "RA-31",
+          "RA-32",
+          "RA-33",
+          "RA-41",
+          "RA-42",
+          "RA-43",
+          "RA-51",
+          "RA-52",
+          "RA-53"
+        ],
+        "color": "#ebc391"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "TOP-01"
+        ],
+        "color": "#c49255"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "LED-SODA-3",
+          "LED-SODA-5",
+          "LED-MID-L",
+          "LED-TR-L",
+          "LED-MID-R",
+          "LED-TR-R"
+        ],
+        "color": "#63768b"
+      }
+    }
+  ]
+}

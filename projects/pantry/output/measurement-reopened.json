@@ -50,9 +50,9 @@
         ]
       },
       "closed": true,
-      "faces": 46,
+      "faces": 38,
       "name": "DIV-1",
-      "volume_mm3": 6177795.104062505
+      "volume_mm3": 6168193.3087500045
     },
     {
       "bbox": {
@@ -68,9 +68,9 @@
         ]
       },
       "closed": true,
-      "faces": 46,
+      "faces": 38,
       "name": "DIV-2",
-      "volume_mm3": 6177795.1040624995
+      "volume_mm3": 6168193.308749998
     },
     {
       "bbox": {
@@ -633,6 +633,6 @@
   ],
   "body_count": 35,
   "total": {
-    "volume_mm3": 58421627.48614841
+    "volume_mm3": 58402423.89552341
   }
 }

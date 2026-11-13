@@ -1,11 +1,11 @@
 {
-  "boolean_ms": 1404.054,
+  "boolean_ms": 1731.651,
   "budget_exceeded": false,
   "budget_s": 90.0,
   "checked": 35,
   "count": 0,
   "interferences": [],
-  "ms": 170.872,
+  "ms": 211.139,
   "pairs_candidate": 126,
   "pairs_cleared": 0,
   "pairs_excluded": 0,
@@ -16,57 +16,57 @@
     {
       "a": "SIDE-L",
       "b": "TOP",
-      "boolean_ms": 45.406,
-      "ms": 45.408,
+      "boolean_ms": 85.616,
+      "ms": 85.618,
       "tessellate_ms": 0.0
     },
     {
       "a": "SIDE-R",
       "b": "TOP",
-      "boolean_ms": 45.217,
-      "ms": 45.221,
-      "tessellate_ms": 0.0
-    },
-    {
-      "a": "SIDE-R",
-      "b": "BOT",
-      "boolean_ms": 31.699,
-      "ms": 31.701,
-      "tessellate_ms": 0.0
-    },
-    {
-      "a": "DIV-2",
-      "b": "TOP",
-      "boolean_ms": 30.0,
-      "ms": 30.001,
+      "boolean_ms": 71.573,
+      "ms": 71.575,
       "tessellate_ms": 0.0
     },
     {
       "a": "DIV-1",
-      "b": "ST-2",
-      "boolean_ms": 28.306,
-      "ms": 28.307,
+      "b": "TOP",
+      "boolean_ms": 65.76,
+      "ms": 65.764,
       "tessellate_ms": 0.0
     },
     {
       "a": "DIV-2",
-      "b": "BACK",
-      "boolean_ms": 28.274,
-      "ms": 28.275,
+      "b": "TOP",
+      "boolean_ms": 60.534,
+      "ms": 60.552,
       "tessellate_ms": 0.0
     },
     {
       "a": "DIV-2",
-      "b": "ST-3",
-      "boolean_ms": 27.156,
-      "ms": 27.159,
+      "b": "BOT",
+      "boolean_ms": 56.045,
+      "ms": 56.048,
       "tessellate_ms": 0.0
     },
     {
       "a": "SIDE-L",
+      "b": "SH-L1",
+      "boolean_ms": 49.441,
+      "ms": 49.445,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "SIDE-R",
       "b": "BOT",
-      "boolean_ms": 26.146,
-      "ms": 26.148,
+      "boolean_ms": 47.519,
+      "ms": 47.522,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "DIV-1",
+      "b": "BOT",
+      "boolean_ms": 42.549,
+      "ms": 42.574,
       "tessellate_ms": 0.0
     }
   ],

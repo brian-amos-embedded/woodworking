@@ -1,6 +1,6 @@
 {
   "name": "Pantry side bays",
-  "revision": "R1",
+  "revision": "R4",
   "parameters_in": {
     "bay": 20.75,
     "center": 26,
@@ -25,6 +25,11 @@
     "led_h": 0.625,
     "led_end": 0.125,
     "angle_leg": 0.625,
+    "middle_z": 24,
+    "organizer_stile_w": 2,
+    "organizer_side_t": 0.75,
+    "pin_projection": 0.25,
+    "front_overhang": 1,
     "org_W": 26,
     "org_H": 36.25,
     "org_D": 18.125,
@@ -39,31 +44,68 @@
     "org_back_clearance": 0.0625,
     "org_base_h": 3.5,
     "org_base_d": 1.5,
-    "org_wire_h": 0.25,
-    "org_wire_d": 0.25
+    "org_channel_flat": 0.625,
+    "org_channel_clear": 0.0625,
+    "org_channel_end": 0.125,
+    "org_channel_lift": 0.125
   },
   "derived_expressions": {
+    "carcass_inset": "organizer_stile_w-organizer_side_t",
     "org_bay": "(org_W-4*org_F)/3",
     "org_div1": "org_F+org_bay+org_F/2-org_T/2",
     "org_div2": "2*org_F+2*org_bay+org_F/2-org_T/2",
     "org_rear": "org_D-org_FT",
     "org_shelf_depth": "org_rear-org_FT",
     "org_panel_start": "org_F-org_G",
-    "org_panel_width": "org_W-2*org_F+2*org_G"
+    "org_panel_width": "org_W-2*org_F+2*org_G",
+    "org_channel_z3": "org_bottom_z+2*org_step+org_T-org_F+org_channel_lift",
+    "org_channel_z5": "org_H-org_F+org_channel_lift"
   },
   "parts": [
+    {
+      "id": "LED-SODA-3",
+      "name": "Continuous angled channel row 3",
+      "material": "lighting",
+      "corner": [
+        "org_F+org_channel_end",
+        "org_FT",
+        "org_channel_z3"
+      ],
+      "size": [
+        "org_W-2*org_F-2*org_channel_end",
+        "org_channel_flat",
+        "org_channel_flat"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "LED-SODA-5",
+      "name": "Continuous angled channel row 5",
+      "material": "lighting",
+      "corner": [
+        "org_F+org_channel_end",
+        "org_FT",
+        "org_channel_z5"
+      ],
+      "size": [
+        "org_W-2*org_F-2*org_channel_end",
+        "org_channel_flat",
+        "org_channel_flat"
+      ],
+      "cuts": []
+    },
     {
       "id": "TOP-01",
       "name": "TOP-01",
       "material": "butcherblock",
       "corner": [
         "-bay",
-        0,
+        "-front_overhang",
         "height"
       ],
       "size": [
         "center+2*bay",
-        "depth",
+        "depth+front_overhang",
         "top_t"
       ],
       "cuts": [
@@ -185,7 +227,7 @@
         "shelf_z"
       ],
       "size": [
-        "bay-stock-2*fit",
+        "bay+carcass_inset-stock-2*fit",
         "depth-2*stock-fit",
         "stock"
       ],
@@ -208,13 +250,13 @@
       "cuts": []
     },
     {
-      "id": "LED-SH-L",
-      "name": "LED-SH-L",
+      "id": "LED-MID-L",
+      "name": "LED-MID-L",
       "material": "lighting",
       "corner": [
         "-bay+rail_h+apron_gap",
-        "2*stock",
-        "shelf_z+stock-rail_h"
+        "stock",
+        "middle_z+stock-rail_h-led_h"
       ],
       "size": [
         "bay-rail_h-2*apron_gap",
@@ -229,8 +271,8 @@
       "material": "lighting",
       "corner": [
         "-bay+rail_h",
-        "stock",
-        "height-rail_h"
+        0,
+        "height-rail_h-led_h"
       ],
       "size": [
         "bay-rail_h",
@@ -324,12 +366,12 @@
       "name": "SH-R",
       "material": "plywood_3_4",
       "corner": [
-        "center+fit",
+        "center-carcass_inset+fit",
         "2*stock",
         "shelf_z"
       ],
       "size": [
-        "bay-stock-2*fit",
+        "bay+carcass_inset-stock-2*fit",
         "depth-2*stock-fit",
         "stock"
       ],
@@ -352,13 +394,13 @@
       "cuts": []
     },
     {
-      "id": "LED-SH-R",
-      "name": "LED-SH-R",
+      "id": "LED-MID-R",
+      "name": "LED-MID-R",
       "material": "lighting",
       "corner": [
         "center+apron_gap",
-        "2*stock",
-        "shelf_z+stock-rail_h"
+        "stock",
+        "middle_z+stock-rail_h-led_h"
       ],
       "size": [
         "bay-rail_h-2*apron_gap",
@@ -373,13 +415,77 @@
       "material": "lighting",
       "corner": [
         "center",
-        "stock",
-        "height-rail_h"
+        0,
+        "height-rail_h-led_h"
       ],
       "size": [
         "bay-rail_h",
         "led_d",
         "led_h"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "SH-MID-L",
+      "name": "SH-MID-L",
+      "material": "plywood_3_4",
+      "corner": [
+        "-bay+stock+fit",
+        "2*stock",
+        "middle_z"
+      ],
+      "size": [
+        "bay+carcass_inset-stock-2*fit",
+        "depth-2*stock-fit",
+        "stock"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "FR-MID-L",
+      "name": "FR-MID-L",
+      "material": "maple",
+      "corner": [
+        "-bay+rail_h+apron_gap",
+        "stock",
+        "middle_z+stock-rail_h"
+      ],
+      "size": [
+        "bay-rail_h-2*apron_gap",
+        "stock",
+        "rail_h"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "SH-MID-R",
+      "name": "SH-MID-R",
+      "material": "plywood_3_4",
+      "corner": [
+        "center-carcass_inset+fit",
+        "2*stock",
+        "middle_z"
+      ],
+      "size": [
+        "bay+carcass_inset-stock-2*fit",
+        "depth-2*stock-fit",
+        "stock"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "FR-MID-R",
+      "name": "FR-MID-R",
+      "material": "maple",
+      "corner": [
+        "center+apron_gap",
+        "stock",
+        "middle_z+stock-rail_h"
+      ],
+      "size": [
+        "bay-rail_h-2*apron_gap",
+        "stock",
+        "rail_h"
       ],
       "cuts": []
     },
@@ -702,55 +808,29 @@
           ]
         },
         {
-          "name": "light-wire-relief",
+          "name": "light-channel-relief",
           "corner": [
             "org_div1",
             "org_FT",
-            "org_bottom_z+org_step+org_T-org_F-org_wire_h"
+            "org_channel_z3-org_channel_clear"
           ],
           "size": [
             "org_T",
-            "org_wire_d",
-            "org_wire_h"
+            "org_channel_flat+org_channel_clear",
+            "org_channel_flat+2*org_channel_clear"
           ]
         },
         {
-          "name": "light-wire-relief",
+          "name": "light-channel-relief",
           "corner": [
             "org_div1",
             "org_FT",
-            "org_bottom_z+2*org_step+org_T-org_F-org_wire_h"
+            "org_channel_z5-org_channel_clear"
           ],
           "size": [
             "org_T",
-            "org_wire_d",
-            "org_wire_h"
-          ]
-        },
-        {
-          "name": "light-wire-relief",
-          "corner": [
-            "org_div1",
-            "org_FT",
-            "org_bottom_z+3*org_step+org_T-org_F-org_wire_h"
-          ],
-          "size": [
-            "org_T",
-            "org_wire_d",
-            "org_wire_h"
-          ]
-        },
-        {
-          "name": "light-wire-relief",
-          "corner": [
-            "org_div1",
-            "org_FT",
-            "org_H-org_F-org_wire_h"
-          ],
-          "size": [
-            "org_T",
-            "org_wire_d",
-            "org_wire_h"
+            "org_channel_flat+org_channel_clear",
+            "org_channel_flat+2*org_channel_clear"
           ]
         }
       ]
@@ -852,55 +932,29 @@
           ]
         },
         {
-          "name": "light-wire-relief",
+          "name": "light-channel-relief",
           "corner": [
             "org_div2",
             "org_FT",
-            "org_bottom_z+org_step+org_T-org_F-org_wire_h"
+            "org_channel_z3-org_channel_clear"
           ],
           "size": [
             "org_T",
-            "org_wire_d",
-            "org_wire_h"
+            "org_channel_flat+org_channel_clear",
+            "org_channel_flat+2*org_channel_clear"
           ]
         },
         {
-          "name": "light-wire-relief",
+          "name": "light-channel-relief",
           "corner": [
             "org_div2",
             "org_FT",
-            "org_bottom_z+2*org_step+org_T-org_F-org_wire_h"
+            "org_channel_z5-org_channel_clear"
           ],
           "size": [
             "org_T",
-            "org_wire_d",
-            "org_wire_h"
-          ]
-        },
-        {
-          "name": "light-wire-relief",
-          "corner": [
-            "org_div2",
-            "org_FT",
-            "org_bottom_z+3*org_step+org_T-org_F-org_wire_h"
-          ],
-          "size": [
-            "org_T",
-            "org_wire_d",
-            "org_wire_h"
-          ]
-        },
-        {
-          "name": "light-wire-relief",
-          "corner": [
-            "org_div2",
-            "org_FT",
-            "org_H-org_F-org_wire_h"
-          ],
-          "size": [
-            "org_T",
-            "org_wire_d",
-            "org_wire_h"
+            "org_channel_flat+org_channel_clear",
+            "org_channel_flat+2*org_channel_clear"
           ]
         }
       ]
@@ -1573,198 +1627,16 @@
       "material": "maple",
       "grain_axis": 0,
       "cuts": []
+    }
+  ],
+  "includes": [
+    {
+      "spec": "source/side-bays.json",
+      "prefix": ""
     },
     {
-      "id": "LED-RA-21",
-      "name": "Angled channel envelope",
-      "material": "lighting",
-      "corner": [
-        "org_F+led_end",
-        "org_FT",
-        "org_bottom_z+org_step+org_T-org_F-angle_leg"
-      ],
-      "size": [
-        "org_bay-2*led_end",
-        0.625,
-        0.625
-      ],
-      "cuts": []
-    },
-    {
-      "id": "LED-RA-22",
-      "name": "Angled channel envelope",
-      "material": "lighting",
-      "corner": [
-        "2*org_F+org_bay+led_end",
-        "org_FT",
-        "org_bottom_z+org_step+org_T-org_F-angle_leg"
-      ],
-      "size": [
-        "org_bay-2*led_end",
-        0.625,
-        0.625
-      ],
-      "cuts": []
-    },
-    {
-      "id": "LED-RA-23",
-      "name": "Angled channel envelope",
-      "material": "lighting",
-      "corner": [
-        "3*org_F+2*org_bay+led_end",
-        "org_FT",
-        "org_bottom_z+org_step+org_T-org_F-angle_leg"
-      ],
-      "size": [
-        "org_bay-2*led_end",
-        0.625,
-        0.625
-      ],
-      "cuts": []
-    },
-    {
-      "id": "LED-RA-31",
-      "name": "Angled channel envelope",
-      "material": "lighting",
-      "corner": [
-        "org_F+led_end",
-        "org_FT",
-        "org_bottom_z+2*org_step+org_T-org_F-angle_leg"
-      ],
-      "size": [
-        "org_bay-2*led_end",
-        0.625,
-        0.625
-      ],
-      "cuts": []
-    },
-    {
-      "id": "LED-RA-32",
-      "name": "Angled channel envelope",
-      "material": "lighting",
-      "corner": [
-        "2*org_F+org_bay+led_end",
-        "org_FT",
-        "org_bottom_z+2*org_step+org_T-org_F-angle_leg"
-      ],
-      "size": [
-        "org_bay-2*led_end",
-        0.625,
-        0.625
-      ],
-      "cuts": []
-    },
-    {
-      "id": "LED-RA-33",
-      "name": "Angled channel envelope",
-      "material": "lighting",
-      "corner": [
-        "3*org_F+2*org_bay+led_end",
-        "org_FT",
-        "org_bottom_z+2*org_step+org_T-org_F-angle_leg"
-      ],
-      "size": [
-        "org_bay-2*led_end",
-        0.625,
-        0.625
-      ],
-      "cuts": []
-    },
-    {
-      "id": "LED-RA-41",
-      "name": "Angled channel envelope",
-      "material": "lighting",
-      "corner": [
-        "org_F+led_end",
-        "org_FT",
-        "org_bottom_z+3*org_step+org_T-org_F-angle_leg"
-      ],
-      "size": [
-        "org_bay-2*led_end",
-        0.625,
-        0.625
-      ],
-      "cuts": []
-    },
-    {
-      "id": "LED-RA-42",
-      "name": "Angled channel envelope",
-      "material": "lighting",
-      "corner": [
-        "2*org_F+org_bay+led_end",
-        "org_FT",
-        "org_bottom_z+3*org_step+org_T-org_F-angle_leg"
-      ],
-      "size": [
-        "org_bay-2*led_end",
-        0.625,
-        0.625
-      ],
-      "cuts": []
-    },
-    {
-      "id": "LED-RA-43",
-      "name": "Angled channel envelope",
-      "material": "lighting",
-      "corner": [
-        "3*org_F+2*org_bay+led_end",
-        "org_FT",
-        "org_bottom_z+3*org_step+org_T-org_F-angle_leg"
-      ],
-      "size": [
-        "org_bay-2*led_end",
-        0.625,
-        0.625
-      ],
-      "cuts": []
-    },
-    {
-      "id": "LED-RA-51",
-      "name": "Angled channel envelope",
-      "material": "lighting",
-      "corner": [
-        "org_F+led_end",
-        "org_FT",
-        "org_H-org_F-angle_leg"
-      ],
-      "size": [
-        "org_bay-2*led_end",
-        0.625,
-        0.625
-      ],
-      "cuts": []
-    },
-    {
-      "id": "LED-RA-52",
-      "name": "Angled channel envelope",
-      "material": "lighting",
-      "corner": [
-        "2*org_F+org_bay+led_end",
-        "org_FT",
-        "org_H-org_F-angle_leg"
-      ],
-      "size": [
-        "org_bay-2*led_end",
-        0.625,
-        0.625
-      ],
-      "cuts": []
-    },
-    {
-      "id": "LED-RA-53",
-      "name": "Angled channel envelope",
-      "material": "lighting",
-      "corner": [
-        "3*org_F+2*org_bay+led_end",
-        "org_FT",
-        "org_H-org_F-angle_leg"
-      ],
-      "size": [
-        "org_bay-2*led_end",
-        0.625,
-        0.625
-      ],
-      "cuts": []
+      "spec": "project.json",
+      "prefix": "org_"
     }
   ]
 }

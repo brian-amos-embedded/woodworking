@@ -1,6 +1,6 @@
 {
   "name": "Pantry side bays",
-  "revision": "R1",
+  "revision": "R2",
   "parameters_in": {
     "bay": 20.75,
     "center": 26,
@@ -24,9 +24,16 @@
     "led_d": 0.375,
     "led_h": 0.625,
     "led_end": 0.125,
-    "angle_leg": 0.625
+    "angle_leg": 0.625,
+    "middle_z": 24,
+    "organizer_stile_w": 2,
+    "organizer_side_t": 0.75,
+    "pin_projection": 0.25,
+    "front_overhang": 1
   },
-  "derived_expressions": {},
+  "derived_expressions": {
+    "carcass_inset": "organizer_stile_w-organizer_side_t"
+  },
   "parts": [
     {
       "id": "TOP-01",
@@ -34,12 +41,12 @@
       "material": "butcherblock",
       "corner": [
         "-bay",
-        0,
+        "-front_overhang",
         "height"
       ],
       "size": [
         "center+2*bay",
-        "depth",
+        "depth+front_overhang",
         "top_t"
       ],
       "cuts": [
@@ -161,7 +168,7 @@
         "shelf_z"
       ],
       "size": [
-        "bay-stock-2*fit",
+        "bay+carcass_inset-stock-2*fit",
         "depth-2*stock-fit",
         "stock"
       ],
@@ -184,13 +191,13 @@
       "cuts": []
     },
     {
-      "id": "LED-SH-L",
-      "name": "LED-SH-L",
+      "id": "LED-MID-L",
+      "name": "LED-MID-L",
       "material": "lighting",
       "corner": [
         "-bay+rail_h+apron_gap",
-        "2*stock",
-        "shelf_z+stock-rail_h"
+        "stock",
+        "middle_z+stock-rail_h-led_h"
       ],
       "size": [
         "bay-rail_h-2*apron_gap",
@@ -205,8 +212,8 @@
       "material": "lighting",
       "corner": [
         "-bay+rail_h",
-        "stock",
-        "height-rail_h"
+        0,
+        "height-rail_h-led_h"
       ],
       "size": [
         "bay-rail_h",
@@ -300,12 +307,12 @@
       "name": "SH-R",
       "material": "plywood_3_4",
       "corner": [
-        "center+fit",
+        "center-carcass_inset+fit",
         "2*stock",
         "shelf_z"
       ],
       "size": [
-        "bay-stock-2*fit",
+        "bay+carcass_inset-stock-2*fit",
         "depth-2*stock-fit",
         "stock"
       ],
@@ -328,13 +335,13 @@
       "cuts": []
     },
     {
-      "id": "LED-SH-R",
-      "name": "LED-SH-R",
+      "id": "LED-MID-R",
+      "name": "LED-MID-R",
       "material": "lighting",
       "corner": [
         "center+apron_gap",
-        "2*stock",
-        "shelf_z+stock-rail_h"
+        "stock",
+        "middle_z+stock-rail_h-led_h"
       ],
       "size": [
         "bay-rail_h-2*apron_gap",
@@ -349,13 +356,77 @@
       "material": "lighting",
       "corner": [
         "center",
-        "stock",
-        "height-rail_h"
+        0,
+        "height-rail_h-led_h"
       ],
       "size": [
         "bay-rail_h",
         "led_d",
         "led_h"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "SH-MID-L",
+      "name": "SH-MID-L",
+      "material": "plywood_3_4",
+      "corner": [
+        "-bay+stock+fit",
+        "2*stock",
+        "middle_z"
+      ],
+      "size": [
+        "bay+carcass_inset-stock-2*fit",
+        "depth-2*stock-fit",
+        "stock"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "FR-MID-L",
+      "name": "FR-MID-L",
+      "material": "maple",
+      "corner": [
+        "-bay+rail_h+apron_gap",
+        "stock",
+        "middle_z+stock-rail_h"
+      ],
+      "size": [
+        "bay-rail_h-2*apron_gap",
+        "stock",
+        "rail_h"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "SH-MID-R",
+      "name": "SH-MID-R",
+      "material": "plywood_3_4",
+      "corner": [
+        "center-carcass_inset+fit",
+        "2*stock",
+        "middle_z"
+      ],
+      "size": [
+        "bay+carcass_inset-stock-2*fit",
+        "depth-2*stock-fit",
+        "stock"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "FR-MID-R",
+      "name": "FR-MID-R",
+      "material": "maple",
+      "corner": [
+        "center+apron_gap",
+        "stock",
+        "middle_z+stock-rail_h"
+      ],
+      "size": [
+        "bay-rail_h-2*apron_gap",
+        "stock",
+        "rail_h"
       ],
       "cuts": []
     }

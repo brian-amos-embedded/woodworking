@@ -43,7 +43,7 @@ def notes(y, strings):
 page('Pantry side shelves','Left and right bays  |  Nominal opening 67 1/2 in  |  Field-fit before cutting')
 pdf.drawImage(str(out/'pantry-combined.png'),44,310,524,368,preserveAspectRatio=True,anchor='c')
 notes(282,[
-    'One adjustable shelf per bay is shown. Duplicate the shelf, apron and light per added level.',
+    'Two adjustable shelves per bay are shown. The middle shelf carries a light.',
     'Use four 1/8 in pegs per shelf. The organizer supplies two rows on each outside face.',
     'The wall supplies a front stile and an independent rear pin strip on each side.',
     'A short-depth front pin backer sits behind each visible stile.',
@@ -53,7 +53,7 @@ notes(282,[
 ])
 pdf.showPage()
 
-page('Cut list','One shelf per bay shown  |  Dimensions in inches  |  Confirm usable stock at the opening')
+page('Cut list','Two shelves per bay shown  |  Dimensions in inches  |  Confirm usable stock at the opening')
 line(42,666,'Part IDs',9,True)
 line(156,666,'Qty',9,True)
 line(200,666,'Material / purpose',9,True)
@@ -73,7 +73,7 @@ for i,(key,material,label,axes) in enumerate(rows):
     y=640-i*31
     dims=[p['size']['xyz'.index(axis)] for axis in axes]
     line(42,y,key if key=='TOP-01' else key+'-L / -R')
-    line(156,y,'1' if key=='TOP-01' else '2')
+    line(156,y,'1' if key=='TOP-01' else ('4' if key in ('SH','FR') else '2'))
     line(200,y,label)
     line(383,y,' x '.join(map(inch,dims)))
     line(200,y-12,material,8)
@@ -85,24 +85,26 @@ notes(359,[
     'Second 1 5/8 in strip: two 33 1/4 in rear pin strips.',
     'Board B: rip one 2 1/8 in and one 1 1/8 in rough strip.',
     '2 1/8 in strip: one 19 3/4 in upper rail + two 19 1/2 in shelf aprons.',
-    '1 1/8 in strip: two 17 1/2 in cleats. Mill both boards to 3/4 in.',
-    'Plywood: two nominal 19 7/8 x 16 9/16 in blanks. Scribe each independently.',
-    'One 24 x 48 in offcut can yield both shelves, with face grain along the 48 in side.',
+    '1 1/8 in strip: two 17 1/2 in cleats. Rip a 2 1/8 in strip for the two extra aprons.',
+    'Plywood: four nominal 21 1/8 x 16 9/16 in blanks. Scribe each independently.',
+    'Each 24 x 48 in offcut can yield two shelves, with face grain along the 48 in side.',
     'Counter: template the opening, then transfer the stopped pockets to the underside.',
 ])
 pdf.showPage()
 
 page('Countertop and cleats','Underside plan and end section  |  Rear-open stopped edge dados')
 x,y,s=52,456,7.5
-w,d=67.5*s,18.125*s
+top=parts['TOP-01']
+w,d=top['size'][0]*s,top['size'][1]*s
+nose=(top['cuts'][0]['corner'][1]-top['corner'][1])*s
 pdf.setFillColor(colors.HexColor('#f4ead9'))
 pdf.rect(x,y,w,d,fill=1)
 for edge in (x,x+w-.75*s):
     pdf.setFillColor(teal)
-    pdf.rect(edge,y+1.5*s,.75*s,(18.125-1.5)*s,fill=1)
-    pdf.line(edge,y+1.5*s,edge+(.75*s if edge==x else -42),y-12)
+    pdf.rect(edge,y+nose,.75*s,d-nose,fill=1)
+    pdf.line(edge,y+nose,edge+(.75*s if edge==x else -42),y-12)
 line(52,613,'REAR / CLEAT POCKETS OPEN HERE',9,True)
-line(52,426,'FRONT / KEEP 1 1/2 IN OF FULL-THICKNESS NOSE',9,True)
+line(52,426,'FRONT / 1 IN OVERHANG / KEEP 2 1/2 IN OF FULL-THICKNESS NOSE',9,True)
 line(52,382,'END SECTION AT CLEAT',10,True)
 pdf.setFillColor(colors.HexColor('#f4ead9'))
 path=pdf.beginPath()
@@ -131,7 +133,7 @@ notes(665,[
     '2. Fasten each front stile and pin backer, then locate the independent rear pin strip.',
     '3. Dry-fit the low shelf and its 2 in apron. Lift and remove it past the upper trim.',
     '4. Transfer one level datum to all four peg rows. Match peg bearing heights.',
-    '5. Install upper decorative rails, then mount channels behind their lower edges.',
+    '5. Install upper decorative rails, then mount channels on their bottom faces.',
 ])
 line(42,548,'Peg rows (from front face of center organizer)',12,True)
 notes(526,[
@@ -145,8 +147,8 @@ notes(526,[
 ])
 line(42,378,'Rectangular lighting channels',12,True)
 notes(356,[
-    'Attach channels low behind the shelf aprons, with the emitting face toward the rear.',
-    'The upper decorative rails conceal fixed channels mounted in the same orientation.',
+    'Mount channels to the bottom faces of the middle shelf aprons, aimed toward the rear.',
+    'Mount fixed channels to the underside of the rails directly below the countertop.',
     'Channel blanks: two up to 18 1/2 in at the shelves and two up to 18 3/4 in above.',
     'Leave extra end clearance for caps and leads. Confirm actual extrusion and clip dimensions.',
     'The CAD envelope is 3/8 in front-to-back x 5/8 in high. Check it before machining.',
@@ -158,7 +160,7 @@ page('Shelf blanks and peg layout','Top views  |  Shelf front is at the bottom  
 from sheet_layout import rip_first
 blanks = [(key, parts[key]['size'][1], parts[key]['size'][0]) for key in ('SH-L','SH-R')]
 layout = rip_first([blanks], (24,48), SHOP['kerf_in'], SHOP['edge_trim_in'], 'S1')
-line(42,664,'3/4 IN MAPLE PLYWOOD / 24 X 48 IN OFFCUT',10,True)
+line(42,664,'3/4 IN MAPLE PLYWOOD / REPEAT ON TWO 24 X 48 IN OFFCUTS',10,True)
 x,y,s=80,460,7.5
 pdf.setStrokeColor(ink)
 pdf.setFillColor(colors.HexColor('#f4ead9'))
@@ -167,7 +169,7 @@ for key,(across,along,width,length) in layout['parts'].items():
     pdf.setFillColor(teal)
     pdf.rect(x+along*s,y+across*s,length*s,width*s,fill=1)
     line(x+along*s+10,y+45,key,10,True)
-line(42,438,f"Trim {inch(SHOP['edge_trim_in'])} in per edge. Rip 16 9/16 in, then crosscut two 19 7/8 in blanks.")
+line(42,438,f"Trim {inch(SHOP['edge_trim_in'])} in per edge. Rip 16 9/16 in, then crosscut two 21 1/8 in blanks.")
 line(42,420,f"Keep the {inch(SHOP['kerf_in'])} in kerf on the waste side. Template each shelf to its bay.")
 for index,hand in enumerate(('L','R')):
     x,y,s=63+index*270,161,9
@@ -176,8 +178,10 @@ for index,hand in enumerate(('L','R')):
     w,d,_=shelf['size']
     pdf.setFillColor(colors.HexColor('#f4ead9'))
     pdf.rect(x,y,w*s,d*s,fill=1)
-    organizer_edge = x+w*s if hand=='L' else x
-    wall_edge = x if hand=='L' else x+w*s
+    parameters = spec['parameters_in']
+    bearing = (parameters['pin_projection']-parameters['fit'])/2*s
+    organizer_edge = x+w*s-bearing if hand=='L' else x+bearing
+    wall_edge = x+bearing if hand=='L' else x+w*s-bearing
     rear = spec['parameters_in']['left_rear' if hand=='L' else 'right_rear']+.75
     for edge, depth in [(organizer_edge,1.875),(organizer_edge,15.75),
                         (wall_edge,1.875),(wall_edge,rear)]:
@@ -188,6 +192,9 @@ for index,hand in enumerate(('L','R')):
     pdf.rect(x+(apron['corner'][0]-sx)*s,y-7,apron['size'][0]*s,7,fill=1)
     line(x,y-25,'SH-'+hand+' / front apron shown in teal',9,True)
     line(x,y+d*s+12,'WALL  /  ORGANIZER' if hand=='L' else 'ORGANIZER  /  WALL',8)
-line(42,93,'Dots show peg bearing positions. Keep pins and plugs clear of the shelf travel path.')
+line(42,106,'Shelf width = carcass to wall-side pin face minus 1/8 in total.')
+line(42,88,'Apron width = clear opening between stiles minus 1/4 in total.')
+line(42,70,'Confirm pin projection and tilt the shelf past the stiles before drilling.')
+
 pdf.showPage()
 pdf.save()

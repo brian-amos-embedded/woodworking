@@ -101,15 +101,29 @@
     {
       "command": "parameters.change",
       "params": {
-        "name": "cab_wire_h",
-        "expression": "0.25 in"
+        "name": "cab_channel_flat",
+        "expression": "0.625 in"
       }
     },
     {
       "command": "parameters.change",
       "params": {
-        "name": "cab_wire_d",
-        "expression": "0.25 in"
+        "name": "cab_channel_clear",
+        "expression": "0.0625 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_channel_end",
+        "expression": "0.125 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_channel_lift",
+        "expression": "0.125 in"
       }
     },
     {
@@ -159,6 +173,20 @@
       "params": {
         "name": "cab_panel_width",
         "expression": "cab_w-2*cab_f+2*cab_g"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_channel_z3",
+        "expression": "cab_bottom_z+2*cab_step+cab_t-cab_f+cab_channel_lift"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_channel_z5",
+        "expression": "cab_h-cab_f+cab_channel_lift"
       }
     }
   ],
@@ -1053,14 +1081,14 @@
     {
       "command": "solid.box",
       "params": {
-        "name": "light-wire-relief",
+        "name": "light-channel-relief",
         "length": "cab_t",
-        "width": "cab_wire_d",
-        "height": "cab_wire_h",
+        "width": "cab_channel_flat+cab_channel_clear",
+        "height": "cab_channel_flat+2*cab_channel_clear",
         "corner": [
           "cab_div1",
           "cab_ft",
-          "cab_bottom_z+cab_step+cab_t-cab_f-cab_wire_h"
+          "cab_channel_z3-cab_channel_clear"
         ],
         "operation": "cut",
         "targets": [
@@ -1071,50 +1099,14 @@
     {
       "command": "solid.box",
       "params": {
-        "name": "light-wire-relief",
+        "name": "light-channel-relief",
         "length": "cab_t",
-        "width": "cab_wire_d",
-        "height": "cab_wire_h",
+        "width": "cab_channel_flat+cab_channel_clear",
+        "height": "cab_channel_flat+2*cab_channel_clear",
         "corner": [
           "cab_div1",
           "cab_ft",
-          "cab_bottom_z+2*cab_step+cab_t-cab_f-cab_wire_h"
-        ],
-        "operation": "cut",
-        "targets": [
-          "DIV-1"
-        ]
-      }
-    },
-    {
-      "command": "solid.box",
-      "params": {
-        "name": "light-wire-relief",
-        "length": "cab_t",
-        "width": "cab_wire_d",
-        "height": "cab_wire_h",
-        "corner": [
-          "cab_div1",
-          "cab_ft",
-          "cab_bottom_z+3*cab_step+cab_t-cab_f-cab_wire_h"
-        ],
-        "operation": "cut",
-        "targets": [
-          "DIV-1"
-        ]
-      }
-    },
-    {
-      "command": "solid.box",
-      "params": {
-        "name": "light-wire-relief",
-        "length": "cab_t",
-        "width": "cab_wire_d",
-        "height": "cab_wire_h",
-        "corner": [
-          "cab_div1",
-          "cab_ft",
-          "cab_h-cab_f-cab_wire_h"
+          "cab_channel_z5-cab_channel_clear"
         ],
         "operation": "cut",
         "targets": [
@@ -1233,14 +1225,14 @@
     {
       "command": "solid.box",
       "params": {
-        "name": "light-wire-relief",
+        "name": "light-channel-relief",
         "length": "cab_t",
-        "width": "cab_wire_d",
-        "height": "cab_wire_h",
+        "width": "cab_channel_flat+cab_channel_clear",
+        "height": "cab_channel_flat+2*cab_channel_clear",
         "corner": [
           "cab_div2",
           "cab_ft",
-          "cab_bottom_z+cab_step+cab_t-cab_f-cab_wire_h"
+          "cab_channel_z3-cab_channel_clear"
         ],
         "operation": "cut",
         "targets": [
@@ -1251,50 +1243,14 @@
     {
       "command": "solid.box",
       "params": {
-        "name": "light-wire-relief",
+        "name": "light-channel-relief",
         "length": "cab_t",
-        "width": "cab_wire_d",
-        "height": "cab_wire_h",
+        "width": "cab_channel_flat+cab_channel_clear",
+        "height": "cab_channel_flat+2*cab_channel_clear",
         "corner": [
           "cab_div2",
           "cab_ft",
-          "cab_bottom_z+2*cab_step+cab_t-cab_f-cab_wire_h"
-        ],
-        "operation": "cut",
-        "targets": [
-          "DIV-2"
-        ]
-      }
-    },
-    {
-      "command": "solid.box",
-      "params": {
-        "name": "light-wire-relief",
-        "length": "cab_t",
-        "width": "cab_wire_d",
-        "height": "cab_wire_h",
-        "corner": [
-          "cab_div2",
-          "cab_ft",
-          "cab_bottom_z+3*cab_step+cab_t-cab_f-cab_wire_h"
-        ],
-        "operation": "cut",
-        "targets": [
-          "DIV-2"
-        ]
-      }
-    },
-    {
-      "command": "solid.box",
-      "params": {
-        "name": "light-wire-relief",
-        "length": "cab_t",
-        "width": "cab_wire_d",
-        "height": "cab_wire_h",
-        "corner": [
-          "cab_div2",
-          "cab_ft",
-          "cab_h-cab_f-cab_wire_h"
+          "cab_channel_z5-cab_channel_clear"
         ],
         "operation": "cut",
         "targets": [

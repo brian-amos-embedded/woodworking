@@ -1,72 +1,72 @@
 {
-  "boolean_ms": 176.558,
+  "boolean_ms": 171.644,
   "budget_exceeded": false,
   "budget_s": 90.0,
-  "checked": 19,
+  "checked": 23,
   "count": 0,
   "interferences": [],
-  "ms": 31.086,
-  "pairs_candidate": 26,
+  "ms": 31.002,
+  "pairs_candidate": 32,
   "pairs_cleared": 0,
   "pairs_excluded": 0,
-  "pairs_intersected": 26,
+  "pairs_intersected": 32,
   "pairs_not_checked": 0,
   "skipped_pairs": 0,
   "slowest": [
     {
       "a": "TOP-01",
-      "b": "TR-R",
-      "boolean_ms": 23.98,
-      "ms": 23.982,
+      "b": "ST-R",
+      "boolean_ms": 22.902,
+      "ms": 22.904,
       "tessellate_ms": 0.0
     },
     {
       "a": "TOP-01",
       "b": "CL-R",
-      "boolean_ms": 21.771,
-      "ms": 21.772,
+      "boolean_ms": 20.369,
+      "ms": 20.37,
       "tessellate_ms": 0.0
     },
     {
       "a": "TOP-01",
-      "b": "ST-R",
-      "boolean_ms": 20.513,
-      "ms": 20.515,
-      "tessellate_ms": 0.0
-    },
-    {
-      "a": "TOP-01",
-      "b": "ST-L",
-      "boolean_ms": 15.867,
-      "ms": 15.868,
+      "b": "TR-R",
+      "boolean_ms": 17.544,
+      "ms": 17.546,
       "tessellate_ms": 0.0
     },
     {
       "a": "TOP-01",
       "b": "TR-L",
-      "boolean_ms": 11.466,
-      "ms": 11.467,
+      "boolean_ms": 10.976,
+      "ms": 10.977,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "TOP-01",
+      "b": "ST-L",
+      "boolean_ms": 8.863,
+      "ms": 8.864,
       "tessellate_ms": 0.0
     },
     {
       "a": "TOP-01",
       "b": "CL-L",
-      "boolean_ms": 10.991,
-      "ms": 10.993,
+      "boolean_ms": 7.27,
+      "ms": 7.272,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "SH-L",
+      "b": "FR-L",
+      "boolean_ms": 6.366,
+      "ms": 6.367,
       "tessellate_ms": 0.0
     },
     {
       "a": "CL-L",
       "b": "PS-L",
-      "boolean_ms": 8.055,
-      "ms": 8.07,
-      "tessellate_ms": 0.0
-    },
-    {
-      "a": "TR-R",
-      "b": "LED-TR-R",
-      "boolean_ms": 7.037,
-      "ms": 7.038,
+      "boolean_ms": 5.245,
+      "ms": 5.247,
       "tessellate_ms": 0.0
     }
   ],

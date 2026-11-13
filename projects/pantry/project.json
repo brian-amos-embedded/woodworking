@@ -1,6 +1,6 @@
 {
   "name": "Soda organizer 2",
-  "revision": "R3",
+  "revision": "R4",
   "status": "Reviewed geometry; nominal-stock fabrication draft",
   "parameters_in": {
     "W": 26,
@@ -17,8 +17,10 @@
     "back_clearance": 0.0625,
     "base_h": 3.5,
     "base_d": 1.5,
-    "wire_h": 0.25,
-    "wire_d": 0.25
+    "channel_flat": 0.625,
+    "channel_clear": 0.0625,
+    "channel_end": 0.125,
+    "channel_lift": 0.125
   },
   "derived_expressions": {
     "bay": "(W-4*F)/3",
@@ -27,7 +29,9 @@
     "rear": "D-FT",
     "shelf_depth": "rear-FT",
     "panel_start": "F-G",
-    "panel_width": "W-2*F+2*G"
+    "panel_width": "W-2*F+2*G",
+    "channel_z3": "bottom_z+2*step+T-F+channel_lift",
+    "channel_z5": "H-F+channel_lift"
   },
   "parts": [
     {
@@ -349,55 +353,29 @@
           ]
         },
         {
-          "name": "light-wire-relief",
+          "name": "light-channel-relief",
           "corner": [
             "div1",
             "FT",
-            "bottom_z+step+T-F-wire_h"
+            "channel_z3-channel_clear"
           ],
           "size": [
             "T",
-            "wire_d",
-            "wire_h"
+            "channel_flat+channel_clear",
+            "channel_flat+2*channel_clear"
           ]
         },
         {
-          "name": "light-wire-relief",
+          "name": "light-channel-relief",
           "corner": [
             "div1",
             "FT",
-            "bottom_z+2*step+T-F-wire_h"
+            "channel_z5-channel_clear"
           ],
           "size": [
             "T",
-            "wire_d",
-            "wire_h"
-          ]
-        },
-        {
-          "name": "light-wire-relief",
-          "corner": [
-            "div1",
-            "FT",
-            "bottom_z+3*step+T-F-wire_h"
-          ],
-          "size": [
-            "T",
-            "wire_d",
-            "wire_h"
-          ]
-        },
-        {
-          "name": "light-wire-relief",
-          "corner": [
-            "div1",
-            "FT",
-            "H-F-wire_h"
-          ],
-          "size": [
-            "T",
-            "wire_d",
-            "wire_h"
+            "channel_flat+channel_clear",
+            "channel_flat+2*channel_clear"
           ]
         }
       ]
@@ -499,55 +477,29 @@
           ]
         },
         {
-          "name": "light-wire-relief",
+          "name": "light-channel-relief",
           "corner": [
             "div2",
             "FT",
-            "bottom_z+step+T-F-wire_h"
+            "channel_z3-channel_clear"
           ],
           "size": [
             "T",
-            "wire_d",
-            "wire_h"
+            "channel_flat+channel_clear",
+            "channel_flat+2*channel_clear"
           ]
         },
         {
-          "name": "light-wire-relief",
+          "name": "light-channel-relief",
           "corner": [
             "div2",
             "FT",
-            "bottom_z+2*step+T-F-wire_h"
+            "channel_z5-channel_clear"
           ],
           "size": [
             "T",
-            "wire_d",
-            "wire_h"
-          ]
-        },
-        {
-          "name": "light-wire-relief",
-          "corner": [
-            "div2",
-            "FT",
-            "bottom_z+3*step+T-F-wire_h"
-          ],
-          "size": [
-            "T",
-            "wire_d",
-            "wire_h"
-          ]
-        },
-        {
-          "name": "light-wire-relief",
-          "corner": [
-            "div2",
-            "FT",
-            "H-F-wire_h"
-          ],
-          "size": [
-            "T",
-            "wire_d",
-            "wire_h"
+            "channel_flat+channel_clear",
+            "channel_flat+2*channel_clear"
           ]
         }
       ]

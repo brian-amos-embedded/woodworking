@@ -390,55 +390,29 @@
         ]
       },
       {
-        "name": "light-wire-relief",
+        "name": "light-channel-relief",
         "corner": [
           8.625,
           0.75,
-          10.0
+          18.3125
         ],
         "size": [
           0.75,
-          0.25,
-          0.25
+          0.6875,
+          0.75
         ]
       },
       {
-        "name": "light-wire-relief",
+        "name": "light-channel-relief",
         "corner": [
           8.625,
           0.75,
-          18.0
+          34.3125
         ],
         "size": [
           0.75,
-          0.25,
-          0.25
-        ]
-      },
-      {
-        "name": "light-wire-relief",
-        "corner": [
-          8.625,
-          0.75,
-          26.0
-        ],
-        "size": [
-          0.75,
-          0.25,
-          0.25
-        ]
-      },
-      {
-        "name": "light-wire-relief",
-        "corner": [
-          8.625,
-          0.75,
-          34.0
-        ],
-        "size": [
-          0.75,
-          0.25,
-          0.25
+          0.6875,
+          0.75
         ]
       }
     ],
@@ -576,55 +550,29 @@
         ]
       },
       {
-        "name": "light-wire-relief",
+        "name": "light-channel-relief",
         "corner": [
           16.625,
           0.75,
-          10.0
+          18.3125
         ],
         "size": [
           0.75,
-          0.25,
-          0.25
+          0.6875,
+          0.75
         ]
       },
       {
-        "name": "light-wire-relief",
+        "name": "light-channel-relief",
         "corner": [
           16.625,
           0.75,
-          18.0
+          34.3125
         ],
         "size": [
           0.75,
-          0.25,
-          0.25
-        ]
-      },
-      {
-        "name": "light-wire-relief",
-        "corner": [
-          16.625,
-          0.75,
-          26.0
-        ],
-        "size": [
-          0.75,
-          0.25,
-          0.25
-        ]
-      },
-      {
-        "name": "light-wire-relief",
-        "corner": [
-          16.625,
-          0.75,
-          34.0
-        ],
-        "size": [
-          0.75,
-          0.25,
-          0.25
+          0.6875,
+          0.75
         ]
       }
     ],

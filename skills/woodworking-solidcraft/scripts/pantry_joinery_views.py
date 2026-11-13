@@ -72,7 +72,7 @@ def draw_joinery(pdf, page, line, inch, parts, output):
     part = by_id['DIV-1']
     x, y, scale = 114, 258, 11
     cuts = [c for c in part['cuts'] if c['name'].startswith('dado') and isclose(c['corner'][0], part['corner'][0])]
-    wire = [c for c in part['cuts'] if c['name'] == 'light-wire-relief']
+    wire = [c for c in part['cuts'] if c['name'] == 'light-channel-relief']
     w, h = face(part, (1, 2), x, y, scale, cuts + wire)
     vertical_starts(part, cuts, x, y, scale)
     line(x, y+h+15, 'BOTH FACES', 10, True)
@@ -81,7 +81,7 @@ def draw_joinery(pdf, page, line, inch, parts, output):
     line(328, 331, 'Run through from front to rear.', 9)
     line(328, 312, 'Repeat the pattern on the opposite face.', 9)
     line(328, 293, 'Opposing dados leave a 1/4 in web.', 9)
-    line(328, 267, 'Wire reliefs: 1/4 in high x 1/4 in deep', 9)
+    line(328, 267, 'Channel reliefs: 3/4 in high x 11/16 in deep', 9)
     line(328, 250, 'from the front edge, through thickness.', 9)
     starts = ', '.join(inch(c['corner'][2] - part['corner'][2]) for c in wire)
     line(328, 231, 'Lower edges from divider bottom (in):', 9)

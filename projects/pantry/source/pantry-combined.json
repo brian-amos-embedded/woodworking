@@ -1,198 +1,38 @@
 {
   "name": "Pantry side bays",
-  "revision": "R1",
+  "revision": "R4",
   "parameters_in": {},
   "derived_expressions": {},
   "parts": [
     {
-      "id": "LED-RA-21",
-      "name": "Angled channel envelope",
+      "id": "LED-SODA-3",
+      "name": "Continuous angled channel row 3",
       "material": "lighting",
       "corner": [
-        "org_F+led_end",
+        "org_F+org_channel_end",
         "org_FT",
-        "org_bottom_z+org_step+org_T-org_F-angle_leg"
+        "org_channel_z3"
       ],
       "size": [
-        "org_bay-2*led_end",
-        0.625,
-        0.625
+        "org_W-2*org_F-2*org_channel_end",
+        "org_channel_flat",
+        "org_channel_flat"
       ],
       "cuts": []
     },
     {
-      "id": "LED-RA-22",
-      "name": "Angled channel envelope",
+      "id": "LED-SODA-5",
+      "name": "Continuous angled channel row 5",
       "material": "lighting",
       "corner": [
-        "2*org_F+org_bay+led_end",
+        "org_F+org_channel_end",
         "org_FT",
-        "org_bottom_z+org_step+org_T-org_F-angle_leg"
+        "org_channel_z5"
       ],
       "size": [
-        "org_bay-2*led_end",
-        0.625,
-        0.625
-      ],
-      "cuts": []
-    },
-    {
-      "id": "LED-RA-23",
-      "name": "Angled channel envelope",
-      "material": "lighting",
-      "corner": [
-        "3*org_F+2*org_bay+led_end",
-        "org_FT",
-        "org_bottom_z+org_step+org_T-org_F-angle_leg"
-      ],
-      "size": [
-        "org_bay-2*led_end",
-        0.625,
-        0.625
-      ],
-      "cuts": []
-    },
-    {
-      "id": "LED-RA-31",
-      "name": "Angled channel envelope",
-      "material": "lighting",
-      "corner": [
-        "org_F+led_end",
-        "org_FT",
-        "org_bottom_z+2*org_step+org_T-org_F-angle_leg"
-      ],
-      "size": [
-        "org_bay-2*led_end",
-        0.625,
-        0.625
-      ],
-      "cuts": []
-    },
-    {
-      "id": "LED-RA-32",
-      "name": "Angled channel envelope",
-      "material": "lighting",
-      "corner": [
-        "2*org_F+org_bay+led_end",
-        "org_FT",
-        "org_bottom_z+2*org_step+org_T-org_F-angle_leg"
-      ],
-      "size": [
-        "org_bay-2*led_end",
-        0.625,
-        0.625
-      ],
-      "cuts": []
-    },
-    {
-      "id": "LED-RA-33",
-      "name": "Angled channel envelope",
-      "material": "lighting",
-      "corner": [
-        "3*org_F+2*org_bay+led_end",
-        "org_FT",
-        "org_bottom_z+2*org_step+org_T-org_F-angle_leg"
-      ],
-      "size": [
-        "org_bay-2*led_end",
-        0.625,
-        0.625
-      ],
-      "cuts": []
-    },
-    {
-      "id": "LED-RA-41",
-      "name": "Angled channel envelope",
-      "material": "lighting",
-      "corner": [
-        "org_F+led_end",
-        "org_FT",
-        "org_bottom_z+3*org_step+org_T-org_F-angle_leg"
-      ],
-      "size": [
-        "org_bay-2*led_end",
-        0.625,
-        0.625
-      ],
-      "cuts": []
-    },
-    {
-      "id": "LED-RA-42",
-      "name": "Angled channel envelope",
-      "material": "lighting",
-      "corner": [
-        "2*org_F+org_bay+led_end",
-        "org_FT",
-        "org_bottom_z+3*org_step+org_T-org_F-angle_leg"
-      ],
-      "size": [
-        "org_bay-2*led_end",
-        0.625,
-        0.625
-      ],
-      "cuts": []
-    },
-    {
-      "id": "LED-RA-43",
-      "name": "Angled channel envelope",
-      "material": "lighting",
-      "corner": [
-        "3*org_F+2*org_bay+led_end",
-        "org_FT",
-        "org_bottom_z+3*org_step+org_T-org_F-angle_leg"
-      ],
-      "size": [
-        "org_bay-2*led_end",
-        0.625,
-        0.625
-      ],
-      "cuts": []
-    },
-    {
-      "id": "LED-RA-51",
-      "name": "Angled channel envelope",
-      "material": "lighting",
-      "corner": [
-        "org_F+led_end",
-        "org_FT",
-        "org_H-org_F-angle_leg"
-      ],
-      "size": [
-        "org_bay-2*led_end",
-        0.625,
-        0.625
-      ],
-      "cuts": []
-    },
-    {
-      "id": "LED-RA-52",
-      "name": "Angled channel envelope",
-      "material": "lighting",
-      "corner": [
-        "2*org_F+org_bay+led_end",
-        "org_FT",
-        "org_H-org_F-angle_leg"
-      ],
-      "size": [
-        "org_bay-2*led_end",
-        0.625,
-        0.625
-      ],
-      "cuts": []
-    },
-    {
-      "id": "LED-RA-53",
-      "name": "Angled channel envelope",
-      "material": "lighting",
-      "corner": [
-        "3*org_F+2*org_bay+led_end",
-        "org_FT",
-        "org_H-org_F-angle_leg"
-      ],
-      "size": [
-        "org_bay-2*led_end",
-        0.625,
-        0.625
+        "org_W-2*org_F-2*org_channel_end",
+        "org_channel_flat",
+        "org_channel_flat"
       ],
       "cuts": []
     }

@@ -55,9 +55,9 @@
           ]
         },
         "closed": true,
-        "faces": 46,
+        "faces": 38,
         "name": "DIV-1",
-        "volume_mm3": 5932625.263001949
+        "volume_mm3": 5923423.542494135
       },
       {
         "bbox": {
@@ -73,9 +73,9 @@
           ]
         },
         "closed": true,
-        "faces": 46,
+        "faces": 38,
         "name": "DIV-2",
-        "volume_mm3": 5932625.263001957
+        "volume_mm3": 5923423.542494145
       },
       {
         "bbox": {
@@ -638,17 +638,17 @@
     ],
     "body_count": 35,
     "total": {
-      "volume_mm3": 58897760.51195516
+      "volume_mm3": 58879357.070939526
     }
   },
   "interference": {
-    "boolean_ms": 1462.382,
+    "boolean_ms": 2205.09,
     "budget_exceeded": false,
     "budget_s": 90.0,
     "checked": 35,
     "count": 0,
     "interferences": [],
-    "ms": 177.4,
+    "ms": 265.45,
     "pairs_candidate": 126,
     "pairs_cleared": 0,
     "pairs_excluded": 0,
@@ -657,59 +657,59 @@
     "skipped_pairs": 0,
     "slowest": [
       {
-        "a": "DIV-1",
-        "b": "TOP",
-        "boolean_ms": 42.073,
-        "ms": 42.074,
-        "tessellate_ms": 0.0
-      },
-      {
-        "a": "DIV-2",
-        "b": "BOT",
-        "boolean_ms": 38.992,
-        "ms": 38.995,
-        "tessellate_ms": 0.0
-      },
-      {
-        "a": "SIDE-L",
-        "b": "TOP",
-        "boolean_ms": 33.216,
-        "ms": 33.218,
-        "tessellate_ms": 0.0
-      },
-      {
-        "a": "DIV-2",
-        "b": "TOP",
-        "boolean_ms": 31.899,
-        "ms": 31.9,
-        "tessellate_ms": 0.0
-      },
-      {
         "a": "SIDE-L",
         "b": "BOT",
-        "boolean_ms": 29.363,
-        "ms": 29.365,
+        "boolean_ms": 78.707,
+        "ms": 78.709,
         "tessellate_ms": 0.0
       },
       {
         "a": "SIDE-R",
-        "b": "TOP",
-        "boolean_ms": 28.981,
-        "ms": 28.983,
+        "b": "BOT",
+        "boolean_ms": 69.592,
+        "ms": 69.593,
         "tessellate_ms": 0.0
       },
       {
-        "a": "TOP",
-        "b": "ST-2",
-        "boolean_ms": 27.784,
-        "ms": 27.785,
+        "a": "SIDE-L",
+        "b": "TOP",
+        "boolean_ms": 67.436,
+        "ms": 67.439,
+        "tessellate_ms": 0.0
+      },
+      {
+        "a": "DIV-2",
+        "b": "BOT",
+        "boolean_ms": 62.063,
+        "ms": 62.067,
         "tessellate_ms": 0.0
       },
       {
         "a": "DIV-1",
-        "b": "BOT",
-        "boolean_ms": 27.025,
-        "ms": 27.027,
+        "b": "ST-2",
+        "boolean_ms": 57.827,
+        "ms": 57.828,
+        "tessellate_ms": 0.0
+      },
+      {
+        "a": "SIDE-R",
+        "b": "BACK",
+        "boolean_ms": 56.612,
+        "ms": 56.613,
+        "tessellate_ms": 0.0
+      },
+      {
+        "a": "DIV-2",
+        "b": "TOP",
+        "boolean_ms": 53.759,
+        "ms": 53.764,
+        "tessellate_ms": 0.0
+      },
+      {
+        "a": "SIDE-L",
+        "b": "BACK",
+        "boolean_ms": 50.159,
+        "ms": 50.162,
         "tessellate_ms": 0.0
       }
     ],

@@ -1,72 +1,72 @@
 {
-  "boolean_ms": 1806.479,
+  "boolean_ms": 2020.668,
   "budget_exceeded": false,
   "budget_s": 90.0,
-  "checked": 66,
+  "checked": 60,
   "count": 0,
   "interferences": [],
-  "ms": 217.562,
-  "pairs_candidate": 178,
+  "ms": 250.971,
+  "pairs_candidate": 190,
   "pairs_cleared": 0,
   "pairs_excluded": 0,
-  "pairs_intersected": 178,
+  "pairs_intersected": 190,
   "pairs_not_checked": 0,
   "skipped_pairs": 0,
   "slowest": [
     {
-      "a": "DIV-1",
-      "b": "TOP",
-      "boolean_ms": 65.832,
-      "ms": 65.834,
-      "tessellate_ms": 0.0
-    },
-    {
-      "a": "DIV-2",
-      "b": "TOP",
-      "boolean_ms": 58.359,
-      "ms": 58.361,
-      "tessellate_ms": 0.0
-    },
-    {
-      "a": "SIDE-L",
-      "b": "TOP",
-      "boolean_ms": 51.902,
-      "ms": 51.919,
-      "tessellate_ms": 0.0
-    },
-    {
       "a": "SIDE-L",
       "b": "BOT",
-      "boolean_ms": 49.987,
-      "ms": 49.989,
-      "tessellate_ms": 0.0
-    },
-    {
-      "a": "DIV-2",
-      "b": "BOT",
-      "boolean_ms": 41.428,
-      "ms": 41.43,
+      "boolean_ms": 55.467,
+      "ms": 55.469,
       "tessellate_ms": 0.0
     },
     {
       "a": "SIDE-R",
       "b": "TOP",
-      "boolean_ms": 36.613,
-      "ms": 36.615,
+      "boolean_ms": 53.207,
+      "ms": 53.209,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "SIDE-R",
+      "b": "BOT",
+      "boolean_ms": 52.761,
+      "ms": 52.763,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "SIDE-L",
+      "b": "TOP",
+      "boolean_ms": 49.77,
+      "ms": 49.774,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "DIV-2",
+      "b": "TOP",
+      "boolean_ms": 48.651,
+      "ms": 48.653,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "DIV-1",
+      "b": "TOP",
+      "boolean_ms": 45.65,
+      "ms": 45.663,
       "tessellate_ms": 0.0
     },
     {
       "a": "DIV-1",
       "b": "BOT",
-      "boolean_ms": 33.285,
-      "ms": 33.288,
+      "boolean_ms": 44.772,
+      "ms": 44.777,
       "tessellate_ms": 0.0
     },
     {
-      "a": "TOP-01",
-      "b": "SIDE-L",
-      "boolean_ms": 32.852,
-      "ms": 32.854,
+      "a": "DIV-2",
+      "b": "BOT",
+      "boolean_ms": 44.709,
+      "ms": 44.723,
       "tessellate_ms": 0.0
     }
   ],
