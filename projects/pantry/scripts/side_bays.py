@@ -3,7 +3,10 @@ import argparse
 import json
 from pathlib import Path
 
-from model import ROOT, Session, check_interference, resolve, solid_commands, verify
+from cabinet_model import check_interference, resolve, solid_commands, verify
+from mcp_session import Session
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def specification():

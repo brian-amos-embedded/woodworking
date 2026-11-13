@@ -21,7 +21,12 @@ Click a model to open an editable copy from the current `main` branch.
 
 ## Rebuild
 
-To rebuild with the SolidCraft 0.40.1 CLI and Python with ReportLab:
+From `projects/pantry`, rebuild with SolidCraft 0.40.1 and Python with ReportLab.
+The scripts here define the pantry geometry, build order, and shop-pack presentation.
+The CAD engine, MCP client, and sheet layout live in the shared woodworking skill:
+
+    export PYTHONPATH="$(cd ../../skills/woodworking-solidcraft/scripts && pwd)${PYTHONPATH:+:$PYTHONPATH}"
+
 
     python scripts/make_project.py
     python scripts/model.py --cli /absolute/path/to/solidcraft-cli

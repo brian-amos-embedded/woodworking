@@ -33,4 +33,5 @@ Run the pantry README commands in the container with `/usr/local/bin/solidcraft-
 - Work from the project inputs. Keep native `.sc` files, part IDs, geometry checks, and shop-pack revisions aligned.
 - Reopen the generated models, check dimensions and interference, then inspect the drawings. Record any assumptions about material, hardware, or installation fit.
 - Link the relevant native file and the one-click SolidCraft design URL. Use the public GitHub raw file URL, URL-encoded as the app's `open` parameter. See the pantry README for examples. For a pinned review, use a commit SHA instead of `main` in the raw URL.
+- Put reusable CAD and shop tooling in `skills/woodworking-solidcraft/scripts/`. Prefer project data and thin build entry points for job-specific geometry and drawing layouts. The pantry README sets the shared Python import path.
 - Keep each new project under `projects/`. Use the shared skills for reusable practices and the project README for job-specific decisions.

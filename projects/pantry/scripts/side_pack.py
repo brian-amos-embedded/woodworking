@@ -2,8 +2,8 @@
 import json
 from reportlab.pdfgen import canvas
 from reportlab.lib import colors
-from model import ROOT, resolve
-from cutlist import inch
+from cabinet_model import resolve
+from cutlist import ROOT, inch
 
 out = ROOT / 'output'
 spec = json.loads((out/'side-bays-spec.json').read_text())

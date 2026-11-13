@@ -17,10 +17,10 @@ To start in a new chat, connect GitHub with access to this repo and paste:
 | Path | Purpose |
 | --- | --- |
 | `projects/<project>/` | A project's README, design inputs, scripts, and deliverables |
-| `projects/pantry/project.json` and `scripts/` within that project | Soda organizer specification, SolidCraft commands, side-bay generator, and PDF generators |
+| `projects/pantry/project.json` and `scripts/` within that project | Soda organizer specification and pantry-specific geometry and drawing definitions |
 | `projects/pantry/source/` | Extracted SketchUp reference geometry |
 | `projects/pantry/output/` | Native SolidCraft models, renders, shop packs, cut lists, and verification results |
-| `skills/` | Woodworking modeling, drawing, and stock-planning guidance, plus SketchUp extraction |
+| `skills/` | Shared CAD engine, MCP client, and sheet layout, plus woodworking guidance and SketchUp extraction |
 | `config/` and root `scripts/` | Shared defaults, MCP configuration example, and CAD smoke test |
 | `Dockerfile`, `compose.yaml`, `.devcontainer/`, `.github/workflows/` | Reproducible headless CAD setup and CI smoke test |
 

@@ -9,7 +9,11 @@ from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 
 from joinery_views import draw_joinery
-from model import ROOT, box_edges, resolve
+from pathlib import Path
+
+from cabinet_model import box_edges, resolve
+
+ROOT = Path(__file__).resolve().parents[1]
 from sheet_layout import rip_first
 
 OUT = ROOT / 'output'
