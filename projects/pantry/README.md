@@ -6,6 +6,22 @@ output/soda-org-2.sc for the organizer machining model. The combined model
 includes lighting clearance envelopes. Peg positions are field-drilling
 annotations. The side shelves are shown one per bay in a sample position.
 
+## Open a model in SolidCraft
+
+Download a native file from GitHub, then open it with **File → Open** in a
+separate [SolidCraft web app](https://app.solidcraft.io/) tab.
+
+| Native model | Contents |
+| --- | --- |
+| [pantry-combined.sc](output/pantry-combined.sc) | Complete fit model and lighting envelopes |
+| [side-bays.sc](output/side-bays.sc) | Adjustable side shelves and countertop |
+| [soda-org-2.sc](output/soda-org-2.sc) | Soda organizer machining model |
+
+[Side shelves shop pack](output/side-shelves-shop-pack.pdf) ·
+[Soda organizer shop pack](output/soda-organizer-R3-shop-pack.pdf)
+
+## Rebuild
+
 To rebuild with the SolidCraft 0.40.1 CLI and Python with ReportLab:
 
     python scripts/make_project.py

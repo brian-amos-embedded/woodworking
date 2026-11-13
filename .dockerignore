@@ -3,6 +3,6 @@ outputs
 input
 .git
 __pycache__
-pantry
+projects
 skills
 work
