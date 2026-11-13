@@ -133,7 +133,7 @@ notes(665,[
     '2. Fasten each front stile and pin backer, then locate the independent rear pin strip.',
     '3. Dry-fit the low shelf and its 2 in apron. Lift and remove it past the upper trim.',
     '4. Transfer one level datum to all four peg rows. Match peg bearing heights.',
-    '5. Install upper decorative rails, then mount channels on their bottom faces.',
+    '5. Install upper decorative rails, then mount channels to their rear faces.',
 ])
 line(42,548,'Peg rows (from front face of center organizer)',12,True)
 notes(526,[
@@ -147,8 +147,8 @@ notes(526,[
 ])
 line(42,378,'Rectangular lighting channels',12,True)
 notes(356,[
-    'Mount channels to the bottom faces of the middle shelf aprons, aimed toward the rear.',
-    'Mount fixed channels to the underside of the rails directly below the countertop.',
+    'Mount channels to the rear faces of the middle shelf aprons, aimed toward the rear.',
+    'Mount fixed channels to the rear faces of the rails directly below the countertop.',
     'Channel blanks: two up to 18 1/2 in at the shelves and two up to 18 3/4 in above.',
     'Leave extra end clearance for caps and leads. Confirm actual extrusion and clip dimensions.',
     'The CAD envelope is 3/8 in front-to-back x 5/8 in high. Check it before machining.',

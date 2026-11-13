@@ -1,11 +1,11 @@
 {
-  "boolean_ms": 2020.668,
+  "boolean_ms": 1803.166,
   "budget_exceeded": false,
   "budget_s": 90.0,
   "checked": 60,
   "count": 0,
   "interferences": [],
-  "ms": 250.971,
+  "ms": 218.632,
   "pairs_candidate": 190,
   "pairs_cleared": 0,
   "pairs_excluded": 0,
@@ -15,58 +15,58 @@
   "slowest": [
     {
       "a": "SIDE-L",
-      "b": "BOT",
-      "boolean_ms": 55.467,
-      "ms": 55.469,
+      "b": "TOP",
+      "boolean_ms": 52.886,
+      "ms": 52.888,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "DIV-2",
+      "b": "TOP",
+      "boolean_ms": 51.16,
+      "ms": 51.163,
       "tessellate_ms": 0.0
     },
     {
       "a": "SIDE-R",
       "b": "TOP",
-      "boolean_ms": 53.207,
-      "ms": 53.209,
-      "tessellate_ms": 0.0
-    },
-    {
-      "a": "SIDE-R",
-      "b": "BOT",
-      "boolean_ms": 52.761,
-      "ms": 52.763,
+      "boolean_ms": 48.691,
+      "ms": 48.694,
       "tessellate_ms": 0.0
     },
     {
       "a": "SIDE-L",
-      "b": "TOP",
-      "boolean_ms": 49.77,
-      "ms": 49.774,
-      "tessellate_ms": 0.0
-    },
-    {
-      "a": "DIV-2",
-      "b": "TOP",
-      "boolean_ms": 48.651,
-      "ms": 48.653,
+      "b": "BOT",
+      "boolean_ms": 41.608,
+      "ms": 41.611,
       "tessellate_ms": 0.0
     },
     {
       "a": "DIV-1",
-      "b": "TOP",
-      "boolean_ms": 45.65,
-      "ms": 45.663,
+      "b": "SH-C3",
+      "boolean_ms": 37.51,
+      "ms": 37.511,
       "tessellate_ms": 0.0
     },
     {
       "a": "DIV-1",
       "b": "BOT",
-      "boolean_ms": 44.772,
-      "ms": 44.777,
+      "boolean_ms": 36.511,
+      "ms": 36.525,
       "tessellate_ms": 0.0
     },
     {
-      "a": "DIV-2",
+      "a": "TOP-01",
+      "b": "SIDE-L",
+      "boolean_ms": 36.479,
+      "ms": 36.482,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "SIDE-R",
       "b": "BOT",
-      "boolean_ms": 44.709,
-      "ms": 44.723,
+      "boolean_ms": 32.493,
+      "ms": 32.497,
       "tessellate_ms": 0.0
     }
   ],

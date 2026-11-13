@@ -255,8 +255,8 @@
       "material": "lighting",
       "corner": [
         "-bay+rail_h+apron_gap",
-        "stock",
-        "middle_z+stock-rail_h-led_h"
+        "2*stock",
+        "middle_z+stock-rail_h"
       ],
       "size": [
         "bay-rail_h-2*apron_gap",
@@ -271,8 +271,8 @@
       "material": "lighting",
       "corner": [
         "-bay+rail_h",
-        0,
-        "height-rail_h-led_h"
+        "stock",
+        "height-rail_h"
       ],
       "size": [
         "bay-rail_h",
@@ -399,8 +399,8 @@
       "material": "lighting",
       "corner": [
         "center+apron_gap",
-        "stock",
-        "middle_z+stock-rail_h-led_h"
+        "2*stock",
+        "middle_z+stock-rail_h"
       ],
       "size": [
         "bay-rail_h-2*apron_gap",
@@ -415,8 +415,8 @@
       "material": "lighting",
       "corner": [
         "center",
-        0,
-        "height-rail_h-led_h"
+        "stock",
+        "height-rail_h"
       ],
       "size": [
         "bay-rail_h",

@@ -36,6 +36,6 @@ and the shop-pack template, and can override any setting in
 The shop packs use nominal stock. Field-fit the side shelves and countertop.
 Verify the pins and extrusion end caps, wiring and clips before machining.
 
-R4 places continuous angled channels behind soda rail rows 3 and 5. The side-bay channels mount beneath the countertop rails and middle shelf aprons.
+R4 places continuous angled channels behind soda rail rows 3 and 5. The side-bay channels mount to the rear faces of the countertop rails and middle shelf aprons.
 
 The countertop projects 1 inch in front of the rails and stiles.

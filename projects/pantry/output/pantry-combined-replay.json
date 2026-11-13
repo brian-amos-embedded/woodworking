@@ -553,8 +553,8 @@
         "height": "cab_led_h",
         "corner": [
           "-cab_bay+cab_rail_h+cab_apron_gap",
-          "cab_stock",
-          "cab_middle_z+cab_stock-cab_rail_h-cab_led_h"
+          "2*cab_stock",
+          "cab_middle_z+cab_stock-cab_rail_h"
         ],
         "body_name": "LED-MID-L"
       }
@@ -568,8 +568,8 @@
         "height": "cab_led_h",
         "corner": [
           "-cab_bay+cab_rail_h",
-          "0 in",
-          "cab_height-cab_rail_h-cab_led_h"
+          "cab_stock",
+          "cab_height-cab_rail_h"
         ],
         "body_name": "LED-TR-L"
       }
@@ -688,8 +688,8 @@
         "height": "cab_led_h",
         "corner": [
           "cab_center+cab_apron_gap",
-          "cab_stock",
-          "cab_middle_z+cab_stock-cab_rail_h-cab_led_h"
+          "2*cab_stock",
+          "cab_middle_z+cab_stock-cab_rail_h"
         ],
         "body_name": "LED-MID-R"
       }
@@ -703,8 +703,8 @@
         "height": "cab_led_h",
         "corner": [
           "cab_center",
-          "0 in",
-          "cab_height-cab_rail_h-cab_led_h"
+          "cab_stock",
+          "cab_height-cab_rail_h"
         ],
         "body_name": "LED-TR-R"
       }
