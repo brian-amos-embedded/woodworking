@@ -43,13 +43,13 @@ def notes(y, strings):
 page('Pantry side shelves','Left and right bays  |  Nominal opening 67 1/2 in  |  Field-fit before cutting')
 pdf.drawImage(str(out/'pantry-combined.png'),44,310,524,368,preserveAspectRatio=True,anchor='c')
 notes(282,[
-    'Two adjustable shelves per bay are shown. The middle shelf carries a light.',
+    'Two adjustable shelves and one fixed bottom shelf per bay.',
     'Use four 1/8 in pegs per shelf. The organizer supplies two rows on each outside face.',
     'The wall supplies a front stile and an independent rear pin strip on each side.',
     'A short-depth front pin backer sits behind each visible stile.',
     'The 2 in upper rails hide the lights. Pocket-screw them to the center stiles from behind.',
     'The 1 1/2 in butcher-block top bears on the organizer and hidden side cleats.',
-    'Nominal wall positions follow the SketchUp opening. Scribe the counter and shelves in place.',
+    'Scribe the countertop and fixed bottom shelves. Leave clearance at adjustable shelves.',
 ])
 pdf.showPage()
 
@@ -86,7 +86,7 @@ notes(359,[
     'Board B: rip one 2 1/8 in and one 1 1/8 in rough strip.',
     '2 1/8 in strip: one 19 3/4 in upper rail + two 19 1/2 in shelf aprons.',
     '1 1/8 in strip: two 17 1/2 in cleats. Rip a 2 1/8 in strip for the two extra aprons.',
-    'Plywood: four nominal 21 1/8 x 16 9/16 in blanks. Scribe each independently.',
+    'Plywood: four nominal 21 1/8 x 16 9/16 in blanks. Maintain clearance for pin adjustment.',
     'Each 24 x 48 in offcut can yield two shelves, with face grain along the 48 in side.',
     'Counter: template the opening, then transfer the stopped pockets to the underside.',
 ])
@@ -170,7 +170,7 @@ for key,(across,along,width,length) in layout['parts'].items():
     pdf.rect(x+along*s,y+across*s,length*s,width*s,fill=1)
     line(x+along*s+10,y+45,key,10,True)
 line(42,438,f"Trim {inch(SHOP['edge_trim_in'])} in per edge. Rip 16 9/16 in, then crosscut two 21 1/8 in blanks.")
-line(42,420,f"Keep the {inch(SHOP['kerf_in'])} in kerf on the waste side. Template each shelf to its bay.")
+line(42,420,f"Keep the {inch(SHOP['kerf_in'])} in kerf on the waste side. Keep the adjustable shelf clearance.")
 for index,hand in enumerate(('L','R')):
     x,y,s=63+index*270,161,9
     shelf=parts['SH-'+hand]
@@ -196,5 +196,54 @@ line(42,106,'Shelf width = carcass to wall-side pin face minus 1/8 in total.')
 line(42,88,'Apron width = clear opening between stiles minus 1/4 in total.')
 line(42,70,'Confirm pin projection and tilt the shelf past the stiles before drilling.')
 
+pdf.showPage()
+page('Fixed bottom shelves','One per bay  |  Install after the face frame  |  Field-fit at the opening')
+rail, shelf = parts['BR-L'], parts['BS-L']
+line(42,666,'Finished blank sizes before fitting',12,True)
+notes(641,[
+    f"BR-L / BR-R: {inch(rail['size'][0])} x {inch(rail['size'][2])} x {inch(rail['size'][1])} in maple.",
+    f"BS-L / BS-R: {inch(shelf['size'][0])} x {inch(shelf['size'][1])} x {inch(shelf['size'][2])} in plywood.",
+    'Allow one additional 24 x 48 in offcut for the two bottom blanks.',
+    'Fit each rail tight between the stiles and pocket-screw from behind.',
+])
+line(42,545,'Section through bottom rail and shelf',12,True)
+scale=52
+x,y=75,382
+w,h=rail['size'][1]*scale,rail['size'][2]*scale
+cut=rail['cuts'][0]
+rabbet,thickness=cut['size'][1]*scale,cut['size'][2]*scale
+pdf.setStrokeColor(ink)
+pdf.setFillColor(colors.HexColor('#f4ead9'))
+pdf.rect(x,y,w,h-thickness,fill=1)
+pdf.rect(x,y+h-thickness,w-rabbet,thickness,fill=1)
+pdf.setFillColor(teal)
+pdf.rect(x+w-rabbet,y+h-thickness,230,thickness,fill=1)
+line(x+53,y+h+12,'FLUSH TOPS / 4 1/4 IN ABOVE NOMINAL FLOOR',9,True)
+line(x,y-19,'FRONT',8,True)
+line(x+89,y+h-17,'FIXED SHELF',9,True)
+line(42,329,'Rabbet: 1/4 in into rear face, down by actual shelf thickness.',10,True)
+notes(300,[
+    'Dry-fit shelf thickness. The open rabbet lets the shelf drop in from above.',
+    'Pocket-screw the rails before seating the shelves. Keep screw bores below the rabbet.',
+    'Scribe each fixed shelf to the actual opening and baseboard.',
+    'Cut the two front shoulders so only the tongue between the stiles enters the rabbet.',
+    'Mirror the wall-side notch: left front corner on BS-L, right front corner on BS-R.',
+    f"Stile relief: {inch(shelf['cuts'][0]['size'][0])} in wide x "
+    f"{inch(shelf['cuts'][0]['size'][1])} in back from the tongue front, through thickness.",
+    'This adds 1/16 in at the stile. Transfer the actual stile outline before cutting.',
+    'Add rear and side bearing cleats as needed in the field. The rail supports the front.',
+    'Secure the bottom shelf after fitting. The shelf pins serve the adjustable shelves.',
+])
+line(42,147,'PLAN AT FRONT EDGE / BS-L SHOWN, MIRROR FOR BS-R',9,True)
+x,y=65,89
+pdf.setFillColor(teal)
+path=pdf.beginPath()
+for i,(u,v) in enumerate([(0,13),(25,13),(25,0),(260,0),(260,10),(282,10),(282,42),(0,42)]):
+    (path.moveTo if i==0 else path.lineTo)(x+u,y+v)
+path.close()
+pdf.drawPath(path,fill=1)
+line(x+74,y-14,'Tongue seats in the rail rabbet',8)
+line(365,112,'Wall-side relief clears the stile.',8)
+line(365,95,'Opposite shoulder clears the center stile.',8)
 pdf.showPage()
 pdf.save()

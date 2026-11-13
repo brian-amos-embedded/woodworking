@@ -39,3 +39,5 @@ Verify the pins and extrusion end caps, wiring and clips before machining.
 R4 places continuous angled channels behind soda rail rows 3 and 5. The side-bay channels mount to the rear faces of the countertop rails and middle shelf aprons.
 
 The countertop projects 1 inch in front of the rails and stiles.
+
+Each side bay has a scribed fixed bottom shelf with a rear-rabbeted front rail, aligned with the organizer's lowest rail.

@@ -199,6 +199,34 @@
     {
       "command": "parameters.change",
       "params": {
+        "name": "cab_base_rail_z",
+        "expression": "2.25 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_base_rabbet",
+        "expression": "0.25 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_baseboard_setback",
+        "expression": "1.5 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_base_stile_clearance",
+        "expression": "0.0625 in"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
         "name": "cab_org_w",
         "expression": "26 in"
       }
@@ -332,6 +360,27 @@
     {
       "command": "parameters.change",
       "params": {
+        "name": "cab_base_shelf_z",
+        "expression": "cab_base_rail_z+cab_rail_h-cab_stock"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_base_front",
+        "expression": "cab_stock-cab_base_rabbet"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cab_base_rear",
+        "expression": "cab_depth-cab_baseboard_setback"
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
         "name": "cab_org_bay",
         "expression": "(cab_org_w-4*cab_org_f)/3"
       }
@@ -460,11 +509,11 @@
         "name": "ST-L",
         "length": "cab_rail_h",
         "width": "cab_stock",
-        "height": "cab_height-cab_pin_bottom",
+        "height": "cab_height-cab_base_rail_z",
         "corner": [
           "-cab_bay",
           "0 in",
-          "cab_pin_bottom"
+          "cab_base_rail_z"
         ],
         "body_name": "ST-L"
       }
@@ -595,11 +644,11 @@
         "name": "ST-R",
         "length": "cab_rail_h",
         "width": "cab_stock",
-        "height": "cab_height-cab_pin_bottom",
+        "height": "cab_height-cab_base_rail_z",
         "corner": [
           "cab_center+cab_bay-cab_rail_h",
           "0 in",
-          "cab_pin_bottom"
+          "cab_base_rail_z"
         ],
         "body_name": "ST-R"
       }
@@ -767,6 +816,66 @@
           "cab_middle_z+cab_stock-cab_rail_h"
         ],
         "body_name": "FR-MID-R"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Fixed bottom rail L",
+        "length": "cab_bay-cab_rail_h",
+        "width": "cab_stock",
+        "height": "cab_rail_h",
+        "corner": [
+          "-cab_bay+cab_rail_h",
+          "0 in",
+          "cab_base_rail_z"
+        ],
+        "body_name": "BR-L"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Scribed fixed bottom shelf L",
+        "length": "cab_bay+cab_carcass_inset-cab_stock",
+        "width": "cab_base_rear-cab_base_front",
+        "height": "cab_stock",
+        "corner": [
+          "-cab_bay+cab_stock",
+          "cab_base_front",
+          "cab_base_shelf_z"
+        ],
+        "body_name": "BS-L"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Fixed bottom rail R",
+        "length": "cab_bay-cab_rail_h",
+        "width": "cab_stock",
+        "height": "cab_rail_h",
+        "corner": [
+          "cab_center",
+          "0 in",
+          "cab_base_rail_z"
+        ],
+        "body_name": "BR-R"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Scribed fixed bottom shelf R",
+        "length": "cab_bay+cab_carcass_inset-cab_stock",
+        "width": "cab_base_rear-cab_base_front",
+        "height": "cab_stock",
+        "corner": [
+          "cab_center-cab_carcass_inset",
+          "cab_base_front",
+          "cab_base_shelf_z"
+        ],
+        "body_name": "BS-R"
       }
     },
     {
@@ -1329,6 +1438,114 @@
         "operation": "cut",
         "targets": [
           "TOP-01"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Rear top shelf rabbet",
+        "length": "cab_bay-cab_rail_h",
+        "width": "cab_base_rabbet",
+        "height": "cab_stock",
+        "corner": [
+          "-cab_bay+cab_rail_h",
+          "cab_base_front",
+          "cab_base_shelf_z"
+        ],
+        "operation": "cut",
+        "targets": [
+          "BR-L"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Front stile clearance relief",
+        "length": "cab_rail_h-cab_stock+cab_base_stile_clearance",
+        "width": "cab_base_rabbet+cab_base_stile_clearance",
+        "height": "cab_stock",
+        "corner": [
+          "-cab_bay+cab_stock",
+          "cab_base_front",
+          "cab_base_shelf_z"
+        ],
+        "operation": "cut",
+        "targets": [
+          "BS-L"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Organizer-side front shoulder",
+        "length": "cab_carcass_inset",
+        "width": "cab_base_rabbet",
+        "height": "cab_stock",
+        "corner": [
+          "0",
+          "cab_base_front",
+          "cab_base_shelf_z"
+        ],
+        "operation": "cut",
+        "targets": [
+          "BS-L"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Rear top shelf rabbet",
+        "length": "cab_bay-cab_rail_h",
+        "width": "cab_base_rabbet",
+        "height": "cab_stock",
+        "corner": [
+          "cab_center",
+          "cab_base_front",
+          "cab_base_shelf_z"
+        ],
+        "operation": "cut",
+        "targets": [
+          "BR-R"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Front stile clearance relief",
+        "length": "cab_rail_h-cab_stock+cab_base_stile_clearance",
+        "width": "cab_base_rabbet+cab_base_stile_clearance",
+        "height": "cab_stock",
+        "corner": [
+          "cab_center+cab_bay-cab_rail_h-cab_base_stile_clearance",
+          "cab_base_front",
+          "cab_base_shelf_z"
+        ],
+        "operation": "cut",
+        "targets": [
+          "BS-R"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Organizer-side front shoulder",
+        "length": "cab_carcass_inset",
+        "width": "cab_base_rabbet",
+        "height": "cab_stock",
+        "corner": [
+          "cab_center-cab_carcass_inset",
+          "cab_base_front",
+          "cab_base_shelf_z"
+        ],
+        "operation": "cut",
+        "targets": [
+          "BS-R"
         ]
       }
     },
@@ -1990,6 +2207,8 @@
           "SH-R",
           "SH-MID-L",
           "SH-MID-R",
+          "BS-L",
+          "BS-R",
           "SIDE-L",
           "SIDE-R",
           "DIV-1",
@@ -2036,6 +2255,8 @@
           "FR-R",
           "FR-MID-L",
           "FR-MID-R",
+          "BR-L",
+          "BR-R",
           "ST-1",
           "ST-2",
           "ST-3",

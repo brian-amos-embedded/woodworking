@@ -1,72 +1,72 @@
 {
-  "boolean_ms": 1803.166,
+  "boolean_ms": 1837.924,
   "budget_exceeded": false,
   "budget_s": 90.0,
-  "checked": 60,
+  "checked": 64,
   "count": 0,
   "interferences": [],
-  "ms": 218.632,
-  "pairs_candidate": 190,
+  "ms": 221.372,
+  "pairs_candidate": 206,
   "pairs_cleared": 0,
   "pairs_excluded": 0,
-  "pairs_intersected": 190,
+  "pairs_intersected": 206,
   "pairs_not_checked": 0,
   "skipped_pairs": 0,
   "slowest": [
     {
-      "a": "SIDE-L",
+      "a": "SIDE-R",
       "b": "TOP",
-      "boolean_ms": 52.886,
-      "ms": 52.888,
-      "tessellate_ms": 0.0
-    },
-    {
-      "a": "DIV-2",
-      "b": "TOP",
-      "boolean_ms": 51.16,
-      "ms": 51.163,
+      "boolean_ms": 45.535,
+      "ms": 45.536,
       "tessellate_ms": 0.0
     },
     {
       "a": "SIDE-R",
+      "b": "BOT",
+      "boolean_ms": 42.877,
+      "ms": 42.878,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "DIV-1",
       "b": "TOP",
-      "boolean_ms": 48.691,
-      "ms": 48.694,
-      "tessellate_ms": 0.0
-    },
-    {
-      "a": "SIDE-L",
-      "b": "BOT",
-      "boolean_ms": 41.608,
-      "ms": 41.611,
-      "tessellate_ms": 0.0
-    },
-    {
-      "a": "DIV-1",
-      "b": "SH-C3",
-      "boolean_ms": 37.51,
-      "ms": 37.511,
+      "boolean_ms": 41.768,
+      "ms": 41.773,
       "tessellate_ms": 0.0
     },
     {
       "a": "DIV-1",
       "b": "BOT",
-      "boolean_ms": 36.511,
-      "ms": 36.525,
+      "boolean_ms": 40.354,
+      "ms": 40.358,
       "tessellate_ms": 0.0
     },
     {
       "a": "TOP-01",
       "b": "SIDE-L",
-      "boolean_ms": 36.479,
-      "ms": 36.482,
+      "boolean_ms": 37.677,
+      "ms": 37.679,
       "tessellate_ms": 0.0
     },
     {
-      "a": "SIDE-R",
-      "b": "BOT",
-      "boolean_ms": 32.493,
-      "ms": 32.497,
+      "a": "SIDE-L",
+      "b": "TOP",
+      "boolean_ms": 35.848,
+      "ms": 35.85,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "SIDE-L",
+      "b": "ST-1",
+      "boolean_ms": 32.258,
+      "ms": 32.259,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "DIV-2",
+      "b": "TOP",
+      "boolean_ms": 29.153,
+      "ms": 29.157,
       "tessellate_ms": 0.0
     }
   ],

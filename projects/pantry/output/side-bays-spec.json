@@ -29,10 +29,17 @@
     "organizer_stile_w": 2,
     "organizer_side_t": 0.75,
     "pin_projection": 0.25,
-    "front_overhang": 1
+    "front_overhang": 1,
+    "base_rail_z": 2.25,
+    "base_rabbet": 0.25,
+    "baseboard_setback": 1.5,
+    "base_stile_clearance": 0.0625
   },
   "derived_expressions": {
-    "carcass_inset": "organizer_stile_w-organizer_side_t"
+    "carcass_inset": "organizer_stile_w-organizer_side_t",
+    "base_shelf_z": "base_rail_z+rail_h-stock",
+    "base_front": "stock-base_rabbet",
+    "base_rear": "depth-baseboard_setback"
   },
   "parts": [
     {
@@ -101,12 +108,12 @@
       "corner": [
         "-bay",
         0,
-        "pin_bottom"
+        "base_rail_z"
       ],
       "size": [
         "rail_h",
         "stock",
-        "height-pin_bottom"
+        "height-base_rail_z"
       ],
       "cuts": []
     },
@@ -245,12 +252,12 @@
       "corner": [
         "center+bay-rail_h",
         0,
-        "pin_bottom"
+        "base_rail_z"
       ],
       "size": [
         "rail_h",
         "stock",
-        "height-pin_bottom"
+        "height-base_rail_z"
       ],
       "cuts": []
     },
@@ -429,6 +436,152 @@
         "rail_h"
       ],
       "cuts": []
+    },
+    {
+      "id": "BR-L",
+      "name": "Fixed bottom rail L",
+      "material": "maple",
+      "corner": [
+        "-bay+rail_h",
+        0,
+        "base_rail_z"
+      ],
+      "size": [
+        "bay-rail_h",
+        "stock",
+        "rail_h"
+      ],
+      "cuts": [
+        {
+          "name": "Rear top shelf rabbet",
+          "corner": [
+            "-bay+rail_h",
+            "base_front",
+            "base_shelf_z"
+          ],
+          "size": [
+            "bay-rail_h",
+            "base_rabbet",
+            "stock"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BS-L",
+      "name": "Scribed fixed bottom shelf L",
+      "material": "plywood_3_4",
+      "corner": [
+        "-bay+stock",
+        "base_front",
+        "base_shelf_z"
+      ],
+      "size": [
+        "bay+carcass_inset-stock",
+        "base_rear-base_front",
+        "stock"
+      ],
+      "cuts": [
+        {
+          "name": "Front stile clearance relief",
+          "corner": [
+            "-bay+stock",
+            "base_front",
+            "base_shelf_z"
+          ],
+          "size": [
+            "rail_h-stock+base_stile_clearance",
+            "base_rabbet+base_stile_clearance",
+            "stock"
+          ]
+        },
+        {
+          "name": "Organizer-side front shoulder",
+          "corner": [
+            "0",
+            "base_front",
+            "base_shelf_z"
+          ],
+          "size": [
+            "carcass_inset",
+            "base_rabbet",
+            "stock"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BR-R",
+      "name": "Fixed bottom rail R",
+      "material": "maple",
+      "corner": [
+        "center",
+        0,
+        "base_rail_z"
+      ],
+      "size": [
+        "bay-rail_h",
+        "stock",
+        "rail_h"
+      ],
+      "cuts": [
+        {
+          "name": "Rear top shelf rabbet",
+          "corner": [
+            "center",
+            "base_front",
+            "base_shelf_z"
+          ],
+          "size": [
+            "bay-rail_h",
+            "base_rabbet",
+            "stock"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BS-R",
+      "name": "Scribed fixed bottom shelf R",
+      "material": "plywood_3_4",
+      "corner": [
+        "center-carcass_inset",
+        "base_front",
+        "base_shelf_z"
+      ],
+      "size": [
+        "bay+carcass_inset-stock",
+        "base_rear-base_front",
+        "stock"
+      ],
+      "cuts": [
+        {
+          "name": "Front stile clearance relief",
+          "corner": [
+            "center+bay-rail_h-base_stile_clearance",
+            "base_front",
+            "base_shelf_z"
+          ],
+          "size": [
+            "rail_h-stock+base_stile_clearance",
+            "base_rabbet+base_stile_clearance",
+            "stock"
+          ]
+        },
+        {
+          "name": "Organizer-side front shoulder",
+          "corner": [
+            "center-carcass_inset",
+            "base_front",
+            "base_shelf_z"
+          ],
+          "size": [
+            "carcass_inset",
+            "base_rabbet",
+            "stock"
+          ]
+        }
+      ]
     }
   ]
 }

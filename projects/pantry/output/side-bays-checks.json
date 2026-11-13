@@ -1,72 +1,72 @@
 {
-  "boolean_ms": 136.901,
+  "boolean_ms": 195.584,
   "budget_exceeded": false,
   "budget_s": 90.0,
-  "checked": 23,
+  "checked": 27,
   "count": 0,
   "interferences": [],
-  "ms": 23.206,
-  "pairs_candidate": 32,
+  "ms": 33.251,
+  "pairs_candidate": 42,
   "pairs_cleared": 0,
   "pairs_excluded": 0,
-  "pairs_intersected": 32,
+  "pairs_intersected": 42,
   "pairs_not_checked": 0,
   "skipped_pairs": 0,
   "slowest": [
     {
       "a": "TOP-01",
-      "b": "CL-R",
-      "boolean_ms": 17.468,
-      "ms": 17.469,
+      "b": "ST-R",
+      "boolean_ms": 19.765,
+      "ms": 19.784,
       "tessellate_ms": 0.0
     },
     {
       "a": "TOP-01",
       "b": "TR-R",
-      "boolean_ms": 16.506,
-      "ms": 16.508,
+      "boolean_ms": 18.564,
+      "ms": 18.567,
       "tessellate_ms": 0.0
     },
     {
       "a": "TOP-01",
-      "b": "ST-R",
-      "boolean_ms": 9.801,
-      "ms": 9.804,
+      "b": "CL-R",
+      "boolean_ms": 15.824,
+      "ms": 15.826,
       "tessellate_ms": 0.0
     },
     {
-      "a": "TOP-01",
-      "b": "CL-L",
-      "boolean_ms": 8.378,
-      "ms": 8.379,
-      "tessellate_ms": 0.0
-    },
-    {
-      "a": "TOP-01",
-      "b": "TR-L",
-      "boolean_ms": 8.262,
-      "ms": 8.263,
+      "a": "ST-L",
+      "b": "BR-L",
+      "boolean_ms": 9.297,
+      "ms": 9.298,
       "tessellate_ms": 0.0
     },
     {
       "a": "TOP-01",
       "b": "ST-L",
-      "boolean_ms": 7.384,
-      "ms": 7.385,
+      "boolean_ms": 8.356,
+      "ms": 8.358,
       "tessellate_ms": 0.0
     },
     {
-      "a": "LED-MID-R",
-      "b": "FR-MID-R",
-      "boolean_ms": 5.019,
-      "ms": 5.02,
+      "a": "BR-R",
+      "b": "BS-R",
+      "boolean_ms": 8.316,
+      "ms": 8.319,
       "tessellate_ms": 0.0
     },
     {
-      "a": "CL-L",
-      "b": "PS-L",
-      "boolean_ms": 4.534,
-      "ms": 4.54,
+      "a": "TR-R",
+      "b": "LED-TR-R",
+      "boolean_ms": 8.061,
+      "ms": 8.063,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "TOP-01",
+      "b": "CL-L",
+      "boolean_ms": 7.09,
+      "ms": 7.092,
       "tessellate_ms": 0.0
     }
   ],
