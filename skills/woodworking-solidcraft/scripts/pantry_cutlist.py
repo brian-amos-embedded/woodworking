@@ -19,6 +19,7 @@ from project_config import load_project
 ROOT = Path(sys.argv[1]).resolve()
 CONFIG = load_project(ROOT)
 from sheet_layout import rip_first
+from hardwood_plan import draw_hardwood_plan
 
 OUT = ROOT / 'output'
 PROJECT = json.loads((ROOT / 'project.json').read_text())
@@ -97,48 +98,6 @@ def layouts():
         for key, rect in plan['parts'].items():
             assert all(abs(a-b) < 1e-8 for a, b in zip(rect[2:], blanks[key][1:]))
     return result
-
-
-def draw_hardwood_plan(pdf, page, line, inch, rough):
-    stock = SHOP['hardwood_default_board_in']
-    kerf = SHOP['kerf_in']
-    blanks = {}
-    for qty, _, _, _, length, width, ids in rough.values():
-        assert qty == len(ids)
-        blanks.update({key: (key, width, length) for key in ids})
-    stiles, rails = rough['STILE'][-1], rough['RAIL'][-1]
-    board_lanes = [[stiles[:2] + rails[:3], stiles[2:] + rails[3:6]], [rails[6:]]]
-    assigned = [key for lanes in board_lanes for lane in lanes for key in lane]
-    assert len(assigned) == len(blanks) and set(assigned) == set(blanks)
-
-    page('4/4 hardwood cut plan', f'Hard maple  |  2 boards at {inch(stock[0])} x {inch(stock[1])} in usable')
-    line(42, 668, f'Kerf: {inch(kerf)} in. Square one end and straighten one edge before measuring usable stock.')
-    line(42, 650, 'Rip the strips first, then crosscut each strip left to right as shown.')
-    line(42, 630, 'Rough blanks: stiles 35 x 2 1/8 in, rails 7 x 2 1/8 in.', 10, True)
-    line(42, 612, 'After milling: stiles 34 x 2 x 3/4 in, rails 6 x 2 x 3/4 in.')
-
-    for index, lanes in enumerate(board_lanes, 1):
-        label = f'B{index}'
-        plan = rip_first([[blanks[key] for key in lane] for lane in lanes], stock or SHOP['sheet_in'], kerf, 0, label)
-        x, y, scale = 64, 480 - (index - 1) * 189, 5
-        line(42, y+54, f'{label}  |  Rip {len(lanes)} strip{"s" if len(lanes) != 1 else ""} at {inch(blanks[lanes[0][0]][1])} in', 12, True)
-        pdf.setStrokeColor(BLUE)
-        pdf.setFillColor(colors.HexColor('#eeeae0'))
-        pdf.rect(x, y, stock[1]*scale, stock[0]*scale, fill=1)
-        for key, (across, along, width, length) in plan['parts'].items():
-            assert (width, length) == blanks[key][1:]
-            px, py = x + along*scale, y + across*scale
-            pdf.setFillColor(TEAL)
-            pdf.rect(px, py, length*scale, width*scale, fill=1)
-            line(px+3, py+2, key, 6.5, True)
-        for n, lane in enumerate(lanes, 1):
-            row = y-25-(n-1)*36
-            line(42, row, f'Strip {n}', 9, True)
-            line(102, row, '  /  '.join(lane), 9)
-            cuts = ' + '.join(inch(blanks[key][2]) for key in lane)
-            line(102, row-15, f'Crosscut lengths (in)  {cuts}', 8)
-    line(42, 157, 'Two full boards total 8 board feet at 4/4. Rough blanks consume about 3.62 board feet.')
-    pdf.showPage()
 
 
 def generate():
@@ -302,7 +261,11 @@ def generate():
     line(42, 450, 'Dry-fit the shelf-and-divider core on the bottom, seat the back, then fit the top.')
     line(42, 430, 'Bring in the outer sides and check square before fitting the face frame.')
     pdf.showPage()
-    draw_hardwood_plan(pdf, page, line, inch, rough)
+    blanks = {key: (key, width, length)
+              for _, _, _, _, length, width, ids in rough.values() for key in ids}
+    stiles, rails = rough['STILE'][-1], rough['RAIL'][-1]
+    lanes = [[stiles[:2] + rails[:3], stiles[2:] + rails[3:6]], [rails[6:]]]
+    draw_hardwood_plan(pdf, page, line, inch, SHOP, blanks, lanes)
     draw_joinery(pdf, page, line, inch, PARTS, OUT)
     page('Soda organizer lighting', f"{PROJECT['revision']}  |  Four rear-mounted continuous channels")
     line(42, 656, 'Cut three 21 3/4 in angled runs (65 1/4 in total) from the 72 in stock.')

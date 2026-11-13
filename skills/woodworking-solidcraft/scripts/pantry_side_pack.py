@@ -4,6 +4,7 @@ from reportlab.pdfgen import canvas
 from reportlab.lib import colors
 from cabinet_model import resolve
 from pantry_cutlist import ROOT, SHOP, inch
+from hardwood_plan import draw_hardwood_plan
 
 out = ROOT / 'output'
 spec = json.loads((out/'side-bays-spec.json').read_text())
@@ -78,20 +79,27 @@ for i,(key,material,label,axes) in enumerate(rows):
     line(383,y,' x '.join(map(inch,dims)))
     line(200,y-12,material,8)
 notes(359,[
-    f"4/4 stock: two {' x '.join(map(inch, SHOP['hardwood_default_board_in']))} in boards, {inch(SHOP['kerf_in'])} in kerf.",
-    'Board A: rip one 2 1/8 in and two 1 5/8 in rough strips.',
-    '2 1/8 in strip: two 35 in stiles + one 19 3/4 in upper rail.',
-    'First 1 5/8 in strip: two 33 1/4 in front pin backers.',
-    'Second 1 5/8 in strip: two 33 1/4 in rear pin strips.',
-    'Board B: rip two 2 1/8 in strips and one 1 1/8 in strip.',
-    '2 1/8 in strip: one 19 3/4 in upper rail + two 19 1/2 in shelf aprons.',
-    'Second 2 1/8 in strip: two 19 3/4 in fixed bottom rail blanks.',
     'Plywood: two nominal 21 1/8 x 17 5/16 in blanks. Maintain clearance for pin adjustment.',
     'One 24 x 48 in offcut yields both movable shelves. Grain runs along the 48 in side.',
-    '1 1/8 in strip: two 17 1/2 in cleats.',
     'Counter: template the opening, then transfer the stopped pockets to the underside.',
 ])
 pdf.showPage()
+
+hardwood_axes = {key: axes for key, material, _, axes in rows if material == 'hard maple'}
+hardwood_axes['BR'] = ('x', 'z', 'y')
+blanks = {}
+for key, part in parts.items():
+    if part['material'] != 'maple':
+        continue
+    length_axis, width_axis, _ = hardwood_axes[key.rsplit('-', 1)[0]]
+    length = part['size']['xyz'.index(length_axis)] + SHOP['hardwood_rough_length_allowance_in']
+    width = part['size']['xyz'.index(width_axis)] + SHOP['hardwood_rough_width_allowance_in']
+    blanks[key] = (key, width, length)
+lanes = [
+    [['ST-L', 'ST-R', 'TR-L'], ['PB-L', 'PB-R'], ['PS-L', 'PS-R']],
+    [['TR-R', 'FR-L', 'FR-R'], ['BR-L', 'BR-R'], ['CL-L', 'CL-R']],
+]
+draw_hardwood_plan(pdf, page, line, inch, SHOP, blanks, lanes)
 
 page('Countertop and cleats','Underside plan and end section  |  Rear-open stopped edge dados')
 x,y,s=52,456,7.5
