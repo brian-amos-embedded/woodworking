@@ -30,7 +30,7 @@ def page(title,sub):
     pdf.drawString(42,749,title)
     pdf.setFont('Helvetica',10)
     pdf.drawString(42,725,sub)
-    line(42,30,'PANTRY SIDE BAYS  /  FIELD-FIT DRAFT',8,True)
+    line(42,30,'PANTRY SIDE BAYS  /  R3 / FIELD-FIT DRAFT',8,True)
     line(550,30,str(n),8,True)
 
 
@@ -43,7 +43,7 @@ def notes(y, strings):
 page('Pantry side shelves','Left and right bays  |  Nominal opening 67 1/2 in  |  Field-fit before cutting')
 pdf.drawImage(str(out/'pantry-combined.png'),44,310,524,368,preserveAspectRatio=True,anchor='c')
 notes(282,[
-    'Two adjustable shelves and one fixed bottom shelf per bay.',
+    'One adjustable shelf and one fixed bottom shelf per bay.',
     'Use four 1/8 in pegs per shelf. The organizer supplies two rows on each outside face.',
     'The wall supplies a front stile and an independent rear pin strip on each side.',
     'A short-depth front pin backer sits behind each visible stile.',
@@ -53,7 +53,7 @@ notes(282,[
 ])
 pdf.showPage()
 
-page('Cut list','Two shelves per bay shown  |  Dimensions in inches  |  Confirm usable stock at the opening')
+page('Cut list','One movable shelf per bay  |  Dimensions in inches  |  Confirm usable stock at the opening')
 line(42,666,'Part IDs',9,True)
 line(156,666,'Qty',9,True)
 line(200,666,'Material / purpose',9,True)
@@ -73,21 +73,22 @@ for i,(key,material,label,axes) in enumerate(rows):
     y=640-i*31
     dims=[p['size']['xyz'.index(axis)] for axis in axes]
     line(42,y,key if key=='TOP-01' else key+'-L / -R')
-    line(156,y,'1' if key=='TOP-01' else ('4' if key in ('SH','FR') else '2'))
+    line(156,y,'1' if key=='TOP-01' else '2')
     line(200,y,label)
     line(383,y,' x '.join(map(inch,dims)))
     line(200,y-12,material,8)
 notes(359,[
     f"4/4 stock: two {' x '.join(map(inch, SHOP['hardwood_default_board_in']))} in boards, {inch(SHOP['kerf_in'])} in kerf.",
     'Board A: rip one 2 1/8 in and two 1 5/8 in rough strips.',
-    '2 1/8 in strip: two 33 3/4 in stiles + one 19 3/4 in upper rail.',
+    '2 1/8 in strip: two 35 in stiles + one 19 3/4 in upper rail.',
     'First 1 5/8 in strip: two 33 1/4 in front pin backers.',
     'Second 1 5/8 in strip: two 33 1/4 in rear pin strips.',
-    'Board B: rip one 2 1/8 in and one 1 1/8 in rough strip.',
+    'Board B: rip two 2 1/8 in strips and one 1 1/8 in strip.',
     '2 1/8 in strip: one 19 3/4 in upper rail + two 19 1/2 in shelf aprons.',
-    '1 1/8 in strip: two 17 1/2 in cleats. Rip a 2 1/8 in strip for the two extra aprons.',
-    'Plywood: four nominal 21 1/8 x 17 5/16 in blanks. Maintain clearance for pin adjustment.',
-    'Each 24 x 48 in offcut can yield two shelves, with face grain along the 48 in side.',
+    'Second 2 1/8 in strip: two 19 3/4 in fixed bottom rail blanks.',
+    'Plywood: two nominal 21 1/8 x 17 5/16 in blanks. Maintain clearance for pin adjustment.',
+    'One 24 x 48 in offcut yields both movable shelves. Grain runs along the 48 in side.',
+    '1 1/8 in strip: two 17 1/2 in cleats.',
     'Counter: template the opening, then transfer the stopped pockets to the underside.',
 ])
 pdf.showPage()
@@ -147,7 +148,7 @@ notes(526,[
 ])
 line(42,378,'Rectangular lighting channels',12,True)
 notes(356,[
-    'Mount channels to the rear faces of the middle shelf aprons, aimed toward the rear.',
+    'Mount channels to the rear faces of the movable shelf aprons, aimed toward the rear.',
     'Mount fixed channels to the rear faces of the rails directly below the countertop.',
     'Channel blanks: two up to 18 1/2 in at the shelves and two up to 18 3/4 in above.',
     'Leave extra end clearance for caps and leads. Confirm actual extrusion and clip dimensions.',
@@ -160,7 +161,7 @@ page('Shelf blanks and peg layout','Top views  |  Shelf front is at the bottom  
 from sheet_layout import rip_first
 blanks = [(key, parts[key]['size'][1], parts[key]['size'][0]) for key in ('SH-L','SH-R')]
 layout = rip_first([blanks], (24,48), SHOP['kerf_in'], SHOP['edge_trim_in'], 'S1')
-line(42,664,'3/4 IN MAPLE PLYWOOD / REPEAT ON TWO 24 X 48 IN OFFCUTS',10,True)
+line(42,664,'3/4 IN MAPLE PLYWOOD / ONE 24 X 48 IN OFFCUT',10,True)
 x,y,s=80,460,7.5
 pdf.setStrokeColor(ink)
 pdf.setFillColor(colors.HexColor('#f4ead9'))

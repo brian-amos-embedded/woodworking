@@ -1,6 +1,6 @@
 {
   "name": "Pantry side bays",
-  "revision": "R4",
+  "revision": "R5",
   "parameters_in": {
     "bay": 20.75,
     "center": 26,
@@ -15,7 +15,6 @@
     "cleat_travel": 0.125,
     "left_rear": 12,
     "right_rear": 15,
-    "shelf_z": 12,
     "fit": 0.0625,
     "pin_w": 1.5,
     "pin_bottom": 3.5,
@@ -69,38 +68,6 @@
     "org_channel_z5": "org_H-org_F+org_channel_lift"
   },
   "parts": [
-    {
-      "id": "LED-SODA-3",
-      "name": "Continuous angled channel row 3",
-      "material": "lighting",
-      "corner": [
-        "org_F+org_channel_end",
-        "org_FT",
-        "org_channel_z3"
-      ],
-      "size": [
-        "org_W-2*org_F-2*org_channel_end",
-        "org_channel_flat",
-        "org_channel_flat"
-      ],
-      "cuts": []
-    },
-    {
-      "id": "LED-SODA-5",
-      "name": "Continuous angled channel row 5",
-      "material": "lighting",
-      "corner": [
-        "org_F+org_channel_end",
-        "org_FT",
-        "org_channel_z5"
-      ],
-      "size": [
-        "org_W-2*org_F-2*org_channel_end",
-        "org_channel_flat",
-        "org_channel_flat"
-      ],
-      "cuts": []
-    },
     {
       "id": "TOP-01",
       "name": "TOP-01",
@@ -225,65 +192,6 @@
       "cuts": []
     },
     {
-      "id": "SH-L",
-      "name": "SH-L",
-      "material": "plywood_3_4",
-      "corner": [
-        "-bay+stock+fit",
-        "stock",
-        "shelf_z"
-      ],
-      "size": [
-        "bay+carcass_inset-stock-2*fit",
-        "depth-stock-fit",
-        "stock"
-      ],
-      "cuts": [
-        {
-          "name": "Wall-side front relief",
-          "corner": [
-            "-bay+stock+fit",
-            "stock",
-            "shelf_z"
-          ],
-          "size": [
-            "rail_h-stock",
-            "stock+fit",
-            "stock"
-          ]
-        },
-        {
-          "name": "Organizer-side front relief",
-          "corner": [
-            "-bay+stock+fit+bay+carcass_inset-stock-2*fit-carcass_inset",
-            "stock",
-            "shelf_z"
-          ],
-          "size": [
-            "carcass_inset",
-            "stock+fit",
-            "stock"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "FR-L",
-      "name": "FR-L",
-      "material": "maple",
-      "corner": [
-        "-bay+rail_h+apron_gap",
-        0,
-        "shelf_z+stock-rail_h"
-      ],
-      "size": [
-        "bay-rail_h-2*apron_gap",
-        "stock",
-        "rail_h"
-      ],
-      "cuts": []
-    },
-    {
       "id": "LED-MID-L",
       "name": "LED-MID-L",
       "material": "lighting",
@@ -396,65 +304,6 @@
       "cuts": []
     },
     {
-      "id": "SH-R",
-      "name": "SH-R",
-      "material": "plywood_3_4",
-      "corner": [
-        "center-carcass_inset+fit",
-        "stock",
-        "shelf_z"
-      ],
-      "size": [
-        "bay+carcass_inset-stock-2*fit",
-        "depth-stock-fit",
-        "stock"
-      ],
-      "cuts": [
-        {
-          "name": "Wall-side front relief",
-          "corner": [
-            "center-carcass_inset+fit+bay+carcass_inset-stock-2*fit-(rail_h-stock)",
-            "stock",
-            "shelf_z"
-          ],
-          "size": [
-            "rail_h-stock",
-            "stock+fit",
-            "stock"
-          ]
-        },
-        {
-          "name": "Organizer-side front relief",
-          "corner": [
-            "center-carcass_inset+fit",
-            "stock",
-            "shelf_z"
-          ],
-          "size": [
-            "carcass_inset",
-            "stock+fit",
-            "stock"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "FR-R",
-      "name": "FR-R",
-      "material": "maple",
-      "corner": [
-        "center+apron_gap",
-        0,
-        "shelf_z+stock-rail_h"
-      ],
-      "size": [
-        "bay-rail_h-2*apron_gap",
-        "stock",
-        "rail_h"
-      ],
-      "cuts": []
-    },
-    {
       "id": "LED-MID-R",
       "name": "LED-MID-R",
       "material": "lighting",
@@ -487,8 +336,8 @@
       "cuts": []
     },
     {
-      "id": "SH-MID-L",
-      "name": "SH-MID-L",
+      "id": "SH-L",
+      "name": "SH-L",
       "material": "plywood_3_4",
       "corner": [
         "-bay+stock+fit",
@@ -530,8 +379,8 @@
       ]
     },
     {
-      "id": "FR-MID-L",
-      "name": "FR-MID-L",
+      "id": "FR-L",
+      "name": "FR-L",
       "material": "maple",
       "corner": [
         "-bay+rail_h+apron_gap",
@@ -546,8 +395,8 @@
       "cuts": []
     },
     {
-      "id": "SH-MID-R",
-      "name": "SH-MID-R",
+      "id": "SH-R",
+      "name": "SH-R",
       "material": "plywood_3_4",
       "corner": [
         "center-carcass_inset+fit",
@@ -589,8 +438,8 @@
       ]
     },
     {
-      "id": "FR-MID-R",
-      "name": "FR-MID-R",
+      "id": "FR-R",
+      "name": "FR-R",
       "material": "maple",
       "corner": [
         "center+apron_gap",
@@ -749,6 +598,38 @@
           ]
         }
       ]
+    },
+    {
+      "id": "LED-SODA-3",
+      "name": "Continuous angled channel row 3",
+      "material": "lighting",
+      "corner": [
+        "org_F+org_channel_end",
+        "org_FT",
+        "org_channel_z3"
+      ],
+      "size": [
+        "org_W-2*org_F-2*org_channel_end",
+        "org_channel_flat",
+        "org_channel_flat"
+      ],
+      "cuts": []
+    },
+    {
+      "id": "LED-SODA-5",
+      "name": "Continuous angled channel row 5",
+      "material": "lighting",
+      "corner": [
+        "org_F+org_channel_end",
+        "org_FT",
+        "org_channel_z5"
+      ],
+      "size": [
+        "org_W-2*org_F-2*org_channel_end",
+        "org_channel_flat",
+        "org_channel_flat"
+      ],
+      "cuts": []
     },
     {
       "id": "SIDE-L",
@@ -1896,24 +1777,14 @@
       "prefix": ""
     },
     {
-      "spec": "project.json",
+      "spec": "source/soda-org-assembly.json",
       "prefix": "org_"
     }
   ],
   "shared_components": [
     [
-      "SH-L",
-      "SH-MID-L"
-    ],
-    [
-      "SH-R",
-      "SH-MID-R"
-    ],
-    [
       "FR-L",
-      "FR-R",
-      "FR-MID-L",
-      "FR-MID-R"
+      "FR-R"
     ],
     [
       "TR-L",

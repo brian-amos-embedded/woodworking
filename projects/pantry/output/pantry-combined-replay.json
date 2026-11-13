@@ -94,13 +94,6 @@
     {
       "command": "parameters.change",
       "params": {
-        "name": "cab_shelf_z",
-        "expression": "12 in"
-      }
-    },
-    {
-      "command": "parameters.change",
-      "params": {
         "name": "cab_fit",
         "expression": "0.0625 in"
       }
@@ -446,36 +439,6 @@
     {
       "command": "solid.box",
       "params": {
-        "name": "Continuous angled channel row 3",
-        "length": "cab_org_w-2*cab_org_f-2*cab_org_channel_end",
-        "width": "cab_org_channel_flat",
-        "height": "cab_org_channel_flat",
-        "corner": [
-          "cab_org_f+cab_org_channel_end",
-          "cab_org_ft",
-          "cab_org_channel_z3"
-        ],
-        "body_name": "LED-SODA-3"
-      }
-    },
-    {
-      "command": "solid.box",
-      "params": {
-        "name": "Continuous angled channel row 5",
-        "length": "cab_org_w-2*cab_org_f-2*cab_org_channel_end",
-        "width": "cab_org_channel_flat",
-        "height": "cab_org_channel_flat",
-        "corner": [
-          "cab_org_f+cab_org_channel_end",
-          "cab_org_ft",
-          "cab_org_channel_z5"
-        ],
-        "body_name": "LED-SODA-5"
-      }
-    },
-    {
-      "command": "solid.box",
-      "params": {
         "name": "TOP-01",
         "length": "cab_center+2*cab_bay",
         "width": "cab_depth+cab_front_overhang",
@@ -561,36 +524,6 @@
           "cab_height-cab_rail_h"
         ],
         "body_name": "TR-L"
-      }
-    },
-    {
-      "command": "solid.box",
-      "params": {
-        "name": "SH-L",
-        "length": "cab_bay+cab_carcass_inset-cab_stock-2*cab_fit",
-        "width": "cab_depth-cab_stock-cab_fit",
-        "height": "cab_stock",
-        "corner": [
-          "-cab_bay+cab_stock+cab_fit",
-          "cab_stock",
-          "cab_shelf_z"
-        ],
-        "body_name": "SH-L"
-      }
-    },
-    {
-      "command": "solid.box",
-      "params": {
-        "name": "FR-L",
-        "length": "cab_bay-cab_rail_h-2*cab_apron_gap",
-        "width": "cab_stock",
-        "height": "cab_rail_h",
-        "corner": [
-          "-cab_bay+cab_rail_h+cab_apron_gap",
-          "0 in",
-          "cab_shelf_z+cab_stock-cab_rail_h"
-        ],
-        "body_name": "FR-L"
       }
     },
     {
@@ -701,36 +634,6 @@
     {
       "command": "solid.box",
       "params": {
-        "name": "SH-R",
-        "length": "cab_bay+cab_carcass_inset-cab_stock-2*cab_fit",
-        "width": "cab_depth-cab_stock-cab_fit",
-        "height": "cab_stock",
-        "corner": [
-          "cab_center-cab_carcass_inset+cab_fit",
-          "cab_stock",
-          "cab_shelf_z"
-        ],
-        "body_name": "SH-R"
-      }
-    },
-    {
-      "command": "solid.box",
-      "params": {
-        "name": "FR-R",
-        "length": "cab_bay-cab_rail_h-2*cab_apron_gap",
-        "width": "cab_stock",
-        "height": "cab_rail_h",
-        "corner": [
-          "cab_center+cab_apron_gap",
-          "0 in",
-          "cab_shelf_z+cab_stock-cab_rail_h"
-        ],
-        "body_name": "FR-R"
-      }
-    },
-    {
-      "command": "solid.box",
-      "params": {
         "name": "LED-MID-R",
         "length": "cab_bay-cab_rail_h-2*cab_apron_gap",
         "width": "cab_led_d",
@@ -761,7 +664,7 @@
     {
       "command": "solid.box",
       "params": {
-        "name": "SH-MID-L",
+        "name": "SH-L",
         "length": "cab_bay+cab_carcass_inset-cab_stock-2*cab_fit",
         "width": "cab_depth-cab_stock-cab_fit",
         "height": "cab_stock",
@@ -770,13 +673,13 @@
           "cab_stock",
           "cab_middle_z"
         ],
-        "body_name": "SH-MID-L"
+        "body_name": "SH-L"
       }
     },
     {
       "command": "solid.box",
       "params": {
-        "name": "FR-MID-L",
+        "name": "FR-L",
         "length": "cab_bay-cab_rail_h-2*cab_apron_gap",
         "width": "cab_stock",
         "height": "cab_rail_h",
@@ -785,13 +688,13 @@
           "0 in",
           "cab_middle_z+cab_stock-cab_rail_h"
         ],
-        "body_name": "FR-MID-L"
+        "body_name": "FR-L"
       }
     },
     {
       "command": "solid.box",
       "params": {
-        "name": "SH-MID-R",
+        "name": "SH-R",
         "length": "cab_bay+cab_carcass_inset-cab_stock-2*cab_fit",
         "width": "cab_depth-cab_stock-cab_fit",
         "height": "cab_stock",
@@ -800,13 +703,13 @@
           "cab_stock",
           "cab_middle_z"
         ],
-        "body_name": "SH-MID-R"
+        "body_name": "SH-R"
       }
     },
     {
       "command": "solid.box",
       "params": {
-        "name": "FR-MID-R",
+        "name": "FR-R",
         "length": "cab_bay-cab_rail_h-2*cab_apron_gap",
         "width": "cab_stock",
         "height": "cab_rail_h",
@@ -815,7 +718,7 @@
           "0 in",
           "cab_middle_z+cab_stock-cab_rail_h"
         ],
-        "body_name": "FR-MID-R"
+        "body_name": "FR-R"
       }
     },
     {
@@ -876,6 +779,36 @@
           "cab_base_shelf_z"
         ],
         "body_name": "BS-R"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Continuous angled channel row 3",
+        "length": "cab_org_w-2*cab_org_f-2*cab_org_channel_end",
+        "width": "cab_org_channel_flat",
+        "height": "cab_org_channel_flat",
+        "corner": [
+          "cab_org_f+cab_org_channel_end",
+          "cab_org_ft",
+          "cab_org_channel_z3"
+        ],
+        "body_name": "LED-SODA-3"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Continuous angled channel row 5",
+        "length": "cab_org_w-2*cab_org_f-2*cab_org_channel_end",
+        "width": "cab_org_channel_flat",
+        "height": "cab_org_channel_flat",
+        "corner": [
+          "cab_org_f+cab_org_channel_end",
+          "cab_org_ft",
+          "cab_org_channel_z5"
+        ],
+        "body_name": "LED-SODA-5"
       }
     },
     {
@@ -1451,7 +1384,7 @@
         "corner": [
           "-cab_bay+cab_stock+cab_fit",
           "cab_stock",
-          "cab_shelf_z"
+          "cab_middle_z"
         ],
         "operation": "cut",
         "targets": [
@@ -1469,7 +1402,7 @@
         "corner": [
           "-cab_bay+cab_stock+cab_fit+cab_bay+cab_carcass_inset-cab_stock-2*cab_fit-cab_carcass_inset",
           "cab_stock",
-          "cab_shelf_z"
+          "cab_middle_z"
         ],
         "operation": "cut",
         "targets": [
@@ -1487,7 +1420,7 @@
         "corner": [
           "cab_center-cab_carcass_inset+cab_fit+cab_bay+cab_carcass_inset-cab_stock-2*cab_fit-(cab_rail_h-cab_stock)",
           "cab_stock",
-          "cab_shelf_z"
+          "cab_middle_z"
         ],
         "operation": "cut",
         "targets": [
@@ -1505,83 +1438,11 @@
         "corner": [
           "cab_center-cab_carcass_inset+cab_fit",
           "cab_stock",
-          "cab_shelf_z"
+          "cab_middle_z"
         ],
         "operation": "cut",
         "targets": [
           "SH-R"
-        ]
-      }
-    },
-    {
-      "command": "solid.box",
-      "params": {
-        "name": "Wall-side front relief",
-        "length": "cab_rail_h-cab_stock",
-        "width": "cab_stock+cab_fit",
-        "height": "cab_stock",
-        "corner": [
-          "-cab_bay+cab_stock+cab_fit",
-          "cab_stock",
-          "cab_middle_z"
-        ],
-        "operation": "cut",
-        "targets": [
-          "SH-MID-L"
-        ]
-      }
-    },
-    {
-      "command": "solid.box",
-      "params": {
-        "name": "Organizer-side front relief",
-        "length": "cab_carcass_inset",
-        "width": "cab_stock+cab_fit",
-        "height": "cab_stock",
-        "corner": [
-          "-cab_bay+cab_stock+cab_fit+cab_bay+cab_carcass_inset-cab_stock-2*cab_fit-cab_carcass_inset",
-          "cab_stock",
-          "cab_middle_z"
-        ],
-        "operation": "cut",
-        "targets": [
-          "SH-MID-L"
-        ]
-      }
-    },
-    {
-      "command": "solid.box",
-      "params": {
-        "name": "Wall-side front relief",
-        "length": "cab_rail_h-cab_stock",
-        "width": "cab_stock+cab_fit",
-        "height": "cab_stock",
-        "corner": [
-          "cab_center-cab_carcass_inset+cab_fit+cab_bay+cab_carcass_inset-cab_stock-2*cab_fit-(cab_rail_h-cab_stock)",
-          "cab_stock",
-          "cab_middle_z"
-        ],
-        "operation": "cut",
-        "targets": [
-          "SH-MID-R"
-        ]
-      }
-    },
-    {
-      "command": "solid.box",
-      "params": {
-        "name": "Organizer-side front relief",
-        "length": "cab_carcass_inset",
-        "width": "cab_stock+cab_fit",
-        "height": "cab_stock",
-        "corner": [
-          "cab_center-cab_carcass_inset+cab_fit",
-          "cab_stock",
-          "cab_middle_z"
-        ],
-        "operation": "cut",
-        "targets": [
-          "SH-MID-R"
         ]
       }
     },
@@ -2349,8 +2210,6 @@
         "bodies": [
           "SH-L",
           "SH-R",
-          "SH-MID-L",
-          "SH-MID-R",
           "BS-L",
           "BS-R",
           "SIDE-L",
@@ -2390,15 +2249,13 @@
           "PB-L",
           "PS-L",
           "TR-L",
-          "FR-L",
           "CL-R",
           "ST-R",
           "PB-R",
           "PS-R",
           "TR-R",
+          "FR-L",
           "FR-R",
-          "FR-MID-L",
-          "FR-MID-R",
           "BR-L",
           "BR-R",
           "ST-1",
@@ -2437,12 +2294,12 @@
       "command": "appearance.assign",
       "params": {
         "bodies": [
-          "LED-SODA-3",
-          "LED-SODA-5",
           "LED-MID-L",
           "LED-TR-L",
           "LED-MID-R",
-          "LED-TR-R"
+          "LED-TR-R",
+          "LED-SODA-3",
+          "LED-SODA-5"
         ],
         "color": "#63768b"
       }
@@ -2453,11 +2310,7 @@
       "command": "solid.remove",
       "params": {
         "bodies": [
-          "SH-MID-L",
-          "SH-MID-R",
           "FR-R",
-          "FR-MID-L",
-          "FR-MID-R",
           "TR-R",
           "LED-MID-R",
           "LED-TR-R",
@@ -2474,27 +2327,27 @@
       "command": "component.from_bodies",
       "params": {
         "bodies": [
-          "LED-SODA-3",
-          "LED-SODA-5",
           "TOP-01",
           "CL-L",
           "ST-L",
           "PB-L",
           "PS-L",
           "TR-L",
-          "SH-L",
-          "FR-L",
           "LED-MID-L",
           "LED-TR-L",
           "CL-R",
           "ST-R",
           "PB-R",
           "PS-R",
+          "SH-L",
+          "FR-L",
           "SH-R",
           "BR-L",
           "BS-L",
           "BR-R",
           "BS-R",
+          "LED-SODA-3",
+          "LED-SODA-5",
           "SIDE-L",
           "SIDE-R",
           "DIV-1",
@@ -2530,36 +2383,6 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 134,
-        "translate": [
-          0.0,
-          0.0,
-          304.79999999999995
-        ]
-      }
-    },
-    {
-      "command": "component.list",
-      "params": {}
-    },
-    {
-      "command": "occurrence.copy",
-      "params": {
-        "component": 150,
-        "translate": [
-          0.0,
-          0.0,
-          304.79999999999995
-        ]
-      }
-    },
-    {
-      "command": "component.list",
-      "params": {}
-    },
-    {
-      "command": "occurrence.copy",
-      "params": {
         "component": 136,
         "translate": [
           1136.6499999999999,
@@ -2575,37 +2398,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 136,
-        "translate": [
-          0.0,
-          0.0,
-          304.79999999999995
-        ]
-      }
-    },
-    {
-      "command": "component.list",
-      "params": {}
-    },
-    {
-      "command": "occurrence.copy",
-      "params": {
-        "component": 136,
-        "translate": [
-          1136.6499999999999,
-          0.0,
-          304.79999999999995
-        ]
-      }
-    },
-    {
-      "command": "component.list",
-      "params": {}
-    },
-    {
-      "command": "occurrence.copy",
-      "params": {
-        "component": 132,
+        "component": 120,
         "translate": [
           1136.6499999999999,
           0.0,
@@ -2620,7 +2413,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 138,
+        "component": 122,
         "translate": [
           1136.6499999999999,
           0.0,
@@ -2635,7 +2428,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 140,
+        "component": 124,
         "translate": [
           1136.6499999999999,
           0.0,
@@ -2650,7 +2443,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 206,
+        "component": 198,
         "translate": [
           0.0,
           0.0,
@@ -2665,7 +2458,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 206,
+        "component": 198,
         "translate": [
           0.0,
           0.0,
@@ -2680,7 +2473,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 208,
+        "component": 200,
         "translate": [
           0.0,
           0.0,
@@ -2695,7 +2488,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 208,
+        "component": 200,
         "translate": [
           0.0,
           0.0,
@@ -2710,7 +2503,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 210,
+        "component": 202,
         "translate": [
           0.0,
           0.0,
@@ -2725,7 +2518,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 210,
+        "component": 202,
         "translate": [
           0.0,
           0.0,

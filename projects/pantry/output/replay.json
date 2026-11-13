@@ -194,6 +194,36 @@
     {
       "command": "solid.box",
       "params": {
+        "name": "Continuous angled channel row 3",
+        "length": "cab_w-2*cab_f-2*cab_channel_end",
+        "width": "cab_channel_flat",
+        "height": "cab_channel_flat",
+        "corner": [
+          "cab_f+cab_channel_end",
+          "cab_ft",
+          "cab_channel_z3"
+        ],
+        "body_name": "LED-SODA-3"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Continuous angled channel row 5",
+        "length": "cab_w-2*cab_f-2*cab_channel_end",
+        "width": "cab_channel_flat",
+        "height": "cab_channel_flat",
+        "corner": [
+          "cab_f+cab_channel_end",
+          "cab_ft",
+          "cab_channel_z5"
+        ],
+        "body_name": "LED-SODA-5"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
         "name": "Outer side L",
         "length": "cab_t",
         "width": "cab_d-cab_ft",
@@ -1426,6 +1456,16 @@
         ],
         "color": "#ebc391"
       }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "LED-SODA-3",
+          "LED-SODA-5"
+        ],
+        "color": "#63768b"
+      }
     }
   ],
   "assembly": [
@@ -1446,6 +1486,8 @@
       "command": "component.from_bodies",
       "params": {
         "bodies": [
+          "LED-SODA-3",
+          "LED-SODA-5",
           "SIDE-L",
           "SIDE-R",
           "DIV-1",
@@ -1481,7 +1523,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 119,
+        "component": 125,
         "translate": [
           0.0,
           0.0,
@@ -1496,7 +1538,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 119,
+        "component": 125,
         "translate": [
           0.0,
           0.0,
@@ -1511,7 +1553,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 121,
+        "component": 127,
         "translate": [
           0.0,
           0.0,
@@ -1526,7 +1568,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 121,
+        "component": 127,
         "translate": [
           0.0,
           0.0,
@@ -1541,7 +1583,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 123,
+        "component": 129,
         "translate": [
           0.0,
           0.0,
@@ -1556,7 +1598,7 @@
     {
       "command": "occurrence.copy",
       "params": {
-        "component": 123,
+        "component": 129,
         "translate": [
           0.0,
           0.0,

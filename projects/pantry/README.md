@@ -1,10 +1,10 @@
-# Pantry side bays and soda organizer R4
+# Pantry assembly R5 and soda organizer R4
 
 The two PDFs are separate shop packets. Open output/pantry-combined.sc for the
 complete fit model, output/side-bays.sc for the side bays and countertop, or
 output/soda-org-2.sc for the organizer machining model. The combined model
 includes lighting clearance envelopes. Peg positions are field-drilling
-annotations. The side shelves are shown two per bay at sample positions.
+annotations. Each side bay has one movable shelf shown at its upper sample position.
 
 ## Open a model in SolidCraft
 
@@ -27,8 +27,8 @@ From the repository root, with Python 3.12+, ReportLab, and SolidCraft 0.40.1:
 python skills/woodworking-solidcraft/scripts/build_project.py projects/pantry --cli /absolute/path/to/solidcraft-cli
 ```
 
-`project.json` defines the organizer. The other two model specifications live
-in `source/`. The combined specification includes both component specifications. Keep the
+`project.json` defines the organizer wood parts. The organizer assembly in
+`source/` adds the lighting channels and is included by the combined model. Keep the
 organizer and side-bay interface dimensions aligned when revising the design. `overrides.json` selects models, test dimensions,
 and the shop-pack template, and can override any setting in
 [projects/defaults.json](../defaults.json).

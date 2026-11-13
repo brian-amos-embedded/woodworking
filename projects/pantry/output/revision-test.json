@@ -8,6 +8,42 @@
       {
         "bbox": {
           "max": [
+            657.2249999999999,
+            34.925,
+            481.80625
+          ],
+          "min": [
+            53.974999999999994,
+            19.049999999999997,
+            465.93125
+          ]
+        },
+        "closed": true,
+        "faces": 6,
+        "name": "LED-SODA-3",
+        "volume_mm3": 152028.42578124997
+      },
+      {
+        "bbox": {
+          "max": [
+            657.2249999999999,
+            34.925,
+            889.0
+          ],
+          "min": [
+            53.974999999999994,
+            19.049999999999997,
+            873.125
+          ]
+        },
+        "closed": true,
+        "faces": 6,
+        "name": "LED-SODA-5",
+        "volume_mm3": 152028.42578124997
+      },
+      {
+        "bbox": {
+          "max": [
             50.8,
             460.375,
             920.75
@@ -636,80 +672,80 @@
         "volume_mm3": 163870.64000000007
       }
     ],
-    "body_count": 35,
+    "body_count": 37,
     "total": {
-      "volume_mm3": 58879357.070939526
+      "volume_mm3": 59183413.922502026
     }
   },
   "interference": {
-    "boolean_ms": 1304.1,
+    "boolean_ms": 1648.829,
     "budget_exceeded": false,
     "budget_s": 90.0,
-    "checked": 35,
+    "checked": 37,
     "count": 0,
     "interferences": [],
-    "ms": 157.247,
-    "pairs_candidate": 126,
+    "ms": 195.731,
+    "pairs_candidate": 144,
     "pairs_cleared": 0,
     "pairs_excluded": 0,
-    "pairs_intersected": 126,
+    "pairs_intersected": 144,
     "pairs_not_checked": 0,
     "skipped_pairs": 0,
     "slowest": [
       {
-        "a": "SIDE-L",
-        "b": "TOP",
-        "boolean_ms": 51.836,
-        "ms": 51.838,
-        "tessellate_ms": 0.0
-      },
-      {
         "a": "SIDE-R",
-        "b": "BOT",
-        "boolean_ms": 48.972,
-        "ms": 48.973,
-        "tessellate_ms": 0.0
-      },
-      {
-        "a": "DIV-1",
         "b": "TOP",
-        "boolean_ms": 45.068,
-        "ms": 45.072,
+        "boolean_ms": 55.197,
+        "ms": 55.199,
         "tessellate_ms": 0.0
       },
       {
         "a": "SIDE-L",
         "b": "SH-L1",
-        "boolean_ms": 39.701,
-        "ms": 39.705,
-        "tessellate_ms": 0.0
-      },
-      {
-        "a": "SIDE-R",
-        "b": "TOP",
-        "boolean_ms": 33.16,
-        "ms": 33.162,
+        "boolean_ms": 45.145,
+        "ms": 45.146,
         "tessellate_ms": 0.0
       },
       {
         "a": "DIV-1",
-        "b": "BOT",
-        "boolean_ms": 29.99,
-        "ms": 29.993,
-        "tessellate_ms": 0.0
-      },
-      {
-        "a": "SIDE-R",
-        "b": "BACK",
-        "boolean_ms": 26.05,
-        "ms": 26.052,
+        "b": "TOP",
+        "boolean_ms": 41.821,
+        "ms": 41.824,
         "tessellate_ms": 0.0
       },
       {
         "a": "SIDE-L",
+        "b": "TOP",
+        "boolean_ms": 41.273,
+        "ms": 41.276,
+        "tessellate_ms": 0.0
+      },
+      {
+        "a": "SIDE-R",
         "b": "BOT",
-        "boolean_ms": 24.0,
-        "ms": 24.003,
+        "boolean_ms": 36.43,
+        "ms": 36.431,
+        "tessellate_ms": 0.0
+      },
+      {
+        "a": "DIV-2",
+        "b": "TOP",
+        "boolean_ms": 36.289,
+        "ms": 36.292,
+        "tessellate_ms": 0.0
+      },
+      {
+        "a": "DIV-1",
+        "b": "ST-2",
+        "boolean_ms": 35.161,
+        "ms": 35.163,
+        "tessellate_ms": 0.0
+      },
+      {
+        "a": "DIV-2",
+        "b": "BOT",
+        "boolean_ms": 34.033,
+        "ms": 34.036,
         "tessellate_ms": 0.0
       }
     ],

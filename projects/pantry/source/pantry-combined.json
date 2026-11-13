@@ -1,49 +1,16 @@
 {
   "name": "Pantry side bays",
-  "revision": "R4",
+  "revision": "R5",
   "parameters_in": {},
   "derived_expressions": {},
-  "parts": [
-    {
-      "id": "LED-SODA-3",
-      "name": "Continuous angled channel row 3",
-      "material": "lighting",
-      "corner": [
-        "org_F+org_channel_end",
-        "org_FT",
-        "org_channel_z3"
-      ],
-      "size": [
-        "org_W-2*org_F-2*org_channel_end",
-        "org_channel_flat",
-        "org_channel_flat"
-      ],
-      "cuts": []
-    },
-    {
-      "id": "LED-SODA-5",
-      "name": "Continuous angled channel row 5",
-      "material": "lighting",
-      "corner": [
-        "org_F+org_channel_end",
-        "org_FT",
-        "org_channel_z5"
-      ],
-      "size": [
-        "org_W-2*org_F-2*org_channel_end",
-        "org_channel_flat",
-        "org_channel_flat"
-      ],
-      "cuts": []
-    }
-  ],
+  "parts": [],
   "includes": [
     {
       "spec": "source/side-bays.json",
       "prefix": ""
     },
     {
-      "spec": "project.json",
+      "spec": "source/soda-org-assembly.json",
       "prefix": "org_"
     }
   ]

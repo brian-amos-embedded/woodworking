@@ -14,7 +14,7 @@ from project_config import load_project, read_json
 def model_spec(root, filename):
     spec = read_json(root / filename)
     for include in spec.get('includes', []):
-        source = read_json(root / include['spec'])
+        source = model_spec(root, include['spec'])
         prefix = include['prefix']
 
         def expression(value):

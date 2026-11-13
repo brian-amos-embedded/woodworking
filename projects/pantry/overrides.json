@@ -6,7 +6,7 @@
   "models": [
     {
       "name": "soda-org-2",
-      "spec": "project.json",
+      "spec": "source/soda-org-assembly.json",
       "prefix": "",
       "exports": [
         "step",
