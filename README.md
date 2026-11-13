@@ -1,6 +1,6 @@
 # Woodworking
 
-This private repository keeps each woodworking design with its editable CAD, build inputs, and shop drawings. It gives a fresh ChatGPT session enough context to revise a design, reproduce the outputs, and pick up where the last session ended.
+This repository keeps each woodworking design with its editable CAD, build inputs, and shop drawings. It gives a fresh ChatGPT session enough context to revise a design, reproduce the outputs, and pick up where the last session ended.
 
 ## Start here
 
@@ -35,6 +35,6 @@ SolidCraft 0.40.1 is pinned for headless CAD. The Python scripts drive its local
 
 ## Open a model in a browser
 
-The [pantry model list](projects/pantry/#open-a-model-in-solidcraft) links directly to each native file. Download the desired file while signed in to GitHub, then open it in a separate [SolidCraft web app](https://app.solidcraft.io/) tab with **File → Open**.
+The [pantry model list](projects/pantry/#open-a-model-in-solidcraft) has one-click links that open the editable models in the SolidCraft web app. Each link loads an unsaved copy from `main`. Use your browser's open-in-new-tab action to keep the repository or chat alongside the model.
 
-SolidCraft can also open a hosted design from a URL if the host serves the file to the app and permits cross-origin access. See [SolidCraft design links](https://docs.solidcraft.io/guide/getting-started.html#design-links-and-embeds). This repo uses private GitHub download links.
+The links use the public GitHub raw file URL with SolidCraft's [design link format](https://docs.solidcraft.io/guide/getting-started.html#design-links-and-embeds).

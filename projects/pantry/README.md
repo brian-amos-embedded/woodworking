@@ -8,14 +8,13 @@ annotations. The side shelves are shown one per bay in a sample position.
 
 ## Open a model in SolidCraft
 
-Download a native file from GitHub, then open it with **File → Open** in a
-separate [SolidCraft web app](https://app.solidcraft.io/) tab.
+Click a model to open an editable copy from the current `main` branch.
 
-| Native model | Contents |
-| --- | --- |
-| [pantry-combined.sc](output/pantry-combined.sc) | Complete fit model and lighting envelopes |
-| [side-bays.sc](output/side-bays.sc) | Adjustable side shelves and countertop |
-| [soda-org-2.sc](output/soda-org-2.sc) | Soda organizer machining model |
+| Model | Open in browser | Native file |
+| --- | --- | --- |
+| Complete pantry assembly | [Open in SolidCraft](https://app.solidcraft.io/?open=https%3A%2F%2Fraw.githubusercontent.com%2Fbrian-amos-embedded%2Fwoodworking%2Fmain%2Fprojects%2Fpantry%2Foutput%2Fpantry-combined.sc) | [`pantry-combined.sc`](output/pantry-combined.sc) |
+| Side shelves and countertop | [Open in SolidCraft](https://app.solidcraft.io/?open=https%3A%2F%2Fraw.githubusercontent.com%2Fbrian-amos-embedded%2Fwoodworking%2Fmain%2Fprojects%2Fpantry%2Foutput%2Fside-bays.sc) | [`side-bays.sc`](output/side-bays.sc) |
+| Soda organizer | [Open in SolidCraft](https://app.solidcraft.io/?open=https%3A%2F%2Fraw.githubusercontent.com%2Fbrian-amos-embedded%2Fwoodworking%2Fmain%2Fprojects%2Fpantry%2Foutput%2Fsoda-org-2.sc) | [`soda-org-2.sc`](output/soda-org-2.sc) |
 
 [Side shelves shop pack](output/side-shelves-shop-pack.pdf) ·
 [Soda organizer shop pack](output/soda-organizer-R3-shop-pack.pdf)
