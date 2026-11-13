@@ -86,7 +86,7 @@ notes(359,[
     'Board B: rip one 2 1/8 in and one 1 1/8 in rough strip.',
     '2 1/8 in strip: one 19 3/4 in upper rail + two 19 1/2 in shelf aprons.',
     '1 1/8 in strip: two 17 1/2 in cleats. Rip a 2 1/8 in strip for the two extra aprons.',
-    'Plywood: four nominal 21 1/8 x 16 9/16 in blanks. Maintain clearance for pin adjustment.',
+    'Plywood: four nominal 21 1/8 x 17 5/16 in blanks. Maintain clearance for pin adjustment.',
     'Each 24 x 48 in offcut can yield two shelves, with face grain along the 48 in side.',
     'Counter: template the opening, then transfer the stopped pockets to the underside.',
 ])
@@ -169,7 +169,7 @@ for key,(across,along,width,length) in layout['parts'].items():
     pdf.setFillColor(teal)
     pdf.rect(x+along*s,y+across*s,length*s,width*s,fill=1)
     line(x+along*s+10,y+45,key,10,True)
-line(42,438,f"Trim {inch(SHOP['edge_trim_in'])} in per edge. Rip 16 9/16 in, then crosscut two 21 1/8 in blanks.")
+line(42,438,f"Trim {inch(SHOP['edge_trim_in'])} in per edge. Rip 17 5/16 in, then crosscut two 21 1/8 in blanks.")
 line(42,420,f"Keep the {inch(SHOP['kerf_in'])} in kerf on the waste side. Keep the adjustable shelf clearance.")
 for index,hand in enumerate(('L','R')):
     x,y,s=63+index*270,161,9
@@ -178,6 +178,11 @@ for index,hand in enumerate(('L','R')):
     w,d,_=shelf['size']
     pdf.setFillColor(colors.HexColor('#f4ead9'))
     pdf.rect(x,y,w*s,d*s,fill=1)
+    for cut in shelf['cuts']:
+        pdf.setFillColor(colors.white)
+        pdf.rect(x+(cut['corner'][0]-sx)*s,y+(cut['corner'][1]-sy)*s,
+                 cut['size'][0]*s,cut['size'][1]*s,fill=1,stroke=0)
+
     parameters = spec['parameters_in']
     bearing = (parameters['pin_projection']-parameters['fit'])/2*s
     organizer_edge = x+w*s-bearing if hand=='L' else x+bearing
@@ -194,7 +199,7 @@ for index,hand in enumerate(('L','R')):
     line(x,y+d*s+12,'WALL  /  ORGANIZER' if hand=='L' else 'ORGANIZER  /  WALL',8)
 line(42,106,'Shelf width = carcass to wall-side pin face minus 1/8 in total.')
 line(42,88,'Apron width = clear opening between stiles minus 1/4 in total.')
-line(42,70,'Confirm pin projection and tilt the shelf past the stiles before drilling.')
+line(42,70,'Front reliefs: 1 1/4 in wide x 13/16 in deep at both corners. Mirror left and right.',9)
 
 pdf.showPage()
 page('Fixed bottom shelves','One per bay  |  Install after the face frame  |  Field-fit at the opening')

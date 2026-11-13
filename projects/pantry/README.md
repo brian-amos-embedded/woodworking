@@ -41,3 +41,5 @@ R4 places continuous angled channels behind soda rail rows 3 and 5. The side-bay
 The countertop projects 1 inch in front of the rails and stiles.
 
 Each side bay has a scribed fixed bottom shelf with a rear-rabbeted front rail, aligned with the organizer's lowest rail.
+
+Movable shelf aprons align with the face frame. The plywood wraps behind the stiles with front corner reliefs. The SolidCraft files use part components and share definitions for explicitly matched repeats.

@@ -642,13 +642,13 @@
     }
   },
   "interference": {
-    "boolean_ms": 2205.09,
+    "boolean_ms": 1304.1,
     "budget_exceeded": false,
     "budget_s": 90.0,
     "checked": 35,
     "count": 0,
     "interferences": [],
-    "ms": 265.45,
+    "ms": 157.247,
     "pairs_candidate": 126,
     "pairs_cleared": 0,
     "pairs_excluded": 0,
@@ -658,58 +658,58 @@
     "slowest": [
       {
         "a": "SIDE-L",
-        "b": "BOT",
-        "boolean_ms": 78.707,
-        "ms": 78.709,
+        "b": "TOP",
+        "boolean_ms": 51.836,
+        "ms": 51.838,
         "tessellate_ms": 0.0
       },
       {
         "a": "SIDE-R",
         "b": "BOT",
-        "boolean_ms": 69.592,
-        "ms": 69.593,
-        "tessellate_ms": 0.0
-      },
-      {
-        "a": "SIDE-L",
-        "b": "TOP",
-        "boolean_ms": 67.436,
-        "ms": 67.439,
-        "tessellate_ms": 0.0
-      },
-      {
-        "a": "DIV-2",
-        "b": "BOT",
-        "boolean_ms": 62.063,
-        "ms": 62.067,
+        "boolean_ms": 48.972,
+        "ms": 48.973,
         "tessellate_ms": 0.0
       },
       {
         "a": "DIV-1",
-        "b": "ST-2",
-        "boolean_ms": 57.827,
-        "ms": 57.828,
+        "b": "TOP",
+        "boolean_ms": 45.068,
+        "ms": 45.072,
+        "tessellate_ms": 0.0
+      },
+      {
+        "a": "SIDE-L",
+        "b": "SH-L1",
+        "boolean_ms": 39.701,
+        "ms": 39.705,
+        "tessellate_ms": 0.0
+      },
+      {
+        "a": "SIDE-R",
+        "b": "TOP",
+        "boolean_ms": 33.16,
+        "ms": 33.162,
+        "tessellate_ms": 0.0
+      },
+      {
+        "a": "DIV-1",
+        "b": "BOT",
+        "boolean_ms": 29.99,
+        "ms": 29.993,
         "tessellate_ms": 0.0
       },
       {
         "a": "SIDE-R",
         "b": "BACK",
-        "boolean_ms": 56.612,
-        "ms": 56.613,
-        "tessellate_ms": 0.0
-      },
-      {
-        "a": "DIV-2",
-        "b": "TOP",
-        "boolean_ms": 53.759,
-        "ms": 53.764,
+        "boolean_ms": 26.05,
+        "ms": 26.052,
         "tessellate_ms": 0.0
       },
       {
         "a": "SIDE-L",
-        "b": "BACK",
-        "boolean_ms": 50.159,
-        "ms": 50.162,
+        "b": "BOT",
+        "boolean_ms": 24.0,
+        "ms": 24.003,
         "tessellate_ms": 0.0
       }
     ],

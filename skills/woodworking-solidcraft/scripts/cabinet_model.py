@@ -84,12 +84,13 @@ def solid_commands(project):
     return {'parameters': params, 'blanks': solids, 'joinery': cuts, 'appearance': finish}
 
 
-def verify(session, parts, machined=True):
+def verify(session, parts, machined=True, body_names=None):
     data = session.json('measure', {'summary': True})
     bodies = {body['name']: body for body in data['bodies']}
-    assert set(bodies) == {part['id'] for part in parts}, list(bodies)
+    body_names = body_names or {part['id']: part['id'] for part in parts}
+    assert set(bodies) == set(body_names.values()), list(bodies)
     for part in parts:
-        body = bodies[part['id']]
+        body = bodies[body_names[part['id']]]
         expected_volume = net_volume(part) if machined else math.prod(part['size'])
         assert body['closed'], part['id']
         assert math.isclose(body['volume_mm3'], expected_volume * INCH**3, abs_tol=0.3), (part['id'], body, expected_volume)

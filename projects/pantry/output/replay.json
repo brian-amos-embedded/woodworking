@@ -1427,5 +1427,146 @@
         "color": "#ebc391"
       }
     }
+  ],
+  "assembly": [
+    {
+      "command": "solid.remove",
+      "params": {
+        "bodies": [
+          "RA-31",
+          "RA-41",
+          "RA-32",
+          "RA-42",
+          "RA-33",
+          "RA-43"
+        ]
+      }
+    },
+    {
+      "command": "component.from_bodies",
+      "params": {
+        "bodies": [
+          "SIDE-L",
+          "SIDE-R",
+          "DIV-1",
+          "DIV-2",
+          "BOT",
+          "TOP",
+          "SH-L1",
+          "SH-C1",
+          "SH-R1",
+          "SH-L2",
+          "SH-C2",
+          "SH-R2",
+          "SH-L3",
+          "SH-C3",
+          "SH-R3",
+          "BACK",
+          "ST-1",
+          "ST-2",
+          "ST-3",
+          "ST-4",
+          "RA-11",
+          "RA-12",
+          "RA-13",
+          "RA-21",
+          "RA-22",
+          "RA-23",
+          "RA-51",
+          "RA-52",
+          "RA-53"
+        ]
+      }
+    },
+    {
+      "command": "occurrence.copy",
+      "params": {
+        "component": 119,
+        "translate": [
+          0.0,
+          0.0,
+          203.2
+        ]
+      }
+    },
+    {
+      "command": "component.list",
+      "params": {}
+    },
+    {
+      "command": "occurrence.copy",
+      "params": {
+        "component": 119,
+        "translate": [
+          0.0,
+          0.0,
+          406.4
+        ]
+      }
+    },
+    {
+      "command": "component.list",
+      "params": {}
+    },
+    {
+      "command": "occurrence.copy",
+      "params": {
+        "component": 121,
+        "translate": [
+          0.0,
+          0.0,
+          203.2
+        ]
+      }
+    },
+    {
+      "command": "component.list",
+      "params": {}
+    },
+    {
+      "command": "occurrence.copy",
+      "params": {
+        "component": 121,
+        "translate": [
+          0.0,
+          0.0,
+          406.4
+        ]
+      }
+    },
+    {
+      "command": "component.list",
+      "params": {}
+    },
+    {
+      "command": "occurrence.copy",
+      "params": {
+        "component": 123,
+        "translate": [
+          0.0,
+          0.0,
+          203.2
+        ]
+      }
+    },
+    {
+      "command": "component.list",
+      "params": {}
+    },
+    {
+      "command": "occurrence.copy",
+      "params": {
+        "component": 123,
+        "translate": [
+          0.0,
+          0.0,
+          406.4
+        ]
+      }
+    },
+    {
+      "command": "component.list",
+      "params": {}
+    }
   ]
 }

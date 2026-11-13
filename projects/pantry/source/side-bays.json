@@ -171,15 +171,42 @@
       "material": "plywood_3_4",
       "corner": [
         "-bay+stock+fit",
-        "2*stock",
+        "stock",
         "shelf_z"
       ],
       "size": [
         "bay+carcass_inset-stock-2*fit",
-        "depth-2*stock-fit",
+        "depth-stock-fit",
         "stock"
       ],
-      "cuts": []
+      "cuts": [
+        {
+          "name": "Wall-side front relief",
+          "corner": [
+            "-bay+stock+fit",
+            "stock",
+            "shelf_z"
+          ],
+          "size": [
+            "rail_h-stock",
+            "stock+fit",
+            "stock"
+          ]
+        },
+        {
+          "name": "Organizer-side front relief",
+          "corner": [
+            "-bay+stock+fit+bay+carcass_inset-stock-2*fit-carcass_inset",
+            "stock",
+            "shelf_z"
+          ],
+          "size": [
+            "carcass_inset",
+            "stock+fit",
+            "stock"
+          ]
+        }
+      ]
     },
     {
       "id": "FR-L",
@@ -187,7 +214,7 @@
       "material": "maple",
       "corner": [
         "-bay+rail_h+apron_gap",
-        "stock",
+        0,
         "shelf_z+stock-rail_h"
       ],
       "size": [
@@ -203,7 +230,7 @@
       "material": "lighting",
       "corner": [
         "-bay+rail_h+apron_gap",
-        "2*stock",
+        "stock",
         "middle_z+stock-rail_h"
       ],
       "size": [
@@ -315,15 +342,42 @@
       "material": "plywood_3_4",
       "corner": [
         "center-carcass_inset+fit",
-        "2*stock",
+        "stock",
         "shelf_z"
       ],
       "size": [
         "bay+carcass_inset-stock-2*fit",
-        "depth-2*stock-fit",
+        "depth-stock-fit",
         "stock"
       ],
-      "cuts": []
+      "cuts": [
+        {
+          "name": "Wall-side front relief",
+          "corner": [
+            "center-carcass_inset+fit+bay+carcass_inset-stock-2*fit-(rail_h-stock)",
+            "stock",
+            "shelf_z"
+          ],
+          "size": [
+            "rail_h-stock",
+            "stock+fit",
+            "stock"
+          ]
+        },
+        {
+          "name": "Organizer-side front relief",
+          "corner": [
+            "center-carcass_inset+fit",
+            "stock",
+            "shelf_z"
+          ],
+          "size": [
+            "carcass_inset",
+            "stock+fit",
+            "stock"
+          ]
+        }
+      ]
     },
     {
       "id": "FR-R",
@@ -331,7 +385,7 @@
       "material": "maple",
       "corner": [
         "center+apron_gap",
-        "stock",
+        0,
         "shelf_z+stock-rail_h"
       ],
       "size": [
@@ -347,7 +401,7 @@
       "material": "lighting",
       "corner": [
         "center+apron_gap",
-        "2*stock",
+        "stock",
         "middle_z+stock-rail_h"
       ],
       "size": [
@@ -379,15 +433,42 @@
       "material": "plywood_3_4",
       "corner": [
         "-bay+stock+fit",
-        "2*stock",
+        "stock",
         "middle_z"
       ],
       "size": [
         "bay+carcass_inset-stock-2*fit",
-        "depth-2*stock-fit",
+        "depth-stock-fit",
         "stock"
       ],
-      "cuts": []
+      "cuts": [
+        {
+          "name": "Wall-side front relief",
+          "corner": [
+            "-bay+stock+fit",
+            "stock",
+            "middle_z"
+          ],
+          "size": [
+            "rail_h-stock",
+            "stock+fit",
+            "stock"
+          ]
+        },
+        {
+          "name": "Organizer-side front relief",
+          "corner": [
+            "-bay+stock+fit+bay+carcass_inset-stock-2*fit-carcass_inset",
+            "stock",
+            "middle_z"
+          ],
+          "size": [
+            "carcass_inset",
+            "stock+fit",
+            "stock"
+          ]
+        }
+      ]
     },
     {
       "id": "FR-MID-L",
@@ -395,7 +476,7 @@
       "material": "maple",
       "corner": [
         "-bay+rail_h+apron_gap",
-        "stock",
+        0,
         "middle_z+stock-rail_h"
       ],
       "size": [
@@ -411,15 +492,42 @@
       "material": "plywood_3_4",
       "corner": [
         "center-carcass_inset+fit",
-        "2*stock",
+        "stock",
         "middle_z"
       ],
       "size": [
         "bay+carcass_inset-stock-2*fit",
-        "depth-2*stock-fit",
+        "depth-stock-fit",
         "stock"
       ],
-      "cuts": []
+      "cuts": [
+        {
+          "name": "Wall-side front relief",
+          "corner": [
+            "center-carcass_inset+fit+bay+carcass_inset-stock-2*fit-(rail_h-stock)",
+            "stock",
+            "middle_z"
+          ],
+          "size": [
+            "rail_h-stock",
+            "stock+fit",
+            "stock"
+          ]
+        },
+        {
+          "name": "Organizer-side front relief",
+          "corner": [
+            "center-carcass_inset+fit",
+            "stock",
+            "middle_z"
+          ],
+          "size": [
+            "carcass_inset",
+            "stock+fit",
+            "stock"
+          ]
+        }
+      ]
     },
     {
       "id": "FR-MID-R",
@@ -427,7 +535,7 @@
       "material": "maple",
       "corner": [
         "center+apron_gap",
-        "stock",
+        0,
         "middle_z+stock-rail_h"
       ],
       "size": [
@@ -583,5 +691,33 @@
         }
       ]
     }
+  ],
+  "shared_components": [
+    [
+      "SH-L",
+      "SH-MID-L"
+    ],
+    [
+      "SH-R",
+      "SH-MID-R"
+    ],
+    [
+      "FR-L",
+      "FR-R",
+      "FR-MID-L",
+      "FR-MID-R"
+    ],
+    [
+      "TR-L",
+      "TR-R"
+    ],
+    [
+      "LED-MID-L",
+      "LED-MID-R"
+    ],
+    [
+      "LED-TR-L",
+      "LED-TR-R"
+    ]
   ]
 }

@@ -1189,5 +1189,22 @@
     "Hardwood rough allowance: +1/8 inch width, +1 inch length.",
     "Run side dados, side back grooves and panel divider dados through; use stopped cuts only where an exit must be hidden or a functional constraint requires them.",
     "No doors or hardware added; source organizer has neither."
+  ],
+  "shared_components": [
+    [
+      "RA-21",
+      "RA-31",
+      "RA-41"
+    ],
+    [
+      "RA-22",
+      "RA-32",
+      "RA-42"
+    ],
+    [
+      "RA-23",
+      "RA-33",
+      "RA-43"
+    ]
   ]
 }

@@ -1,72 +1,72 @@
 {
-  "boolean_ms": 195.584,
+  "boolean_ms": 202.66,
   "budget_exceeded": false,
   "budget_s": 90.0,
   "checked": 27,
   "count": 0,
   "interferences": [],
-  "ms": 33.251,
-  "pairs_candidate": 42,
+  "ms": 30.841,
+  "pairs_candidate": 46,
   "pairs_cleared": 0,
   "pairs_excluded": 0,
-  "pairs_intersected": 42,
+  "pairs_intersected": 46,
   "pairs_not_checked": 0,
   "skipped_pairs": 0,
   "slowest": [
     {
       "a": "TOP-01",
+      "b": "TR-L (TR-L:2)",
+      "boolean_ms": 12.762,
+      "ms": 12.764,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "TOP-01",
       "b": "ST-R",
-      "boolean_ms": 19.765,
-      "ms": 19.784,
-      "tessellate_ms": 0.0
-    },
-    {
-      "a": "TOP-01",
-      "b": "TR-R",
-      "boolean_ms": 18.564,
-      "ms": 18.567,
-      "tessellate_ms": 0.0
-    },
-    {
-      "a": "TOP-01",
-      "b": "CL-R",
-      "boolean_ms": 15.824,
-      "ms": 15.826,
-      "tessellate_ms": 0.0
-    },
-    {
-      "a": "ST-L",
-      "b": "BR-L",
-      "boolean_ms": 9.297,
-      "ms": 9.298,
-      "tessellate_ms": 0.0
-    },
-    {
-      "a": "TOP-01",
-      "b": "ST-L",
-      "boolean_ms": 8.356,
-      "ms": 8.358,
-      "tessellate_ms": 0.0
-    },
-    {
-      "a": "BR-R",
-      "b": "BS-R",
-      "boolean_ms": 8.316,
-      "ms": 8.319,
-      "tessellate_ms": 0.0
-    },
-    {
-      "a": "TR-R",
-      "b": "LED-TR-R",
-      "boolean_ms": 8.061,
-      "ms": 8.063,
+      "boolean_ms": 12.289,
+      "ms": 12.292,
       "tessellate_ms": 0.0
     },
     {
       "a": "TOP-01",
       "b": "CL-L",
-      "boolean_ms": 7.09,
-      "ms": 7.092,
+      "boolean_ms": 12.11,
+      "ms": 12.112,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "ST-R",
+      "b": "SH-R (SH-R:2)",
+      "boolean_ms": 10.367,
+      "ms": 10.369,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "CL-L",
+      "b": "PB-L",
+      "boolean_ms": 9.225,
+      "ms": 9.226,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "TOP-01",
+      "b": "CL-R",
+      "boolean_ms": 8.407,
+      "ms": 8.409,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "CL-R",
+      "b": "PB-R",
+      "boolean_ms": 7.171,
+      "ms": 7.172,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "BR-L",
+      "b": "BS-L",
+      "boolean_ms": 6.474,
+      "ms": 6.476,
       "tessellate_ms": 0.0
     }
   ],

@@ -568,11 +568,11 @@
       "params": {
         "name": "SH-L",
         "length": "cab_bay+cab_carcass_inset-cab_stock-2*cab_fit",
-        "width": "cab_depth-2*cab_stock-cab_fit",
+        "width": "cab_depth-cab_stock-cab_fit",
         "height": "cab_stock",
         "corner": [
           "-cab_bay+cab_stock+cab_fit",
-          "2*cab_stock",
+          "cab_stock",
           "cab_shelf_z"
         ],
         "body_name": "SH-L"
@@ -587,7 +587,7 @@
         "height": "cab_rail_h",
         "corner": [
           "-cab_bay+cab_rail_h+cab_apron_gap",
-          "cab_stock",
+          "0 in",
           "cab_shelf_z+cab_stock-cab_rail_h"
         ],
         "body_name": "FR-L"
@@ -602,7 +602,7 @@
         "height": "cab_led_h",
         "corner": [
           "-cab_bay+cab_rail_h+cab_apron_gap",
-          "2*cab_stock",
+          "cab_stock",
           "cab_middle_z+cab_stock-cab_rail_h"
         ],
         "body_name": "LED-MID-L"
@@ -703,11 +703,11 @@
       "params": {
         "name": "SH-R",
         "length": "cab_bay+cab_carcass_inset-cab_stock-2*cab_fit",
-        "width": "cab_depth-2*cab_stock-cab_fit",
+        "width": "cab_depth-cab_stock-cab_fit",
         "height": "cab_stock",
         "corner": [
           "cab_center-cab_carcass_inset+cab_fit",
-          "2*cab_stock",
+          "cab_stock",
           "cab_shelf_z"
         ],
         "body_name": "SH-R"
@@ -722,7 +722,7 @@
         "height": "cab_rail_h",
         "corner": [
           "cab_center+cab_apron_gap",
-          "cab_stock",
+          "0 in",
           "cab_shelf_z+cab_stock-cab_rail_h"
         ],
         "body_name": "FR-R"
@@ -737,7 +737,7 @@
         "height": "cab_led_h",
         "corner": [
           "cab_center+cab_apron_gap",
-          "2*cab_stock",
+          "cab_stock",
           "cab_middle_z+cab_stock-cab_rail_h"
         ],
         "body_name": "LED-MID-R"
@@ -763,11 +763,11 @@
       "params": {
         "name": "SH-MID-L",
         "length": "cab_bay+cab_carcass_inset-cab_stock-2*cab_fit",
-        "width": "cab_depth-2*cab_stock-cab_fit",
+        "width": "cab_depth-cab_stock-cab_fit",
         "height": "cab_stock",
         "corner": [
           "-cab_bay+cab_stock+cab_fit",
-          "2*cab_stock",
+          "cab_stock",
           "cab_middle_z"
         ],
         "body_name": "SH-MID-L"
@@ -782,7 +782,7 @@
         "height": "cab_rail_h",
         "corner": [
           "-cab_bay+cab_rail_h+cab_apron_gap",
-          "cab_stock",
+          "0 in",
           "cab_middle_z+cab_stock-cab_rail_h"
         ],
         "body_name": "FR-MID-L"
@@ -793,11 +793,11 @@
       "params": {
         "name": "SH-MID-R",
         "length": "cab_bay+cab_carcass_inset-cab_stock-2*cab_fit",
-        "width": "cab_depth-2*cab_stock-cab_fit",
+        "width": "cab_depth-cab_stock-cab_fit",
         "height": "cab_stock",
         "corner": [
           "cab_center-cab_carcass_inset+cab_fit",
-          "2*cab_stock",
+          "cab_stock",
           "cab_middle_z"
         ],
         "body_name": "SH-MID-R"
@@ -812,7 +812,7 @@
         "height": "cab_rail_h",
         "corner": [
           "cab_center+cab_apron_gap",
-          "cab_stock",
+          "0 in",
           "cab_middle_z+cab_stock-cab_rail_h"
         ],
         "body_name": "FR-MID-R"
@@ -1438,6 +1438,150 @@
         "operation": "cut",
         "targets": [
           "TOP-01"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Wall-side front relief",
+        "length": "cab_rail_h-cab_stock",
+        "width": "cab_stock+cab_fit",
+        "height": "cab_stock",
+        "corner": [
+          "-cab_bay+cab_stock+cab_fit",
+          "cab_stock",
+          "cab_shelf_z"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SH-L"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Organizer-side front relief",
+        "length": "cab_carcass_inset",
+        "width": "cab_stock+cab_fit",
+        "height": "cab_stock",
+        "corner": [
+          "-cab_bay+cab_stock+cab_fit+cab_bay+cab_carcass_inset-cab_stock-2*cab_fit-cab_carcass_inset",
+          "cab_stock",
+          "cab_shelf_z"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SH-L"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Wall-side front relief",
+        "length": "cab_rail_h-cab_stock",
+        "width": "cab_stock+cab_fit",
+        "height": "cab_stock",
+        "corner": [
+          "cab_center-cab_carcass_inset+cab_fit+cab_bay+cab_carcass_inset-cab_stock-2*cab_fit-(cab_rail_h-cab_stock)",
+          "cab_stock",
+          "cab_shelf_z"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SH-R"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Organizer-side front relief",
+        "length": "cab_carcass_inset",
+        "width": "cab_stock+cab_fit",
+        "height": "cab_stock",
+        "corner": [
+          "cab_center-cab_carcass_inset+cab_fit",
+          "cab_stock",
+          "cab_shelf_z"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SH-R"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Wall-side front relief",
+        "length": "cab_rail_h-cab_stock",
+        "width": "cab_stock+cab_fit",
+        "height": "cab_stock",
+        "corner": [
+          "-cab_bay+cab_stock+cab_fit",
+          "cab_stock",
+          "cab_middle_z"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SH-MID-L"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Organizer-side front relief",
+        "length": "cab_carcass_inset",
+        "width": "cab_stock+cab_fit",
+        "height": "cab_stock",
+        "corner": [
+          "-cab_bay+cab_stock+cab_fit+cab_bay+cab_carcass_inset-cab_stock-2*cab_fit-cab_carcass_inset",
+          "cab_stock",
+          "cab_middle_z"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SH-MID-L"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Wall-side front relief",
+        "length": "cab_rail_h-cab_stock",
+        "width": "cab_stock+cab_fit",
+        "height": "cab_stock",
+        "corner": [
+          "cab_center-cab_carcass_inset+cab_fit+cab_bay+cab_carcass_inset-cab_stock-2*cab_fit-(cab_rail_h-cab_stock)",
+          "cab_stock",
+          "cab_middle_z"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SH-MID-R"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "name": "Organizer-side front relief",
+        "length": "cab_carcass_inset",
+        "width": "cab_stock+cab_fit",
+        "height": "cab_stock",
+        "corner": [
+          "cab_center-cab_carcass_inset+cab_fit",
+          "cab_stock",
+          "cab_middle_z"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SH-MID-R"
         ]
       }
     },
@@ -2302,6 +2446,296 @@
         ],
         "color": "#63768b"
       }
+    }
+  ],
+  "assembly": [
+    {
+      "command": "solid.remove",
+      "params": {
+        "bodies": [
+          "SH-MID-L",
+          "SH-MID-R",
+          "FR-R",
+          "FR-MID-L",
+          "FR-MID-R",
+          "TR-R",
+          "LED-MID-R",
+          "LED-TR-R",
+          "RA-31",
+          "RA-41",
+          "RA-32",
+          "RA-42",
+          "RA-33",
+          "RA-43"
+        ]
+      }
+    },
+    {
+      "command": "component.from_bodies",
+      "params": {
+        "bodies": [
+          "LED-SODA-3",
+          "LED-SODA-5",
+          "TOP-01",
+          "CL-L",
+          "ST-L",
+          "PB-L",
+          "PS-L",
+          "TR-L",
+          "SH-L",
+          "FR-L",
+          "LED-MID-L",
+          "LED-TR-L",
+          "CL-R",
+          "ST-R",
+          "PB-R",
+          "PS-R",
+          "SH-R",
+          "BR-L",
+          "BS-L",
+          "BR-R",
+          "BS-R",
+          "SIDE-L",
+          "SIDE-R",
+          "DIV-1",
+          "DIV-2",
+          "BOT",
+          "TOP",
+          "SH-L1",
+          "SH-C1",
+          "SH-R1",
+          "SH-L2",
+          "SH-C2",
+          "SH-R2",
+          "SH-L3",
+          "SH-C3",
+          "SH-R3",
+          "BACK",
+          "ST-1",
+          "ST-2",
+          "ST-3",
+          "ST-4",
+          "RA-11",
+          "RA-12",
+          "RA-13",
+          "RA-21",
+          "RA-22",
+          "RA-23",
+          "RA-51",
+          "RA-52",
+          "RA-53"
+        ]
+      }
+    },
+    {
+      "command": "occurrence.copy",
+      "params": {
+        "component": 134,
+        "translate": [
+          0.0,
+          0.0,
+          304.79999999999995
+        ]
+      }
+    },
+    {
+      "command": "component.list",
+      "params": {}
+    },
+    {
+      "command": "occurrence.copy",
+      "params": {
+        "component": 150,
+        "translate": [
+          0.0,
+          0.0,
+          304.79999999999995
+        ]
+      }
+    },
+    {
+      "command": "component.list",
+      "params": {}
+    },
+    {
+      "command": "occurrence.copy",
+      "params": {
+        "component": 136,
+        "translate": [
+          1136.6499999999999,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "command": "component.list",
+      "params": {}
+    },
+    {
+      "command": "occurrence.copy",
+      "params": {
+        "component": 136,
+        "translate": [
+          0.0,
+          0.0,
+          304.79999999999995
+        ]
+      }
+    },
+    {
+      "command": "component.list",
+      "params": {}
+    },
+    {
+      "command": "occurrence.copy",
+      "params": {
+        "component": 136,
+        "translate": [
+          1136.6499999999999,
+          0.0,
+          304.79999999999995
+        ]
+      }
+    },
+    {
+      "command": "component.list",
+      "params": {}
+    },
+    {
+      "command": "occurrence.copy",
+      "params": {
+        "component": 132,
+        "translate": [
+          1136.6499999999999,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "command": "component.list",
+      "params": {}
+    },
+    {
+      "command": "occurrence.copy",
+      "params": {
+        "component": 138,
+        "translate": [
+          1136.6499999999999,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "command": "component.list",
+      "params": {}
+    },
+    {
+      "command": "occurrence.copy",
+      "params": {
+        "component": 140,
+        "translate": [
+          1136.6499999999999,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "command": "component.list",
+      "params": {}
+    },
+    {
+      "command": "occurrence.copy",
+      "params": {
+        "component": 206,
+        "translate": [
+          0.0,
+          0.0,
+          203.2
+        ]
+      }
+    },
+    {
+      "command": "component.list",
+      "params": {}
+    },
+    {
+      "command": "occurrence.copy",
+      "params": {
+        "component": 206,
+        "translate": [
+          0.0,
+          0.0,
+          406.4
+        ]
+      }
+    },
+    {
+      "command": "component.list",
+      "params": {}
+    },
+    {
+      "command": "occurrence.copy",
+      "params": {
+        "component": 208,
+        "translate": [
+          0.0,
+          0.0,
+          203.2
+        ]
+      }
+    },
+    {
+      "command": "component.list",
+      "params": {}
+    },
+    {
+      "command": "occurrence.copy",
+      "params": {
+        "component": 208,
+        "translate": [
+          0.0,
+          0.0,
+          406.4
+        ]
+      }
+    },
+    {
+      "command": "component.list",
+      "params": {}
+    },
+    {
+      "command": "occurrence.copy",
+      "params": {
+        "component": 210,
+        "translate": [
+          0.0,
+          0.0,
+          203.2
+        ]
+      }
+    },
+    {
+      "command": "component.list",
+      "params": {}
+    },
+    {
+      "command": "occurrence.copy",
+      "params": {
+        "component": 210,
+        "translate": [
+          0.0,
+          0.0,
+          406.4
+        ]
+      }
+    },
+    {
+      "command": "component.list",
+      "params": {}
     }
   ]
 }

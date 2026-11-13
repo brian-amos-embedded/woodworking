@@ -32,9 +32,55 @@ def model_spec(root, filename):
                 if target in spec[field]:
                     raise ValueError(f'Duplicate model parameter: {target}')
                 spec[field][target] = expression(value)
+        spec.setdefault('shared_components', []).extend(source.get('shared_components', []))
         spec['parts'].extend(dict(box(part), cuts=[box(cut) for cut in part['cuts']])
                              for part in source['parts'])
     return spec
+
+
+def assemble_components(session, spec, parts, variant, commands):
+    """Promote bodies and place explicitly declared, geometrically identical copies."""
+    def execute(command, **params):
+        step = dict(command=command, params=params)
+        commands.append(step)
+        return session.json('execute', step)
+
+    names = {p['id']: p['id'] for p in parts}
+    by_id = {p['id']: p for p in parts}
+    alternate = {p['id']: p for p in resolve(spec, variant)} if variant else by_id
+
+    def signature(part):
+        return (part['material'], part.get('grain_axis'), part['size'], [
+            (cut['size'], [round(x-y, 8) for x,y in zip(cut['corner'],part['corner'])])
+            for cut in part['cuts']])
+
+    copies = {}
+    for primary, *instances in spec.get('shared_components', []):
+        for instance in instances:
+            if instance in copies or instance == primary:
+                raise ValueError(f'Repeated component occurrence: {instance}')
+            offsets = []
+            for model in (by_id, alternate):
+                a, b = model[primary], model[instance]
+                if signature(a) != signature(b):
+                    raise ValueError(f'Component geometry differs: {primary}, {instance}')
+                offsets.append([round(y-x, 8) for x,y in zip(a['corner'], b['corner'])])
+            if offsets[0] != offsets[1]:
+                raise ValueError(f'Occurrence translation changes with parameters: {instance}')
+            copies[instance] = primary, offsets[0]
+
+    if copies:
+        execute('solid.remove', bodies=list(copies))
+    definitions = execute('component.from_bodies', bodies=[key for key in names if key not in copies])
+    component_ids = {row['body']: row['component'] for row in definitions['components']}
+    for instance, (primary, offset) in copies.items():
+        result = execute('occurrence.copy', component=component_ids[primary],
+                         translate=[v*INCH for v in offset])
+        tree = execute('component.list')
+        component = next(c for c in tree['components'] if c['id'] == result['component'])
+        occurrence = next(o for o in component['occurrences'] if o['id'] == result['occurrence'])
+        names[instance] = f"{primary} ({occurrence['name']})"
+    return names
 
 
 def build_model(cli, root, out, model):
@@ -76,6 +122,16 @@ def build_model(cli, root, out, model):
                   'interference':check_interference(session)})
             change(session, {k:spec['parameters_in'][k] for k in test})
             verify(session, parts)
+        assembly_commands = []
+        names = assemble_components(session, spec, parts, model.get('test'), assembly_commands)
+        write('replay', commands | {'assembly': assembly_commands})
+        write('measurement', verify(session, parts, body_names=names))
+        write('checks' if prefix else 'interference', check_interference(session))
+        if test:
+            change(session, test)
+            verify(session, resolve(spec, test), body_names=names)
+            check_interference(session)
+            change(session, {k:spec['parameters_in'][k] for k in test})
         session.json('save', {'path':str(design)})
         for ext in model.get('exports', []):
             session.json('export', {'path':str(out / f'{name}.{ext}')})
@@ -83,10 +139,10 @@ def build_model(cli, root, out, model):
             filename = name if prefix and view == 'iso' else prefix + view
             shot(session, out / f'{filename}.png', (1000,900), {'view':view})
     with Session(cli, out, design=design) as session:
-        write('measurement-reopened', verify(session, parts))
+        write('measurement-reopened', verify(session, parts, body_names=names))
         for label, ids in model.get('isolated', {}).items():
             session.json('execute', {'command':'browser.visibility','params':{
-                'visible':True,'isolate':True,'items':ids}})
+                'visible':True,'isolate':True,'items':[names[key] for key in ids]}})
             camera = {'view':'iso'}
             if settings := model.get('camera', {}).get(label):
                 part = next(p for p in parts if p['id'] == ids[0])

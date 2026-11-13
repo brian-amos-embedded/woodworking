@@ -1,11 +1,11 @@
 {
-  "boolean_ms": 1731.651,
+  "boolean_ms": 1131.767,
   "budget_exceeded": false,
   "budget_s": 90.0,
   "checked": 35,
   "count": 0,
   "interferences": [],
-  "ms": 211.139,
+  "ms": 142.21,
   "pairs_candidate": 126,
   "pairs_cleared": 0,
   "pairs_excluded": 0,
@@ -14,59 +14,59 @@
   "skipped_pairs": 0,
   "slowest": [
     {
-      "a": "SIDE-L",
-      "b": "TOP",
-      "boolean_ms": 85.616,
-      "ms": 85.618,
+      "a": "DIV-2",
+      "b": "BOT",
+      "boolean_ms": 47.592,
+      "ms": 47.594,
       "tessellate_ms": 0.0
     },
     {
       "a": "SIDE-R",
       "b": "TOP",
-      "boolean_ms": 71.573,
-      "ms": 71.575,
-      "tessellate_ms": 0.0
-    },
-    {
-      "a": "DIV-1",
-      "b": "TOP",
-      "boolean_ms": 65.76,
-      "ms": 65.764,
-      "tessellate_ms": 0.0
-    },
-    {
-      "a": "DIV-2",
-      "b": "TOP",
-      "boolean_ms": 60.534,
-      "ms": 60.552,
-      "tessellate_ms": 0.0
-    },
-    {
-      "a": "DIV-2",
-      "b": "BOT",
-      "boolean_ms": 56.045,
-      "ms": 56.048,
+      "boolean_ms": 36.914,
+      "ms": 36.916,
       "tessellate_ms": 0.0
     },
     {
       "a": "SIDE-L",
-      "b": "SH-L1",
-      "boolean_ms": 49.441,
-      "ms": 49.445,
-      "tessellate_ms": 0.0
-    },
-    {
-      "a": "SIDE-R",
-      "b": "BOT",
-      "boolean_ms": 47.519,
-      "ms": 47.522,
+      "b": "TOP",
+      "boolean_ms": 33.172,
+      "ms": 33.175,
       "tessellate_ms": 0.0
     },
     {
       "a": "DIV-1",
       "b": "BOT",
-      "boolean_ms": 42.549,
-      "ms": 42.574,
+      "boolean_ms": 28.116,
+      "ms": 28.119,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "SIDE-L",
+      "b": "BOT",
+      "boolean_ms": 25.28,
+      "ms": 25.284,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "DIV-2",
+      "b": "TOP",
+      "boolean_ms": 25.054,
+      "ms": 25.056,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "DIV-1",
+      "b": "TOP",
+      "boolean_ms": 24.381,
+      "ms": 24.384,
+      "tessellate_ms": 0.0
+    },
+    {
+      "a": "SIDE-L",
+      "b": "RA-21 (RA-21:2)",
+      "boolean_ms": 23.312,
+      "ms": 23.315,
       "tessellate_ms": 0.0
     }
   ],
